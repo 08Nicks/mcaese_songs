@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07060b" />
+  <title>MC AESE · Setlist Puebla &amp; CDMX</title>
+  <meta name="description" content="Setlist de MC Aese para Puebla y CDMX: orden del show, letras guardadas en tu dispositivo y modo concierto con letra grande." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0812'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23ff3d81' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23ffb020'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="MC Aese, inicio">
+      <span class="brand-disc" aria-hidden="true"></span>
+      MC AESE
+    </a>
+
+    <nav class="topnav" aria-label="Navegación principal">
+      <a class="topnav-link" href="#setlist">Setlist</a>
+      <a class="topnav-link" href="#playlist">Playlist</a>
+      <button class="topnav-concert" id="navConcert" type="button">Modo concierto</button>
+      <div class="progress-pill" id="progressPill" role="status" aria-label="Canciones listas">
+        <svg class="ring" viewBox="0 0 40 40" aria-hidden="true">
+          <circle class="ring-bg" cx="20" cy="20" r="16"></circle>
+          <circle class="ring-fg" id="ringFg" cx="20" cy="20" r="16"></circle>
+        </svg>
+        <span><b id="readyCount">0</b>/<span id="totalCount">18</span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="vinyl" aria-hidden="true"><span class="vinyl-label">AESE</span></div>
+
+      <p class="eyebrow"><span class="dot"></span>Setlist · Puebla &amp; CDMX</p>
+      <h1 class="hero-title" id="heroTitle">MC <em>AESE</em></h1>
+      <p class="lede">
+        La noche entera, canción por canción. Guarda tus letras, marca lo que ya te sabes
+        y entra en modo concierto cuando bajen las luces.
+      </p>
+
+      <div class="countdown" id="countdown" role="timer" aria-label="Cuenta atrás para el concierto">
+        <div class="cd" id="cdTiles">
+          <div class="cd-tile"><b id="cdDays">00</b><span>días</span></div>
+          <div class="cd-tile"><b id="cdHours">00</b><span>hrs</span></div>
+          <div class="cd-tile"><b id="cdMins">00</b><span>min</span></div>
+          <div class="cd-tile"><b id="cdSecs">00</b><span>seg</span></div>
+        </div>
+        <p class="cd-live" id="cdLive" hidden>¡Es hoy!</p>
+      </div>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="heroConcert" type="button">
+          <span class="play-ico" aria-hidden="true"></span> Entrar en modo concierto
+        </button>
+        <a class="btn btn-ghost" href="#setlist">Ver el setlist <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <p class="hero-note">
+        <span id="totalSongs">18</span> canciones · <span id="lyricsCount">0</span> con letra ·
+        <span id="readyNote">0</span> <span id="readyLabel">listas</span>
+      </p>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>Puebla</span><i>✦</i><span class="outline">CDMX</span><i>✦</i><span>MC Aese</span><i>✦</i><span class="outline">En vivo</span><i>✦</i>
+        </div>
+        <div class="marquee-group">
+          <span>Puebla</span><i>✦</i><span class="outline">CDMX</span><i>✦</i><span>MC Aese</span><i>✦</i><span class="outline">En vivo</span><i>✦</i>
+        </div>
+      </div>
+    </div>
+
+    <section class="setlist" id="setlist" aria-labelledby="setlistTitle">
+      <div class="section-head">
+        <div>
+          <p class="kicker">El orden del show</p>
+          <h2 id="setlistTitle">Setlist</h2>
+        </div>
+        <p class="setlist-count"><b id="visibleCount">18</b> canciones</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search" for="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path>
+          </svg>
+          <input id="search" type="search" placeholder="Buscar canción…" autocomplete="off" spellcheck="false" />
+        </label>
+
+        <div class="filters" id="filters" role="group" aria-label="Filtrar canciones">
+          <button class="chip is-active" type="button" data-filter="all">Todas</button>
+          <button class="chip" type="button" data-filter="lyrics">Con letra</button>
+          <button class="chip" type="button" data-filter="empty">Sin letra</button>
+          <button class="chip" type="button" data-filter="review">Repasar</button>
+          <button class="chip" type="button" data-filter="ready">Listas</button>
+        </div>
+      </div>
+
+      <ol class="song-grid" id="songGrid"></ol>
+      <p class="empty-state" id="emptyState" hidden>No hay canciones con ese filtro. Prueba con otra búsqueda.</p>
+    </section>
+
+    <section class="playlist" id="playlist" aria-labelledby="playlistTitle">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Para calentar motores</p>
+          <h2 id="playlistTitle">Playlist</h2>
+        </div>
+        <a class="playlist-link" href="https://open.spotify.com/playlist/5lgXAGOYUWEV2PalvbGJdN" target="_blank" rel="noopener">
+          Abrir en Spotify <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="playlist-card">
+        <div class="playlist-info">
+          <span class="spotify-badge">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" fill="#1db954"></circle>
+              <path d="M7 9.4c3.2-1 7.5-.7 10.1.9M7.6 12.4c2.7-.8 6.3-.5 8.6.8M8.1 15.2c2.2-.6 5.1-.4 7 .8" fill="none" stroke="#05130a" stroke-width="1.5" stroke-linecap="round"></path>
+            </svg>
+            Spotify
+          </span>
+          <h3>MC Aese · la previa</h3>
+          <p>La playlist para escuchar antes del show, mientras llegas al venue o para seguir la fiesta después.</p>
+          <a class="btn btn-primary playlist-cta" href="https://open.spotify.com/playlist/5lgXAGOYUWEV2PalvbGJdN" target="_blank" rel="noopener">
+            <span class="play-ico" aria-hidden="true"></span> Reproducir playlist
+          </a>
+          <p class="playlist-note">Si el reproductor no carga, abre la playlist directo en la app de Spotify.</p>
+        </div>
+
+        <div class="spotify-embed">
+          <iframe
+            src="https://open.spotify.com/embed/playlist/5lgXAGOYUWEV2PalvbGJdN?utm_source=generator&amp;theme=0"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            title="Playlist de MC Aese en Spotify"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <p class="footer-title">MC AESE · Puebla &amp; CDMX</p>
+      <p class="footer-copy">
+        Tus letras, notas y estados se guardan solo en este dispositivo. Nada se sube a internet.
+        Si quieres llevar la página a otro celular, exporta un respaldo e impórtalo allá.
+      </p>
+    </div>
+    <div class="footer-actions">
+      <button class="ghost-sm" id="exportBtn" type="button">Exportar respaldo</button>
+      <button class="ghost-sm" id="importBtn" type="button">Importar</button>
+      <button class="ghost-sm danger" id="resetBtn" type="button">Borrar todo</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden />
+    </div>
+  </footer>
+
+  <!-- Panel de canción -->
+  <div class="overlay" id="sheetOverlay" hidden>
+    <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+      <div class="grabber" aria-hidden="true"></div>
+
+      <header class="sheet-head">
+        <p class="sheet-eyebrow">Canción <span id="sheetIndex">01</span> / <span id="sheetTotal">18</span></p>
+        <h2 id="sheetTitle">—</h2>
+        <div class="track-tabs" id="sheetTabs" role="tablist" aria-label="Canciones del bloque" hidden></div>
+        <div class="parts" id="sheetParts"></div>
+        <button class="icon-btn sheet-close" id="sheetClose" type="button" aria-label="Cerrar canción">✕</button>
+      </header>
+
+      <div class="sheet-tools">
+        <button class="tool-btn font-btn" id="fontMinus" type="button" aria-label="Reducir tamaño de letra">A−</button>
+        <button class="tool-btn font-btn" id="fontPlus" type="button" aria-label="Aumentar tamaño de letra">A+</button>
+        <span class="tool-sep" aria-hidden="true"></span>
+        <a class="tool-btn" id="searchLyrics" href="#" target="_blank" rel="noopener">Buscar letra ↗</a>
+        <button class="tool-btn" id="pasteLyrics" type="button">Pegar</button>
+        <button class="tool-btn" id="clearLyrics" type="button">Borrar letra</button>
+        <span class="tool-spacer"></span>
+        <button class="tool-btn edit" id="editLyrics" type="button" aria-pressed="false">Editar letra</button>
+        <button class="tool-btn accent" id="concertFromSheet" type="button">Modo concierto</button>
+      </div>
+
+      <div class="lyrics-wrap">
+        <div class="lyrics-view" id="lyricsView" role="region" aria-label="Letra guardada" tabindex="0"></div>
+        <textarea
+          id="lyricsInput"
+          class="lyrics-input"
+          placeholder="Pega aquí la letra o tus apuntes para esta canción…&#10;&#10;Se guarda solo en este dispositivo.&#10;Puedes usar saltos de línea y dejarla lista para el show."
+          spellcheck="false"
+          aria-label="Letra de la canción"
+        ></textarea>
+        <p class="save-state" id="saveState">Se guarda automáticamente en tu dispositivo</p>
+      </div>
+
+      <footer class="sheet-foot">
+        <button class="nav-btn" id="sheetPrev" type="button">
+          <small>Anterior</small><span id="prevName">—</span>
+        </button>
+        <button class="status-pill" id="sheetStatus" type="button" data-status="0">Por ver</button>
+        <button class="nav-btn next" id="sheetNext" type="button">
+          <small>Siguiente</small><span id="nextName">—</span>
+        </button>
+      </footer>
+    </section>
+  </div>
+
+  <!-- Modo concierto -->
+  <div class="concert" id="concert" hidden role="dialog" aria-modal="true" aria-label="Modo concierto">
+    <div class="concert-top">
+      <span class="concert-brand">MC AESE <em>· en vivo</em></span>
+      <div class="concert-progress" aria-hidden="true"><div id="concertBar"></div></div>
+      <button class="concert-close" id="concertClose" type="button">Salir ✕</button>
+    </div>
+
+    <div class="concert-body" id="concertBody">
+      <div class="concert-meta">
+        <span class="idx" id="concertIndex">01</span>
+        <span id="concertTag">Setlist</span>
+      </div>
+      <h2 class="concert-title" id="concertTitle">—</h2>
+      <div class="track-tabs concert-tabs" id="concertTabs" role="tablist" aria-label="Canciones del bloque" hidden></div>
+      <div class="concert-lyrics" id="concertLyrics"></div>
+
+      <div class="concert-empty" id="concertEmpty" hidden>
+        <strong>Todavía no hay letra aquí.</strong>
+        <p>Agrégala en el panel de la canción y aparecerá en grande, lista para el show.</p>
+        <button class="btn btn-primary" id="addLyricsBtn" type="button">Agregar letra</button>
+      </div>
+
+      <p class="up-next"><span>Después</span> <b id="upNext">—</b></p>
+      <p class="concert-hint">Desliza a los lados o usa las flechas para cambiar de canción.</p>
+    </div>
+
+    <div class="concert-nav">
+      <button class="c-btn" id="concertPrev" type="button"><span aria-hidden="true">←</span> Anterior</button>
+      <div class="c-size">
+        <button class="c-mini" id="concertMinus" type="button" aria-label="Reducir letra">A−</button>
+        <button class="c-mini" id="concertPlus" type="button" aria-label="Aumentar letra">A+</button>
+      </div>
+      <button class="c-btn primary" id="concertNext" type="button">Siguiente <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="songs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
