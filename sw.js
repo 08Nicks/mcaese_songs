@@ -1,13 +1,13 @@
 /* Service worker de MC Aese.
    Permite abrir el setlist y tus letras sin conexión una vez cargada la página. */
 
-const CACHE = "mcaese-v1";
+const CACHE = "mcaese-v2";
 const ASSETS = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
-  "./songs.js",
+  "./styles.css?v=2",
+  "./app.js?v=2",
+  "./songs.js?v=2",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
