@@ -25,9 +25,20 @@ y entrar desde el celular a `http://TU-IP:4173`.
 - **Letras visibles y editables** con guardado automático en el navegador (`localStorage`). Al abrir una canción verás la letra; toca **Editar letra** para modificarla y **Listo ✓** para volver a la vista de lectura. Nada se sube a internet.
 - **Botón Pegar** para traer la letra desde el portapapeles y **Buscar letra** para abrir una búsqueda.
 - **Modo concierto** a pantalla completa: letra grande, navegación con botones, flechas del teclado o deslizando el dedo, y bloqueo de pantalla si el navegador lo permite.
+- **Versión móvil instalable**: se adapta al celular, se puede agregar a la pantalla de inicio y funciona sin conexión una vez cargada.
 - **Playlist de Spotify** embebida y enlace directo.
 - **Respaldo**: exporta un `.json` con tus letras y estados, e impórtalo en otro dispositivo.
 - Diseño adaptable a celular, tablet y escritorio.
+
+## Instalarla en el celular
+
+Si ya está publicada en GitHub Pages:
+
+1. Abre `https://08nicks.github.io/mcaese_songs/` en Chrome o Safari desde el teléfono.
+2. **iPhone:** toca Compartir → **Agregar a pantalla de inicio**. **Android:** abre el menú → **Instalar app**.
+3. Se abrirá a pantalla completa como una app y funcionará sin conexión después de la primera carga.
+
+Las letras siguen guardándose en ese dispositivo. Para pasarlas desde la computadora, usa **Exportar respaldo** e **Importar**.
 
 ## Cómo agregar las letras
 

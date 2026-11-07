@@ -1235,6 +1235,15 @@
         /* nada */
       }
     });
+
+    // Versión instalable y sin conexión en el sitio publicado (HTTPS).
+    if ("serviceWorker" in navigator && location.protocol === "https:") {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch(() => {
+          /* sin service worker: la página sigue funcionando */
+        });
+      });
+    }
   }
 
   init();

@@ -1895,8 +1895,27 @@ a {
     overflow: visible;
   }
 
+  .chip {
+    min-height: 38px;
+  }
+
   .topnav-link {
     display: none;
+  }
+
+  .topbar {
+    padding-top: calc(0.65rem + env(safe-area-inset-top));
+    padding-right: calc(0.9rem + env(safe-area-inset-right));
+    padding-bottom: 0.65rem;
+    padding-left: calc(0.9rem + env(safe-area-inset-left));
+  }
+
+  .song-open {
+    padding: 1rem 0.9rem;
+  }
+
+  .song-status {
+    width: 52px;
   }
 
   .overlay {
@@ -1906,9 +1925,11 @@ a {
 
   .sheet {
     width: 100%;
-    max-height: 94dvh;
-    border-radius: 26px 26px 0 0;
-    border-bottom: none;
+    height: 100dvh;
+    max-height: 100dvh;
+    border: 0;
+    border-radius: 0;
+    overscroll-behavior: contain;
   }
 
   .grabber {
@@ -1916,7 +1937,7 @@ a {
   }
 
   .sheet-head {
-    padding-top: 0.9rem;
+    padding-top: calc(0.9rem + env(safe-area-inset-top));
   }
 
   .lyrics-wrap {
@@ -1931,6 +1952,34 @@ a {
     min-height: 30dvh;
   }
 
+  .track-tabs {
+    flex-wrap: wrap;
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .track-tab {
+    flex: 0 1 auto;
+  }
+
+  .track-tab-flag {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border-radius: 50%;
+    background: var(--faint);
+    font-size: 0;
+    letter-spacing: 0;
+  }
+
+  .track-tab-flag.has-lyrics {
+    background: var(--green);
+  }
+
+  .concert-tabs {
+    justify-content: flex-start;
+  }
+
   .sheet-tools {
     padding-inline: 1rem;
   }
@@ -1941,6 +1990,10 @@ a {
 
   .tool-btn.accent {
     margin-left: auto;
+  }
+
+  .sheet-foot {
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
   }
 
   .concert-top {
@@ -1961,7 +2014,7 @@ a {
   }
 
   .footer {
-    padding-bottom: 3rem;
+    padding-bottom: calc(3rem + env(safe-area-inset-bottom));
   }
 }
 
@@ -2006,6 +2059,21 @@ a {
 
   .filters {
     width: 100%;
+    gap: 0.35rem;
+  }
+
+  .track-tabs {
+    gap: 0.35rem;
+  }
+
+  .track-tab {
+    min-height: 40px;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.68rem;
+  }
+
+  .song-meta {
+    font-size: 0.68rem;
   }
 
   .sheet-head h2 {
