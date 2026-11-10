@@ -1,1916 +1,1957 @@
 window.KARAOKE_DATA = {
   "title": "De un «Veremos» a Dos Años",
   "bpm": 84,
-  "countIn": 2.857,
-  "audio": "de-un-veremos-a-dos-anos.mp3",
-  "guideAudio": "de-un-veremos-a-dos-anos-guia.mp3",
-  "mixAudio": "de-un-veremos-a-dos-anos-mezcla.mp3",
-  "duration": 440.0,
+  "countIn": 0.0,
+  "audio": "de-un-veremos-a-dos-anos-estudio.mp3",
+  "myVoiceAudio": "de-un-veremos-a-dos-anos-mezcla.mp3",
+  "duration": 303.2,
   "sections": [
     {
       "name": "Intro",
       "start": 0.0,
-      "end": 37.143,
+      "end": 28.0,
       "lines": [
         {
           "text": "¿Te acuerdas cómo empezó todo en aquel mes de octubre?",
           "start": 0.0,
-          "end": 4.464,
+          "end": 3.58,
           "words": [
             {
               "text": "¿Te",
               "start": 0.0,
-              "end": 0.235
+              "end": 0.36
             },
             {
               "text": "acuerdas",
-              "start": 0.235,
-              "end": 0.94
+              "start": 0.36,
+              "end": 0.72
             },
             {
               "text": "cómo",
-              "start": 0.94,
-              "end": 1.41
+              "start": 0.72,
+              "end": 1.07
             },
             {
               "text": "empezó",
-              "start": 1.41,
-              "end": 2.115
+              "start": 1.07,
+              "end": 1.43
             },
             {
               "text": "todo",
-              "start": 2.115,
-              "end": 2.585
+              "start": 1.43,
+              "end": 1.79
             },
             {
               "text": "en",
-              "start": 2.585,
-              "end": 2.82
+              "start": 1.79,
+              "end": 2.15
             },
             {
               "text": "aquel",
-              "start": 2.82,
-              "end": 3.289
+              "start": 2.15,
+              "end": 2.51
             },
             {
               "text": "mes",
-              "start": 3.289,
-              "end": 3.524
+              "start": 2.51,
+              "end": 2.86
             },
             {
               "text": "de",
-              "start": 3.524,
-              "end": 3.759
+              "start": 2.86,
+              "end": 3.22
             },
             {
               "text": "octubre?",
-              "start": 3.759,
-              "end": 4.464
+              "start": 3.22,
+              "end": 3.58
             }
           ]
         },
         {
           "text": "Un camino sin un mapa donde el corazón descubre.",
-          "start": 4.464,
-          "end": 8.571,
+          "start": 3.94,
+          "end": 6.42,
           "words": [
             {
               "text": "Un",
-              "start": 4.464,
-              "end": 4.706
+              "start": 3.94,
+              "end": 4.22
             },
             {
               "text": "camino",
-              "start": 4.706,
-              "end": 5.431
+              "start": 4.22,
+              "end": 4.49
             },
             {
               "text": "sin",
-              "start": 5.431,
-              "end": 5.672
+              "start": 4.49,
+              "end": 4.77
             },
             {
               "text": "un",
-              "start": 5.672,
-              "end": 5.914
+              "start": 4.77,
+              "end": 5.04
             },
             {
               "text": "mapa",
-              "start": 5.914,
-              "end": 6.397
+              "start": 5.04,
+              "end": 5.32
             },
             {
               "text": "donde",
-              "start": 6.397,
-              "end": 6.88
+              "start": 5.32,
+              "end": 5.59
             },
             {
               "text": "el",
-              "start": 6.88,
-              "end": 7.122
+              "start": 5.59,
+              "end": 5.87
             },
             {
               "text": "corazón",
-              "start": 7.122,
-              "end": 7.847
+              "start": 5.87,
+              "end": 6.14
             },
             {
               "text": "descubre.",
-              "start": 7.847,
-              "end": 8.571
+              "start": 6.14,
+              "end": 6.42
             }
           ]
         },
         {
           "text": "De una banca en Paseo Bravo a cruzar toda la ciudad,",
-          "start": 8.571,
-          "end": 12.857,
+          "start": 6.64,
+          "end": 9.44,
           "words": [
             {
               "text": "De",
-              "start": 8.571,
-              "end": 8.81
+              "start": 6.64,
+              "end": 6.89
             },
             {
               "text": "una",
-              "start": 8.81,
-              "end": 9.286
+              "start": 6.89,
+              "end": 7.15
             },
             {
               "text": "banca",
-              "start": 9.286,
-              "end": 9.762
+              "start": 7.15,
+              "end": 7.4
             },
             {
               "text": "en",
-              "start": 9.762,
-              "end": 10.0
+              "start": 7.4,
+              "end": 7.66
             },
             {
               "text": "Paseo",
-              "start": 10.0,
-              "end": 10.476
+              "start": 7.66,
+              "end": 7.91
             },
             {
               "text": "Bravo",
-              "start": 10.476,
-              "end": 10.952
+              "start": 7.91,
+              "end": 8.17
             },
             {
               "text": "a",
-              "start": 10.952,
-              "end": 11.19
+              "start": 8.17,
+              "end": 8.42
             },
             {
               "text": "cruzar",
-              "start": 11.19,
-              "end": 11.667
+              "start": 8.42,
+              "end": 8.68
             },
             {
               "text": "toda",
-              "start": 11.667,
-              "end": 12.143
+              "start": 8.68,
+              "end": 8.93
             },
             {
               "text": "la",
-              "start": 12.143,
-              "end": 12.381
+              "start": 8.93,
+              "end": 9.19
             },
             {
               "text": "ciudad,",
-              "start": 12.381,
-              "end": 12.857
+              "start": 9.19,
+              "end": 9.44
             }
           ]
         },
         {
           "text": "caminando entre las dudas, el cansancio y la verdad.",
-          "start": 12.857,
-          "end": 16.607,
+          "start": 9.88,
+          "end": 12.46,
           "words": [
             {
               "text": "caminando",
-              "start": 12.857,
-              "end": 13.739
+              "start": 9.88,
+              "end": 10.17
             },
             {
               "text": "entre",
-              "start": 13.739,
-              "end": 14.181
+              "start": 10.17,
+              "end": 10.45
             },
             {
               "text": "las",
-              "start": 14.181,
-              "end": 14.401
+              "start": 10.45,
+              "end": 10.74
             },
             {
               "text": "dudas,",
-              "start": 14.401,
-              "end": 14.842
+              "start": 10.74,
+              "end": 11.03
             },
             {
               "text": "el",
-              "start": 14.842,
-              "end": 15.063
+              "start": 11.03,
+              "end": 11.31
             },
             {
               "text": "cansancio",
-              "start": 15.063,
-              "end": 15.725
+              "start": 11.31,
+              "end": 11.6
             },
             {
               "text": "y",
-              "start": 15.725,
-              "end": 15.945
+              "start": 11.6,
+              "end": 11.89
             },
             {
               "text": "la",
-              "start": 15.945,
-              "end": 16.166
+              "start": 11.89,
+              "end": 12.17
             },
             {
               "text": "verdad.",
-              "start": 16.166,
-              "end": 16.607
+              "start": 12.17,
+              "end": 12.46
             }
           ]
         },
         {
           "text": "Hoy te escribo lo que siento desde el día en que te vi,",
-          "start": 16.607,
-          "end": 20.714,
+          "start": 12.64,
+          "end": 15.72,
           "words": [
             {
               "text": "Hoy",
-              "start": 16.607,
-              "end": 16.849
+              "start": 12.64,
+              "end": 12.88
             },
             {
               "text": "te",
-              "start": 16.849,
-              "end": 17.09
+              "start": 12.88,
+              "end": 13.11
             },
             {
               "text": "escribo",
-              "start": 17.09,
-              "end": 17.815
+              "start": 13.11,
+              "end": 13.35
             },
             {
               "text": "lo",
-              "start": 17.815,
-              "end": 18.057
+              "start": 13.35,
+              "end": 13.59
             },
             {
               "text": "que",
-              "start": 18.057,
-              "end": 18.298
+              "start": 13.59,
+              "end": 13.82
             },
             {
               "text": "siento",
-              "start": 18.298,
-              "end": 18.782
+              "start": 13.82,
+              "end": 14.06
             },
             {
               "text": "desde",
-              "start": 18.782,
-              "end": 19.265
+              "start": 14.06,
+              "end": 14.3
             },
             {
               "text": "el",
-              "start": 19.265,
-              "end": 19.506
+              "start": 14.3,
+              "end": 14.54
             },
             {
               "text": "día",
-              "start": 19.506,
-              "end": 19.748
+              "start": 14.54,
+              "end": 14.77
             },
             {
               "text": "en",
-              "start": 19.748,
-              "end": 19.989
+              "start": 14.77,
+              "end": 15.01
             },
             {
               "text": "que",
-              "start": 19.989,
-              "end": 20.231
+              "start": 15.01,
+              "end": 15.25
             },
             {
               "text": "te",
-              "start": 20.231,
-              "end": 20.473
+              "start": 15.25,
+              "end": 15.48
             },
             {
               "text": "vi,",
-              "start": 20.473,
-              "end": 20.714
+              "start": 15.48,
+              "end": 15.72
             }
           ]
         },
         {
           "text": "cada paso y cada historia se quedó grabada aquí;",
-          "start": 20.714,
-          "end": 24.821,
+          "start": 15.92,
+          "end": 18.52,
           "words": [
             {
               "text": "cada",
-              "start": 20.714,
-              "end": 21.171
+              "start": 15.92,
+              "end": 16.21
             },
             {
               "text": "paso",
-              "start": 21.171,
-              "end": 21.627
+              "start": 16.21,
+              "end": 16.5
             },
             {
               "text": "y",
-              "start": 21.627,
-              "end": 21.855
+              "start": 16.5,
+              "end": 16.79
             },
             {
               "text": "cada",
-              "start": 21.855,
-              "end": 22.312
+              "start": 16.79,
+              "end": 17.08
             },
             {
               "text": "historia",
-              "start": 22.312,
-              "end": 22.996
+              "start": 17.08,
+              "end": 17.36
             },
             {
               "text": "se",
-              "start": 22.996,
-              "end": 23.224
+              "start": 17.36,
+              "end": 17.65
             },
             {
               "text": "quedó",
-              "start": 23.224,
-              "end": 23.681
+              "start": 17.65,
+              "end": 17.94
             },
             {
               "text": "grabada",
-              "start": 23.681,
-              "end": 24.365
+              "start": 17.94,
+              "end": 18.23
             },
             {
               "text": "aquí;",
-              "start": 24.365,
-              "end": 24.821
+              "start": 18.23,
+              "end": 18.52
             }
           ]
         },
         {
           "text": "más de dos años volando donde el tiempo fue testigo,",
-          "start": 24.821,
-          "end": 28.929,
+          "start": 18.9,
+          "end": 21.84,
           "words": [
             {
               "text": "más",
-              "start": 24.821,
-              "end": 25.063
+              "start": 18.9,
+              "end": 19.19
             },
             {
               "text": "de",
-              "start": 25.063,
-              "end": 25.305
+              "start": 19.19,
+              "end": 19.49
             },
             {
               "text": "dos",
-              "start": 25.305,
-              "end": 25.546
+              "start": 19.49,
+              "end": 19.78
             },
             {
               "text": "años",
-              "start": 25.546,
-              "end": 26.029
+              "start": 19.78,
+              "end": 20.08
             },
             {
               "text": "volando",
-              "start": 26.029,
-              "end": 26.754
+              "start": 20.08,
+              "end": 20.37
             },
             {
               "text": "donde",
-              "start": 26.754,
-              "end": 27.237
+              "start": 20.37,
+              "end": 20.66
             },
             {
               "text": "el",
-              "start": 27.237,
-              "end": 27.479
+              "start": 20.66,
+              "end": 20.96
             },
             {
               "text": "tiempo",
-              "start": 27.479,
-              "end": 27.962
+              "start": 20.96,
+              "end": 21.25
             },
             {
               "text": "fue",
-              "start": 27.962,
-              "end": 28.204
+              "start": 21.25,
+              "end": 21.55
             },
             {
               "text": "testigo,",
-              "start": 28.204,
-              "end": 28.929
+              "start": 21.55,
+              "end": 21.84
             }
           ]
         },
         {
           "text": "de empezar con un «veremos» a todo lo que hoy te digo.",
-          "start": 28.929,
-          "end": 33.214,
+          "start": 21.9,
+          "end": 23.68,
           "words": [
             {
               "text": "de",
-              "start": 28.929,
-              "end": 29.167
+              "start": 21.9,
+              "end": 22.05
             },
             {
               "text": "empezar",
-              "start": 29.167,
-              "end": 29.881
+              "start": 22.05,
+              "end": 22.2
             },
             {
               "text": "con",
-              "start": 29.881,
-              "end": 30.119
+              "start": 22.2,
+              "end": 22.34
             },
             {
               "text": "un",
-              "start": 30.119,
-              "end": 30.357
+              "start": 22.34,
+              "end": 22.49
             },
             {
               "text": "«veremos»",
-              "start": 30.357,
-              "end": 31.071
+              "start": 22.49,
+              "end": 22.64
             },
             {
               "text": "a",
-              "start": 31.071,
-              "end": 31.31
+              "start": 22.64,
+              "end": 22.79
             },
             {
               "text": "todo",
-              "start": 31.31,
-              "end": 31.786
+              "start": 22.79,
+              "end": 22.94
             },
             {
               "text": "lo",
-              "start": 31.786,
-              "end": 32.024
+              "start": 22.94,
+              "end": 23.09
             },
             {
               "text": "que",
-              "start": 32.024,
-              "end": 32.262
+              "start": 23.09,
+              "end": 23.23
             },
             {
               "text": "hoy",
-              "start": 32.262,
-              "end": 32.5
+              "start": 23.23,
+              "end": 23.38
             },
             {
               "text": "te",
-              "start": 32.5,
-              "end": 32.738
+              "start": 23.38,
+              "end": 23.53
             },
             {
               "text": "digo.",
-              "start": 32.738,
-              "end": 33.214
+              "start": 23.53,
+              "end": 23.68
+            }
+          ]
+        },
+        {
+          "text": "A todo lo que hoy te digo.",
+          "start": 24.32,
+          "end": 26.2,
+          "words": [
+            {
+              "text": "A",
+              "start": 24.32,
+              "end": 24.59
+            },
+            {
+              "text": "todo",
+              "start": 24.59,
+              "end": 24.86
+            },
+            {
+              "text": "lo",
+              "start": 24.86,
+              "end": 25.13
+            },
+            {
+              "text": "que",
+              "start": 25.13,
+              "end": 25.39
+            },
+            {
+              "text": "hoy",
+              "start": 25.39,
+              "end": 25.66
+            },
+            {
+              "text": "te",
+              "start": 25.66,
+              "end": 25.93
+            },
+            {
+              "text": "digo.",
+              "start": 25.93,
+              "end": 26.2
             }
           ]
         },
         {
           "text": "¡Hey, hey, hey...! Escucha esto.",
-          "start": 33.214,
-          "end": 35.357,
+          "start": 27.66,
+          "end": 28.64,
           "words": [
             {
               "text": "¡Hey,",
-              "start": 33.214,
-              "end": 33.482
+              "start": 27.66,
+              "end": 27.86
             },
             {
               "text": "hey,",
-              "start": 33.482,
-              "end": 33.75
+              "start": 27.86,
+              "end": 28.05
             },
             {
               "text": "hey...!",
-              "start": 33.75,
-              "end": 34.018
+              "start": 28.05,
+              "end": 28.25
             },
             {
               "text": "Escucha",
-              "start": 34.018,
-              "end": 34.821
+              "start": 28.25,
+              "end": 28.44
             },
             {
               "text": "esto.",
-              "start": 34.821,
-              "end": 35.357
+              "start": 28.44,
+              "end": 28.64
             }
           ]
         }
       ]
     },
     {
-      "name": "Verso 1",
-      "start": 37.143,
-      "end": 108.571,
+      "name": "Verso 1: Paseo Bravo, Michin y «A Granel»",
+      "start": 28.0,
+      "end": 105.0,
       "lines": [
         {
           "text": "Ha cambiado la manera en que te miro aquí a mi lado:",
-          "start": 37.143,
-          "end": 40.179,
+          "start": 28.82,
+          "end": 31.52,
           "words": [
             {
               "text": "Ha",
-              "start": 37.143,
-              "end": 37.303
+              "start": 28.82,
+              "end": 29.05
             },
             {
               "text": "cambiado",
-              "start": 37.303,
-              "end": 37.782
+              "start": 29.05,
+              "end": 29.27
             },
             {
               "text": "la",
-              "start": 37.782,
-              "end": 37.942
+              "start": 29.27,
+              "end": 29.5
             },
             {
               "text": "manera",
-              "start": 37.942,
-              "end": 38.421
+              "start": 29.5,
+              "end": 29.72
             },
             {
               "text": "en",
-              "start": 38.421,
-              "end": 38.581
+              "start": 29.72,
+              "end": 29.95
             },
             {
               "text": "que",
-              "start": 38.581,
-              "end": 38.741
+              "start": 29.95,
+              "end": 30.17
             },
             {
               "text": "te",
-              "start": 38.741,
-              "end": 38.9
+              "start": 30.17,
+              "end": 30.39
             },
             {
               "text": "miro",
-              "start": 38.9,
-              "end": 39.22
+              "start": 30.39,
+              "end": 30.62
             },
             {
               "text": "aquí",
-              "start": 39.22,
-              "end": 39.539
+              "start": 30.62,
+              "end": 30.84
             },
             {
               "text": "a",
-              "start": 39.539,
-              "end": 39.699
+              "start": 30.84,
+              "end": 31.07
             },
             {
               "text": "mi",
-              "start": 39.699,
-              "end": 39.859
+              "start": 31.07,
+              "end": 31.3
             },
             {
               "text": "lado:",
-              "start": 39.859,
-              "end": 40.179
+              "start": 31.3,
+              "end": 31.52
             }
           ]
         },
         {
           "text": "pasé de un desesperado a ser un ciego enamorado.",
-          "start": 40.179,
-          "end": 43.214,
+          "start": 31.9,
+          "end": 35.12,
           "words": [
             {
               "text": "pasé",
-              "start": 40.179,
-              "end": 40.498
+              "start": 31.9,
+              "end": 32.26
             },
             {
               "text": "de",
-              "start": 40.498,
-              "end": 40.658
+              "start": 32.26,
+              "end": 32.62
             },
             {
               "text": "un",
-              "start": 40.658,
-              "end": 40.818
+              "start": 32.62,
+              "end": 32.97
             },
             {
               "text": "desesperado",
-              "start": 40.818,
-              "end": 41.617
+              "start": 32.97,
+              "end": 33.33
             },
             {
               "text": "a",
-              "start": 41.617,
-              "end": 41.776
+              "start": 33.33,
+              "end": 33.69
             },
             {
               "text": "ser",
-              "start": 41.776,
-              "end": 41.936
+              "start": 33.69,
+              "end": 34.05
             },
             {
               "text": "un",
-              "start": 41.936,
-              "end": 42.096
+              "start": 34.05,
+              "end": 34.4
             },
             {
               "text": "ciego",
-              "start": 42.096,
-              "end": 42.415
+              "start": 34.4,
+              "end": 34.76
             },
             {
               "text": "enamorado.",
-              "start": 42.415,
-              "end": 43.214
+              "start": 34.76,
+              "end": 35.12
             }
           ]
         },
         {
           "text": "Cada día que se pasa te conozco un poco más,",
-          "start": 43.214,
-          "end": 45.536,
+          "start": 35.12,
+          "end": 37.48,
           "words": [
             {
               "text": "Cada",
-              "start": 43.214,
-              "end": 43.524
+              "start": 35.12,
+              "end": 35.36
             },
             {
               "text": "día",
-              "start": 43.524,
-              "end": 43.679
+              "start": 35.36,
+              "end": 35.59
             },
             {
               "text": "que",
-              "start": 43.679,
-              "end": 43.833
+              "start": 35.59,
+              "end": 35.83
             },
             {
               "text": "se",
-              "start": 43.833,
-              "end": 43.988
+              "start": 35.83,
+              "end": 36.06
             },
             {
               "text": "pasa",
-              "start": 43.988,
-              "end": 44.298
+              "start": 36.06,
+              "end": 36.3
             },
             {
               "text": "te",
-              "start": 44.298,
-              "end": 44.452
+              "start": 36.3,
+              "end": 36.54
             },
             {
               "text": "conozco",
-              "start": 44.452,
-              "end": 44.917
+              "start": 36.54,
+              "end": 36.77
             },
             {
               "text": "un",
-              "start": 44.917,
-              "end": 45.071
+              "start": 36.77,
+              "end": 37.01
             },
             {
               "text": "poco",
-              "start": 45.071,
-              "end": 45.381
+              "start": 37.01,
+              "end": 37.24
             },
             {
               "text": "más,",
-              "start": 45.381,
-              "end": 45.536
+              "start": 37.24,
+              "end": 37.48
             }
           ]
         },
         {
           "text": "mi Pasita, mi Popito, ya no doy un paso atrás.",
-          "start": 45.536,
-          "end": 48.036,
+          "start": 37.66,
+          "end": 40.44,
           "words": [
             {
               "text": "mi",
-              "start": 45.536,
-              "end": 45.692
+              "start": 37.66,
+              "end": 37.94
             },
             {
               "text": "Pasita,",
-              "start": 45.692,
-              "end": 46.161
+              "start": 37.94,
+              "end": 38.22
             },
             {
               "text": "mi",
-              "start": 46.161,
-              "end": 46.317
+              "start": 38.22,
+              "end": 38.49
             },
             {
               "text": "Popito,",
-              "start": 46.317,
-              "end": 46.786
+              "start": 38.49,
+              "end": 38.77
             },
             {
               "text": "ya",
-              "start": 46.786,
-              "end": 46.942
+              "start": 38.77,
+              "end": 39.05
             },
             {
               "text": "no",
-              "start": 46.942,
-              "end": 47.098
+              "start": 39.05,
+              "end": 39.33
             },
             {
               "text": "doy",
-              "start": 47.098,
-              "end": 47.254
+              "start": 39.33,
+              "end": 39.61
             },
             {
               "text": "un",
-              "start": 47.254,
-              "end": 47.411
+              "start": 39.61,
+              "end": 39.88
             },
             {
               "text": "paso",
-              "start": 47.411,
-              "end": 47.723
+              "start": 39.88,
+              "end": 40.16
             },
             {
               "text": "atrás.",
-              "start": 47.723,
-              "end": 48.036
+              "start": 40.16,
+              "end": 40.44
             }
           ]
         },
         {
           "text": "Desde que nos conocimos con tu blusa rosa afuera,",
-          "start": 48.036,
-          "end": 50.714,
+          "start": 40.62,
+          "end": 43.4,
           "words": [
             {
               "text": "Desde",
-              "start": 48.036,
-              "end": 48.351
+              "start": 40.62,
+              "end": 40.93
             },
             {
               "text": "que",
-              "start": 48.351,
-              "end": 48.508
+              "start": 40.93,
+              "end": 41.24
             },
             {
               "text": "nos",
-              "start": 48.508,
-              "end": 48.666
+              "start": 41.24,
+              "end": 41.55
             },
             {
               "text": "conocimos",
-              "start": 48.666,
-              "end": 49.296
+              "start": 41.55,
+              "end": 41.86
             },
             {
               "text": "con",
-              "start": 49.296,
-              "end": 49.454
+              "start": 41.86,
+              "end": 42.16
             },
             {
               "text": "tu",
-              "start": 49.454,
-              "end": 49.611
+              "start": 42.16,
+              "end": 42.47
             },
             {
               "text": "blusa",
-              "start": 49.611,
-              "end": 49.926
+              "start": 42.47,
+              "end": 42.78
             },
             {
               "text": "rosa",
-              "start": 49.926,
-              "end": 50.242
+              "start": 42.78,
+              "end": 43.09
             },
             {
               "text": "afuera,",
-              "start": 50.242,
-              "end": 50.714
+              "start": 43.09,
+              "end": 43.4
             }
           ]
         },
         {
           "text": "sin saber que empezaría nuestra historia verdadera;",
-          "start": 50.714,
-          "end": 53.393,
+          "start": 43.48,
+          "end": 45.52,
           "words": [
             {
               "text": "sin",
-              "start": 50.714,
-              "end": 50.872
+              "start": 43.48,
+              "end": 43.77
             },
             {
               "text": "saber",
-              "start": 50.872,
-              "end": 51.187
+              "start": 43.77,
+              "end": 44.06
             },
             {
               "text": "que",
-              "start": 51.187,
-              "end": 51.345
+              "start": 44.06,
+              "end": 44.35
             },
             {
               "text": "empezaría",
-              "start": 51.345,
-              "end": 51.975
+              "start": 44.35,
+              "end": 44.65
             },
             {
               "text": "nuestra",
-              "start": 51.975,
-              "end": 52.29
+              "start": 44.65,
+              "end": 44.94
             },
             {
               "text": "historia",
-              "start": 52.29,
-              "end": 52.763
+              "start": 44.94,
+              "end": 45.23
             },
             {
               "text": "verdadera;",
-              "start": 52.763,
-              "end": 53.393
+              "start": 45.23,
+              "end": 45.52
             }
           ]
         },
         {
           "text": "hasta darte en aniversario, con amor y entre mil cosas,",
-          "start": 53.393,
-          "end": 56.25,
+          "start": 45.52,
+          "end": 50.14,
           "words": [
             {
               "text": "hasta",
-              "start": 53.393,
-              "end": 53.694
+              "start": 45.52,
+              "end": 45.98
             },
             {
               "text": "darte",
-              "start": 53.694,
-              "end": 53.994
+              "start": 45.98,
+              "end": 46.44
             },
             {
               "text": "en",
-              "start": 53.994,
-              "end": 54.145
+              "start": 46.44,
+              "end": 46.91
             },
             {
               "text": "aniversario,",
-              "start": 54.145,
-              "end": 54.897
+              "start": 46.91,
+              "end": 47.37
             },
             {
               "text": "con",
-              "start": 54.897,
-              "end": 55.047
+              "start": 47.37,
+              "end": 47.83
             },
             {
               "text": "amor",
-              "start": 55.047,
-              "end": 55.348
+              "start": 47.83,
+              "end": 48.29
             },
             {
               "text": "y",
-              "start": 55.348,
-              "end": 55.498
+              "start": 48.29,
+              "end": 48.75
             },
             {
               "text": "entre",
-              "start": 55.498,
-              "end": 55.799
+              "start": 48.75,
+              "end": 49.22
             },
             {
               "text": "mil",
-              "start": 55.799,
-              "end": 55.949
+              "start": 49.22,
+              "end": 49.68
             },
             {
               "text": "cosas,",
-              "start": 55.949,
-              "end": 56.25
+              "start": 49.68,
+              "end": 50.14
             }
           ]
         },
         {
           "text": "de regalo esa cajita toda llena de mariposas;",
-          "start": 56.25,
-          "end": 59.107,
+          "start": 50.26,
+          "end": 52.28,
           "words": [
             {
               "text": "de",
-              "start": 56.25,
-              "end": 56.409
+              "start": 50.26,
+              "end": 50.51
             },
             {
               "text": "regalo",
-              "start": 56.409,
-              "end": 56.885
+              "start": 50.51,
+              "end": 50.77
             },
             {
               "text": "esa",
-              "start": 56.885,
-              "end": 57.202
+              "start": 50.77,
+              "end": 51.02
             },
             {
               "text": "cajita",
-              "start": 57.202,
-              "end": 57.679
+              "start": 51.02,
+              "end": 51.27
             },
             {
               "text": "toda",
-              "start": 57.679,
-              "end": 57.996
+              "start": 51.27,
+              "end": 51.52
             },
             {
               "text": "llena",
-              "start": 57.996,
-              "end": 58.313
+              "start": 51.52,
+              "end": 51.77
             },
             {
               "text": "de",
-              "start": 58.313,
-              "end": 58.472
+              "start": 51.77,
+              "end": 52.03
             },
             {
               "text": "mariposas;",
-              "start": 58.472,
-              "end": 59.107
+              "start": 52.03,
+              "end": 52.28
             }
           ]
         },
         {
           "text": "y me diste mascaritas de «Cómo entrenar a tu dragón»,",
-          "start": 59.107,
-          "end": 61.786,
+          "start": 52.28,
+          "end": 55.64,
           "words": [
             {
               "text": "y",
-              "start": 59.107,
-              "end": 59.256
+              "start": 52.28,
+              "end": 52.62
             },
             {
               "text": "me",
-              "start": 59.256,
-              "end": 59.405
+              "start": 52.62,
+              "end": 52.95
             },
             {
               "text": "diste",
-              "start": 59.405,
-              "end": 59.702
+              "start": 52.95,
+              "end": 53.29
             },
             {
               "text": "mascaritas",
-              "start": 59.702,
-              "end": 60.298
+              "start": 53.29,
+              "end": 53.62
             },
             {
               "text": "de",
-              "start": 60.298,
-              "end": 60.446
+              "start": 53.62,
+              "end": 53.96
             },
             {
               "text": "«Cómo",
-              "start": 60.446,
-              "end": 60.744
+              "start": 53.96,
+              "end": 54.3
             },
             {
               "text": "entrenar",
-              "start": 60.744,
-              "end": 61.19
+              "start": 54.3,
+              "end": 54.63
             },
             {
               "text": "a",
-              "start": 61.19,
-              "end": 61.339
+              "start": 54.63,
+              "end": 54.97
             },
             {
               "text": "tu",
-              "start": 61.339,
-              "end": 61.488
+              "start": 54.97,
+              "end": 55.3
             },
             {
               "text": "dragón»,",
-              "start": 61.488,
-              "end": 61.786
+              "start": 55.3,
+              "end": 55.64
             }
           ]
         },
         {
           "text": "un regalo tan bonito que guardé en el corazón.",
-          "start": 61.786,
-          "end": 64.286,
+          "start": 55.92,
+          "end": 58.24,
           "words": [
             {
               "text": "un",
-              "start": 61.786,
-              "end": 61.942
+              "start": 55.92,
+              "end": 56.18
             },
             {
               "text": "regalo",
-              "start": 61.942,
-              "end": 62.411
+              "start": 56.18,
+              "end": 56.44
             },
             {
               "text": "tan",
-              "start": 62.411,
-              "end": 62.567
+              "start": 56.44,
+              "end": 56.69
             },
             {
               "text": "bonito",
-              "start": 62.567,
-              "end": 63.036
+              "start": 56.69,
+              "end": 56.95
             },
             {
               "text": "que",
-              "start": 63.036,
-              "end": 63.192
+              "start": 56.95,
+              "end": 57.21
             },
             {
               "text": "guardé",
-              "start": 63.192,
-              "end": 63.504
+              "start": 57.21,
+              "end": 57.47
             },
             {
               "text": "en",
-              "start": 63.504,
-              "end": 63.661
+              "start": 57.47,
+              "end": 57.72
             },
             {
               "text": "el",
-              "start": 63.661,
-              "end": 63.817
+              "start": 57.72,
+              "end": 57.98
             },
             {
               "text": "corazón.",
-              "start": 63.817,
-              "end": 64.286
+              "start": 57.98,
+              "end": 58.24
             }
           ]
         },
         {
           "text": "En el Michin, con tu miedo a la altura en ese puente,",
-          "start": 64.286,
-          "end": 67.143,
+          "start": 58.88,
+          "end": 61.7,
           "words": [
             {
               "text": "En",
-              "start": 64.286,
-              "end": 64.444
+              "start": 58.88,
+              "end": 59.12
             },
             {
               "text": "el",
-              "start": 64.444,
-              "end": 64.603
+              "start": 59.12,
+              "end": 59.35
             },
             {
               "text": "Michin,",
-              "start": 64.603,
-              "end": 64.921
+              "start": 59.35,
+              "end": 59.59
             },
             {
               "text": "con",
-              "start": 64.921,
-              "end": 65.079
+              "start": 59.59,
+              "end": 59.82
             },
             {
               "text": "tu",
-              "start": 65.079,
-              "end": 65.238
+              "start": 59.82,
+              "end": 60.05
             },
             {
               "text": "miedo",
-              "start": 65.238,
-              "end": 65.556
+              "start": 60.05,
+              "end": 60.29
             },
             {
               "text": "a",
-              "start": 65.556,
-              "end": 65.714
+              "start": 60.29,
+              "end": 60.53
             },
             {
               "text": "la",
-              "start": 65.714,
-              "end": 65.873
+              "start": 60.53,
+              "end": 60.76
             },
             {
               "text": "altura",
-              "start": 65.873,
-              "end": 66.349
+              "start": 60.76,
+              "end": 61.0
             },
             {
               "text": "en",
-              "start": 66.349,
-              "end": 66.508
+              "start": 61.0,
+              "end": 61.23
             },
             {
               "text": "ese",
-              "start": 66.508,
-              "end": 66.825
+              "start": 61.23,
+              "end": 61.47
             },
             {
               "text": "puente,",
-              "start": 66.825,
-              "end": 67.143
+              "start": 61.47,
+              "end": 61.7
             }
           ]
         },
         {
           "text": "apreté fuerte tu mano pa' cruzarlo frente a frente;",
-          "start": 67.143,
-          "end": 69.821,
+          "start": 62.04,
+          "end": 65.92,
           "words": [
             {
               "text": "apreté",
-              "start": 67.143,
-              "end": 67.616
+              "start": 62.04,
+              "end": 62.47
             },
             {
               "text": "fuerte",
-              "start": 67.616,
-              "end": 67.931
+              "start": 62.47,
+              "end": 62.9
             },
             {
               "text": "tu",
-              "start": 67.931,
-              "end": 68.088
+              "start": 62.9,
+              "end": 63.33
             },
             {
               "text": "mano",
-              "start": 68.088,
-              "end": 68.403
+              "start": 63.33,
+              "end": 63.76
             },
             {
               "text": "pa'",
-              "start": 68.403,
-              "end": 68.561
+              "start": 63.76,
+              "end": 64.2
             },
             {
               "text": "cruzarlo",
-              "start": 68.561,
-              "end": 69.034
+              "start": 64.2,
+              "end": 64.63
             },
             {
               "text": "frente",
-              "start": 69.034,
-              "end": 69.349
+              "start": 64.63,
+              "end": 65.06
             },
             {
               "text": "a",
-              "start": 69.349,
-              "end": 69.506
+              "start": 65.06,
+              "end": 65.49
             },
             {
               "text": "frente;",
-              "start": 69.506,
-              "end": 69.821
+              "start": 65.49,
+              "end": 65.92
             }
           ]
         },
         {
           "text": "y el temor de las alturas de repente se dio a la fuga,",
-          "start": 69.821,
-          "end": 72.679,
+          "start": 66.32,
+          "end": 68.76,
           "words": [
             {
               "text": "y",
-              "start": 69.821,
-              "end": 69.972
+              "start": 66.32,
+              "end": 66.51
             },
             {
               "text": "el",
-              "start": 69.972,
-              "end": 70.122
+              "start": 66.51,
+              "end": 66.7
             },
             {
               "text": "temor",
-              "start": 70.122,
-              "end": 70.423
+              "start": 66.7,
+              "end": 66.88
             },
             {
               "text": "de",
-              "start": 70.423,
-              "end": 70.573
+              "start": 66.88,
+              "end": 67.07
             },
             {
               "text": "las",
-              "start": 70.573,
-              "end": 70.724
+              "start": 67.07,
+              "end": 67.26
             },
             {
               "text": "alturas",
-              "start": 70.724,
-              "end": 71.175
+              "start": 67.26,
+              "end": 67.45
             },
             {
               "text": "de",
-              "start": 71.175,
-              "end": 71.325
+              "start": 67.45,
+              "end": 67.63
             },
             {
               "text": "repente",
-              "start": 71.325,
-              "end": 71.776
+              "start": 67.63,
+              "end": 67.82
             },
             {
               "text": "se",
-              "start": 71.776,
-              "end": 71.927
+              "start": 67.82,
+              "end": 68.01
             },
             {
               "text": "dio",
-              "start": 71.927,
-              "end": 72.077
+              "start": 68.01,
+              "end": 68.2
             },
             {
               "text": "a",
-              "start": 72.077,
-              "end": 72.227
+              "start": 68.2,
+              "end": 68.38
             },
             {
               "text": "la",
-              "start": 72.227,
-              "end": 72.378
+              "start": 68.38,
+              "end": 68.57
             },
             {
               "text": "fuga,",
-              "start": 72.378,
-              "end": 72.679
+              "start": 68.57,
+              "end": 68.76
             }
           ]
         },
         {
           "text": "cuando vi cómo brillabas conociendo a la tortuga.",
-          "start": 72.679,
-          "end": 75.357,
+          "start": 68.88,
+          "end": 70.2,
           "words": [
             {
               "text": "cuando",
-              "start": 72.679,
-              "end": 72.994
+              "start": 68.88,
+              "end": 69.05
             },
             {
               "text": "vi",
-              "start": 72.994,
-              "end": 73.151
+              "start": 69.05,
+              "end": 69.21
             },
             {
               "text": "cómo",
-              "start": 73.151,
-              "end": 73.466
+              "start": 69.21,
+              "end": 69.38
             },
             {
               "text": "brillabas",
-              "start": 73.466,
-              "end": 73.939
+              "start": 69.38,
+              "end": 69.54
             },
             {
               "text": "conociendo",
-              "start": 73.939,
-              "end": 74.569
+              "start": 69.54,
+              "end": 69.7
             },
             {
               "text": "a",
-              "start": 74.569,
-              "end": 74.727
+              "start": 69.7,
+              "end": 69.87
             },
             {
               "text": "la",
-              "start": 74.727,
-              "end": 74.884
+              "start": 69.87,
+              "end": 70.03
             },
             {
               "text": "tortuga.",
-              "start": 74.884,
-              "end": 75.357
+              "start": 70.03,
+              "end": 70.2
             }
           ]
         },
         {
           "text": "Aventamos piedras juntos cuando al río nos metimos,",
-          "start": 75.357,
-          "end": 77.857,
+          "start": 70.54,
+          "end": 72.98,
           "words": [
             {
               "text": "Aventamos",
-              "start": 75.357,
-              "end": 75.982
+              "start": 70.54,
+              "end": 70.84
             },
             {
               "text": "piedras",
-              "start": 75.982,
-              "end": 76.295
+              "start": 70.84,
+              "end": 71.15
             },
             {
               "text": "juntos",
-              "start": 76.295,
-              "end": 76.607
+              "start": 71.15,
+              "end": 71.46
             },
             {
               "text": "cuando",
-              "start": 76.607,
-              "end": 76.92
+              "start": 71.46,
+              "end": 71.76
             },
             {
               "text": "al",
-              "start": 76.92,
-              "end": 77.076
+              "start": 71.76,
+              "end": 72.06
             },
             {
               "text": "río",
-              "start": 77.076,
-              "end": 77.232
+              "start": 72.06,
+              "end": 72.37
             },
             {
               "text": "nos",
-              "start": 77.232,
-              "end": 77.388
+              "start": 72.37,
+              "end": 72.68
             },
             {
               "text": "metimos,",
-              "start": 77.388,
-              "end": 77.857
+              "start": 72.68,
+              "end": 72.98
             }
           ]
         },
         {
           "text": "y hasta un cerro solo a ver un listón rojo nos subimos;",
-          "start": 77.857,
-          "end": 80.714,
+          "start": 73.08,
+          "end": 75.16,
           "words": [
             {
               "text": "y",
-              "start": 77.857,
-              "end": 78.008
+              "start": 73.08,
+              "end": 73.25
             },
             {
               "text": "hasta",
-              "start": 78.008,
-              "end": 78.308
+              "start": 73.25,
+              "end": 73.43
             },
             {
               "text": "un",
-              "start": 78.308,
-              "end": 78.459
+              "start": 73.43,
+              "end": 73.6
             },
             {
               "text": "cerro",
-              "start": 78.459,
-              "end": 78.759
+              "start": 73.6,
+              "end": 73.77
             },
             {
               "text": "solo",
-              "start": 78.759,
-              "end": 79.06
+              "start": 73.77,
+              "end": 73.95
             },
             {
               "text": "a",
-              "start": 79.06,
-              "end": 79.211
+              "start": 73.95,
+              "end": 74.12
             },
             {
               "text": "ver",
-              "start": 79.211,
-              "end": 79.361
+              "start": 74.12,
+              "end": 74.29
             },
             {
               "text": "un",
-              "start": 79.361,
-              "end": 79.511
+              "start": 74.29,
+              "end": 74.47
             },
             {
               "text": "listón",
-              "start": 79.511,
-              "end": 79.812
+              "start": 74.47,
+              "end": 74.64
             },
             {
               "text": "rojo",
-              "start": 79.812,
-              "end": 80.113
+              "start": 74.64,
+              "end": 74.81
             },
             {
               "text": "nos",
-              "start": 80.113,
-              "end": 80.263
+              "start": 74.81,
+              "end": 74.99
             },
             {
               "text": "subimos;",
-              "start": 80.263,
-              "end": 80.714
+              "start": 74.99,
+              "end": 75.16
             }
           ]
         },
         {
           "text": "aprendí a probar contigo un helado sabor a flor,",
-          "start": 80.714,
-          "end": 83.393,
+          "start": 75.38,
+          "end": 77.38,
           "words": [
             {
               "text": "aprendí",
-              "start": 80.714,
-              "end": 81.187
+              "start": 75.38,
+              "end": 75.6
             },
             {
               "text": "a",
-              "start": 81.187,
-              "end": 81.345
+              "start": 75.6,
+              "end": 75.82
             },
             {
               "text": "probar",
-              "start": 81.345,
-              "end": 81.66
+              "start": 75.82,
+              "end": 76.05
             },
             {
               "text": "contigo",
-              "start": 81.66,
-              "end": 82.132
+              "start": 76.05,
+              "end": 76.27
             },
             {
               "text": "un",
-              "start": 82.132,
-              "end": 82.29
+              "start": 76.27,
+              "end": 76.49
             },
             {
               "text": "helado",
-              "start": 82.29,
-              "end": 82.763
+              "start": 76.49,
+              "end": 76.71
             },
             {
               "text": "sabor",
-              "start": 82.763,
-              "end": 83.078
+              "start": 76.71,
+              "end": 76.94
             },
             {
               "text": "a",
-              "start": 83.078,
-              "end": 83.235
+              "start": 76.94,
+              "end": 77.16
             },
             {
               "text": "flor,",
-              "start": 83.235,
-              "end": 83.393
+              "start": 77.16,
+              "end": 77.38
             }
           ]
         },
         {
           "text": "descubriendo en cada cita un mundo lleno de color.",
-          "start": 83.393,
-          "end": 86.071,
+          "start": 77.6,
+          "end": 80.3,
           "words": [
             {
               "text": "descubriendo",
-              "start": 83.393,
-              "end": 84.023
+              "start": 77.6,
+              "end": 77.9
             },
             {
               "text": "en",
-              "start": 84.023,
-              "end": 84.181
+              "start": 77.9,
+              "end": 78.2
             },
             {
               "text": "cada",
-              "start": 84.181,
-              "end": 84.496
+              "start": 78.2,
+              "end": 78.5
             },
             {
               "text": "cita",
-              "start": 84.496,
-              "end": 84.811
+              "start": 78.5,
+              "end": 78.8
             },
             {
               "text": "un",
-              "start": 84.811,
-              "end": 84.968
+              "start": 78.8,
+              "end": 79.1
             },
             {
               "text": "mundo",
-              "start": 84.968,
-              "end": 85.284
+              "start": 79.1,
+              "end": 79.4
             },
             {
               "text": "lleno",
-              "start": 85.284,
-              "end": 85.599
+              "start": 79.4,
+              "end": 79.7
             },
             {
               "text": "de",
-              "start": 85.599,
-              "end": 85.756
+              "start": 79.7,
+              "end": 80.0
             },
             {
               "text": "color.",
-              "start": 85.756,
-              "end": 86.071
+              "start": 80.0,
+              "end": 80.3
             }
           ]
         },
         {
           "text": "En la tienda de tu tía, ese negocio «A Granel»,",
-          "start": 86.071,
-          "end": 88.393,
+          "start": 80.3,
+          "end": 83.3,
           "words": [
             {
               "text": "En",
-              "start": 86.071,
-              "end": 86.226
+              "start": 80.3,
+              "end": 80.6
             },
             {
               "text": "la",
-              "start": 86.226,
-              "end": 86.381
+              "start": 80.6,
+              "end": 80.9
             },
             {
               "text": "tienda",
-              "start": 86.381,
-              "end": 86.69
+              "start": 80.9,
+              "end": 81.2
             },
             {
               "text": "de",
-              "start": 86.69,
-              "end": 86.845
+              "start": 81.2,
+              "end": 81.5
             },
             {
               "text": "tu",
-              "start": 86.845,
-              "end": 87.0
+              "start": 81.5,
+              "end": 81.8
             },
             {
               "text": "tía,",
-              "start": 87.0,
-              "end": 87.155
+              "start": 81.8,
+              "end": 82.1
             },
             {
               "text": "ese",
-              "start": 87.155,
-              "end": 87.464
+              "start": 82.1,
+              "end": 82.4
             },
             {
               "text": "negocio",
-              "start": 87.464,
-              "end": 87.929
+              "start": 82.4,
+              "end": 82.7
             },
             {
               "text": "«A",
-              "start": 87.929,
-              "end": 88.083
+              "start": 82.7,
+              "end": 83.0
             },
             {
               "text": "Granel»,",
-              "start": 88.083,
-              "end": 88.393
+              "start": 83.0,
+              "end": 83.3
+            }
+          ]
+        },
+        {
+          "text": "Se negocio a gran él y cambiamos.",
+          "start": 83.42,
+          "end": 85.26,
+          "words": [
+            {
+              "text": "Se",
+              "start": 83.42,
+              "end": 83.68
+            },
+            {
+              "text": "negocio",
+              "start": 83.68,
+              "end": 83.95
+            },
+            {
+              "text": "a",
+              "start": 83.95,
+              "end": 84.21
+            },
+            {
+              "text": "gran",
+              "start": 84.21,
+              "end": 84.47
+            },
+            {
+              "text": "él",
+              "start": 84.47,
+              "end": 84.73
+            },
+            {
+              "text": "y",
+              "start": 84.73,
+              "end": 85.0
+            },
+            {
+              "text": "cambiamos.",
+              "start": 85.0,
+              "end": 85.26
             }
           ]
         },
         {
           "text": "chambeamos por dos semanas entre dulces y papel;",
-          "start": 88.393,
-          "end": 90.536,
+          "start": 85.64,
+          "end": 87.74,
           "words": [
             {
               "text": "chambeamos",
-              "start": 88.393,
-              "end": 88.821
+              "start": 85.64,
+              "end": 85.9
             },
             {
               "text": "por",
-              "start": 88.821,
-              "end": 88.964
+              "start": 85.9,
+              "end": 86.16
             },
             {
               "text": "dos",
-              "start": 88.964,
-              "end": 89.107
+              "start": 86.16,
+              "end": 86.43
             },
             {
               "text": "semanas",
-              "start": 89.107,
-              "end": 89.536
+              "start": 86.43,
+              "end": 86.69
             },
             {
               "text": "entre",
-              "start": 89.536,
-              "end": 89.821
+              "start": 86.69,
+              "end": 86.95
             },
             {
               "text": "dulces",
-              "start": 89.821,
-              "end": 90.107
+              "start": 86.95,
+              "end": 87.22
             },
             {
               "text": "y",
-              "start": 90.107,
-              "end": 90.25
+              "start": 87.22,
+              "end": 87.48
             },
             {
               "text": "papel;",
-              "start": 90.25,
-              "end": 90.536
-            }
-          ]
-        },
-        {
-          "text": "turnándonos los horarios para atender el local,",
-          "start": 90.536,
-          "end": 93.036,
-          "words": [
-            {
-              "text": "turnándonos",
-              "start": 90.536,
-              "end": 91.161
-            },
-            {
-              "text": "los",
-              "start": 91.161,
-              "end": 91.317
-            },
-            {
-              "text": "horarios",
-              "start": 91.317,
-              "end": 91.786
-            },
-            {
-              "text": "para",
-              "start": 91.786,
-              "end": 92.098
-            },
-            {
-              "text": "atender",
-              "start": 92.098,
-              "end": 92.567
-            },
-            {
-              "text": "el",
-              "start": 92.567,
-              "end": 92.723
-            },
-            {
-              "text": "local,",
-              "start": 92.723,
-              "end": 93.036
+              "start": 87.48,
+              "end": 87.74
             }
           ]
         },
         {
           "text": "compartiendo aquel trabajo de una forma tan especial.",
-          "start": 93.036,
-          "end": 95.893,
+          "start": 87.96,
+          "end": 93.56,
           "words": [
             {
               "text": "compartiendo",
-              "start": 93.036,
-              "end": 93.671
+              "start": 87.96,
+              "end": 88.66
             },
             {
               "text": "aquel",
-              "start": 93.671,
-              "end": 93.988
+              "start": 88.66,
+              "end": 89.36
             },
             {
               "text": "trabajo",
-              "start": 93.988,
-              "end": 94.464
+              "start": 89.36,
+              "end": 90.06
             },
             {
               "text": "de",
-              "start": 94.464,
-              "end": 94.623
+              "start": 90.06,
+              "end": 90.76
             },
             {
               "text": "una",
-              "start": 94.623,
-              "end": 94.94
+              "start": 90.76,
+              "end": 91.46
             },
             {
               "text": "forma",
-              "start": 94.94,
-              "end": 95.258
+              "start": 91.46,
+              "end": 92.16
             },
             {
               "text": "tan",
-              "start": 95.258,
-              "end": 95.417
+              "start": 92.16,
+              "end": 92.86
             },
             {
               "text": "especial.",
-              "start": 95.417,
-              "end": 95.893
+              "start": 92.86,
+              "end": 93.56
             }
           ]
         },
         {
           "text": "De unos dulces Ricosbesos a un pozole bien caliente,",
-          "start": 95.893,
-          "end": 98.75,
+          "start": 93.78,
+          "end": 95.22,
           "words": [
             {
               "text": "De",
-              "start": 95.893,
-              "end": 96.052
+              "start": 93.78,
+              "end": 93.94
             },
             {
               "text": "unos",
-              "start": 96.052,
-              "end": 96.369
+              "start": 93.94,
+              "end": 94.1
             },
             {
               "text": "dulces",
-              "start": 96.369,
-              "end": 96.687
+              "start": 94.1,
+              "end": 94.26
             },
             {
               "text": "Ricosbesos",
-              "start": 96.687,
-              "end": 97.321
+              "start": 94.26,
+              "end": 94.42
             },
             {
               "text": "a",
-              "start": 97.321,
-              "end": 97.48
+              "start": 94.42,
+              "end": 94.58
             },
             {
               "text": "un",
-              "start": 97.48,
-              "end": 97.639
+              "start": 94.58,
+              "end": 94.74
             },
             {
               "text": "pozole",
-              "start": 97.639,
-              "end": 98.115
+              "start": 94.74,
+              "end": 94.9
             },
             {
               "text": "bien",
-              "start": 98.115,
-              "end": 98.274
+              "start": 94.9,
+              "end": 95.06
             },
             {
               "text": "caliente,",
-              "start": 98.274,
-              "end": 98.75
+              "start": 95.06,
+              "end": 95.22
             }
           ]
         },
         {
           "text": "o sentarnos por un sushi platicando frente a frente;",
-          "start": 98.75,
-          "end": 101.429,
+          "start": 95.46,
+          "end": 98.9,
           "words": [
             {
               "text": "o",
-              "start": 98.75,
-              "end": 98.908
+              "start": 95.46,
+              "end": 95.84
             },
             {
               "text": "sentarnos",
-              "start": 98.908,
-              "end": 99.38
+              "start": 95.84,
+              "end": 96.22
             },
             {
               "text": "por",
-              "start": 99.38,
-              "end": 99.538
+              "start": 96.22,
+              "end": 96.61
             },
             {
               "text": "un",
-              "start": 99.538,
-              "end": 99.695
+              "start": 96.61,
+              "end": 96.99
             },
             {
               "text": "sushi",
-              "start": 99.695,
-              "end": 100.011
+              "start": 96.99,
+              "end": 97.37
             },
             {
               "text": "platicando",
-              "start": 100.011,
-              "end": 100.641
+              "start": 97.37,
+              "end": 97.75
             },
             {
               "text": "frente",
-              "start": 100.641,
-              "end": 100.956
+              "start": 97.75,
+              "end": 98.14
             },
             {
               "text": "a",
-              "start": 100.956,
-              "end": 101.113
+              "start": 98.14,
+              "end": 98.52
             },
             {
               "text": "frente;",
-              "start": 101.113,
-              "end": 101.429
+              "start": 98.52,
+              "end": 98.9
             }
           ]
         },
         {
           "text": "esperando ahí en Dorada o subiéndote a la ruta,",
-          "start": 101.429,
-          "end": 104.464,
+          "start": 98.9,
+          "end": 102.56,
           "words": [
             {
               "text": "esperando",
-              "start": 101.429,
-              "end": 102.068
+              "start": 98.9,
+              "end": 99.31
             },
             {
               "text": "ahí",
-              "start": 102.068,
-              "end": 102.387
+              "start": 99.31,
+              "end": 99.71
             },
             {
               "text": "en",
-              "start": 102.387,
-              "end": 102.547
+              "start": 99.71,
+              "end": 100.12
             },
             {
               "text": "Dorada",
-              "start": 102.547,
-              "end": 103.026
+              "start": 100.12,
+              "end": 100.53
             },
             {
               "text": "o",
-              "start": 103.026,
-              "end": 103.186
+              "start": 100.53,
+              "end": 100.93
             },
             {
               "text": "subiéndote",
-              "start": 103.186,
-              "end": 103.825
+              "start": 100.93,
+              "end": 101.34
             },
             {
               "text": "a",
-              "start": 103.825,
-              "end": 103.985
+              "start": 101.34,
+              "end": 101.75
             },
             {
               "text": "la",
-              "start": 103.985,
-              "end": 104.145
+              "start": 101.75,
+              "end": 102.15
             },
             {
               "text": "ruta,",
-              "start": 104.145,
-              "end": 104.464
+              "start": 102.15,
+              "end": 102.56
             }
           ]
         },
         {
           "text": "mientras cada despedida el corazón nos la disputa.",
-          "start": 104.464,
-          "end": 107.143,
+          "start": 102.68,
+          "end": 105.72,
           "words": [
             {
               "text": "mientras",
-              "start": 104.464,
-              "end": 104.779
+              "start": 102.68,
+              "end": 103.06
             },
             {
               "text": "cada",
-              "start": 104.779,
-              "end": 105.095
+              "start": 103.06,
+              "end": 103.44
             },
             {
               "text": "despedida",
-              "start": 105.095,
-              "end": 105.725
+              "start": 103.44,
+              "end": 103.82
             },
             {
               "text": "el",
-              "start": 105.725,
-              "end": 105.882
+              "start": 103.82,
+              "end": 104.2
             },
             {
               "text": "corazón",
-              "start": 105.882,
-              "end": 106.355
+              "start": 104.2,
+              "end": 104.58
             },
             {
               "text": "nos",
-              "start": 106.355,
-              "end": 106.513
+              "start": 104.58,
+              "end": 104.96
             },
             {
               "text": "la",
-              "start": 106.513,
-              "end": 106.67
+              "start": 104.96,
+              "end": 105.34
             },
             {
               "text": "disputa.",
-              "start": 106.67,
-              "end": 107.143
+              "start": 105.34,
+              "end": 105.72
             }
           ]
         }
@@ -1918,2395 +1959,2222 @@ window.KARAOKE_DATA = {
     },
     {
       "name": "Primer Coro",
-      "start": 108.571,
-      "end": 148.571,
+      "start": 105.0,
+      "end": 137.0,
       "lines": [
         {
-          "text": "¡Y túuu...!",
-          "start": 108.571,
-          "end": 111.429,
-          "words": [
-            {
-              "text": "¡Y",
-              "start": 108.571,
-              "end": 110.0
-            },
-            {
-              "text": "túuu...!",
-              "start": 110.0,
-              "end": 111.429
-            }
-          ]
-        },
-        {
           "text": "Vi pasar nuestra relación de una idea a realidad,",
-          "start": 111.429,
-          "end": 115.714,
+          "start": 106.48,
+          "end": 109.42,
           "words": [
             {
               "text": "Vi",
-              "start": 111.429,
-              "end": 111.681
+              "start": 106.48,
+              "end": 106.81
             },
             {
               "text": "pasar",
-              "start": 111.681,
-              "end": 112.185
+              "start": 106.81,
+              "end": 107.13
             },
             {
               "text": "nuestra",
-              "start": 112.185,
-              "end": 112.689
+              "start": 107.13,
+              "end": 107.46
             },
             {
               "text": "relación",
-              "start": 112.689,
-              "end": 113.445
+              "start": 107.46,
+              "end": 107.79
             },
             {
               "text": "de",
-              "start": 113.445,
-              "end": 113.697
+              "start": 107.79,
+              "end": 108.11
             },
             {
               "text": "una",
-              "start": 113.697,
-              "end": 114.202
+              "start": 108.11,
+              "end": 108.44
             },
             {
               "text": "idea",
-              "start": 114.202,
-              "end": 114.706
+              "start": 108.44,
+              "end": 108.77
             },
             {
               "text": "a",
-              "start": 114.706,
-              "end": 114.958
+              "start": 108.77,
+              "end": 109.09
             },
             {
               "text": "realidad,",
-              "start": 114.958,
-              "end": 115.714
+              "start": 109.09,
+              "end": 109.42
             }
           ]
         },
         {
           "text": "de empezar con un «veremos» a dos años de verdad.",
-          "start": 115.714,
-          "end": 119.821,
+          "start": 110.2,
+          "end": 113.28,
           "words": [
             {
               "text": "de",
-              "start": 115.714,
-              "end": 115.971
+              "start": 110.2,
+              "end": 110.51
             },
             {
               "text": "empezar",
-              "start": 115.971,
-              "end": 116.741
+              "start": 110.51,
+              "end": 110.82
             },
             {
               "text": "con",
-              "start": 116.741,
-              "end": 116.998
+              "start": 110.82,
+              "end": 111.12
             },
             {
               "text": "un",
-              "start": 116.998,
-              "end": 117.254
+              "start": 111.12,
+              "end": 111.43
             },
             {
               "text": "«veremos»",
-              "start": 117.254,
-              "end": 118.025
+              "start": 111.43,
+              "end": 111.74
             },
             {
               "text": "a",
-              "start": 118.025,
-              "end": 118.281
+              "start": 111.74,
+              "end": 112.05
             },
             {
               "text": "dos",
-              "start": 118.281,
-              "end": 118.538
+              "start": 112.05,
+              "end": 112.36
             },
             {
               "text": "años",
-              "start": 118.538,
-              "end": 119.051
+              "start": 112.36,
+              "end": 112.66
             },
             {
               "text": "de",
-              "start": 119.051,
-              "end": 119.308
+              "start": 112.66,
+              "end": 112.97
             },
             {
               "text": "verdad.",
-              "start": 119.308,
-              "end": 119.821
+              "start": 112.97,
+              "end": 113.28
+            }
+          ]
+        },
+        {
+          "text": "A dos años de verdad.",
+          "start": 113.8,
+          "end": 115.62,
+          "words": [
+            {
+              "text": "A",
+              "start": 113.8,
+              "end": 114.16
+            },
+            {
+              "text": "dos",
+              "start": 114.16,
+              "end": 114.53
+            },
+            {
+              "text": "años",
+              "start": 114.53,
+              "end": 114.89
+            },
+            {
+              "text": "de",
+              "start": 114.89,
+              "end": 115.26
+            },
+            {
+              "text": "verdad.",
+              "start": 115.26,
+              "end": 115.62
             }
           ]
         },
         {
           "text": "Mi perspectiva sobre ti dio un giro en el corazón:",
-          "start": 119.821,
-          "end": 124.107,
+          "start": 116.56,
+          "end": 119.38,
           "words": [
             {
               "text": "Mi",
-              "start": 119.821,
-              "end": 120.074
+              "start": 116.56,
+              "end": 116.84
             },
             {
               "text": "perspectiva",
-              "start": 120.074,
-              "end": 121.082
+              "start": 116.84,
+              "end": 117.12
             },
             {
               "text": "sobre",
-              "start": 121.082,
-              "end": 121.586
+              "start": 117.12,
+              "end": 117.41
             },
             {
               "text": "ti",
-              "start": 121.586,
-              "end": 121.838
+              "start": 117.41,
+              "end": 117.69
             },
             {
               "text": "dio",
-              "start": 121.838,
-              "end": 122.09
+              "start": 117.69,
+              "end": 117.97
             },
             {
               "text": "un",
-              "start": 122.09,
-              "end": 122.342
+              "start": 117.97,
+              "end": 118.25
             },
             {
               "text": "giro",
-              "start": 122.342,
-              "end": 122.847
+              "start": 118.25,
+              "end": 118.53
             },
             {
               "text": "en",
-              "start": 122.847,
-              "end": 123.099
+              "start": 118.53,
+              "end": 118.82
             },
             {
               "text": "el",
-              "start": 123.099,
-              "end": 123.351
+              "start": 118.82,
+              "end": 119.1
             },
             {
               "text": "corazón:",
-              "start": 123.351,
-              "end": 124.107
+              "start": 119.1,
+              "end": 119.38
             }
           ]
         },
         {
           "text": "hoy eres mi inspiración y toda mi motivación;",
-          "start": 124.107,
-          "end": 127.857,
+          "start": 119.84,
+          "end": 124.1,
           "words": [
             {
               "text": "hoy",
-              "start": 124.107,
-              "end": 124.342
+              "start": 119.84,
+              "end": 120.37
             },
             {
               "text": "eres",
-              "start": 124.342,
-              "end": 124.81
+              "start": 120.37,
+              "end": 120.91
             },
             {
               "text": "mi",
-              "start": 124.81,
-              "end": 125.045
+              "start": 120.91,
+              "end": 121.44
             },
             {
               "text": "inspiración",
-              "start": 125.045,
-              "end": 125.982
+              "start": 121.44,
+              "end": 121.97
             },
             {
               "text": "y",
-              "start": 125.982,
-              "end": 126.217
+              "start": 121.97,
+              "end": 122.5
             },
             {
               "text": "toda",
-              "start": 126.217,
-              "end": 126.685
+              "start": 122.5,
+              "end": 123.03
             },
             {
               "text": "mi",
-              "start": 126.685,
-              "end": 126.92
+              "start": 123.03,
+              "end": 123.57
             },
             {
               "text": "motivación;",
-              "start": 126.92,
-              "end": 127.857
+              "start": 123.57,
+              "end": 124.1
             }
           ]
         },
         {
           "text": "dejaste de ser tan solo mi razón para existir,",
-          "start": 127.857,
-          "end": 131.964,
+          "start": 124.32,
+          "end": 125.64,
           "words": [
             {
               "text": "dejaste",
-              "start": 127.857,
-              "end": 128.627
+              "start": 124.32,
+              "end": 124.47
             },
             {
               "text": "de",
-              "start": 128.627,
-              "end": 128.884
+              "start": 124.47,
+              "end": 124.61
             },
             {
               "text": "ser",
-              "start": 128.884,
-              "end": 129.141
+              "start": 124.61,
+              "end": 124.76
             },
             {
               "text": "tan",
-              "start": 129.141,
-              "end": 129.397
+              "start": 124.76,
+              "end": 124.91
             },
             {
               "text": "solo",
-              "start": 129.397,
-              "end": 129.911
+              "start": 124.91,
+              "end": 125.05
             },
             {
               "text": "mi",
-              "start": 129.911,
-              "end": 130.167
+              "start": 125.05,
+              "end": 125.2
             },
             {
               "text": "razón",
-              "start": 130.167,
-              "end": 130.681
+              "start": 125.2,
+              "end": 125.35
             },
             {
               "text": "para",
-              "start": 130.681,
-              "end": 131.194
+              "start": 125.35,
+              "end": 125.49
             },
             {
               "text": "existir,",
-              "start": 131.194,
-              "end": 131.964
+              "start": 125.49,
+              "end": 125.64
             }
           ]
         },
         {
           "text": "ahora eres el motor que me impulsa a construir.",
-          "start": 131.964,
-          "end": 136.071,
+          "start": 125.96,
+          "end": 128.38,
           "words": [
             {
               "text": "ahora",
-              "start": 131.964,
-              "end": 132.734
+              "start": 125.96,
+              "end": 126.23
             },
             {
               "text": "eres",
-              "start": 132.734,
-              "end": 133.248
+              "start": 126.23,
+              "end": 126.5
             },
             {
               "text": "el",
-              "start": 133.248,
-              "end": 133.504
+              "start": 126.5,
+              "end": 126.77
             },
             {
               "text": "motor",
-              "start": 133.504,
-              "end": 134.018
+              "start": 126.77,
+              "end": 127.04
             },
             {
               "text": "que",
-              "start": 134.018,
-              "end": 134.275
+              "start": 127.04,
+              "end": 127.3
             },
             {
               "text": "me",
-              "start": 134.275,
-              "end": 134.531
+              "start": 127.3,
+              "end": 127.57
             },
             {
               "text": "impulsa",
-              "start": 134.531,
-              "end": 135.301
+              "start": 127.57,
+              "end": 127.84
             },
             {
               "text": "a",
-              "start": 135.301,
-              "end": 135.558
+              "start": 127.84,
+              "end": 128.11
             },
             {
               "text": "construir.",
-              "start": 135.558,
-              "end": 136.071
+              "start": 128.11,
+              "end": 128.38
             }
           ]
         },
         {
           "text": "Sé que falta definirnos y lo sigues meditando,",
-          "start": 136.071,
-          "end": 139.821,
+          "start": 128.62,
+          "end": 130.44,
           "words": [
             {
               "text": "Sé",
-              "start": 136.071,
-              "end": 136.306
+              "start": 128.62,
+              "end": 128.85
             },
             {
               "text": "que",
-              "start": 136.306,
-              "end": 136.54
+              "start": 128.85,
+              "end": 129.07
             },
             {
               "text": "falta",
-              "start": 136.54,
-              "end": 137.009
+              "start": 129.07,
+              "end": 129.3
             },
             {
               "text": "definirnos",
-              "start": 137.009,
-              "end": 137.946
+              "start": 129.3,
+              "end": 129.53
             },
             {
               "text": "y",
-              "start": 137.946,
-              "end": 138.181
+              "start": 129.53,
+              "end": 129.76
             },
             {
               "text": "lo",
-              "start": 138.181,
-              "end": 138.415
+              "start": 129.76,
+              "end": 129.99
             },
             {
               "text": "sigues",
-              "start": 138.415,
-              "end": 138.884
+              "start": 129.99,
+              "end": 130.21
             },
             {
               "text": "meditando,",
-              "start": 138.884,
-              "end": 139.821
+              "start": 130.21,
+              "end": 130.44
             }
           ]
         },
         {
           "text": "no es la mejor situación... pero aquí te sigo amando.",
-          "start": 139.821,
-          "end": 144.464,
+          "start": 130.76,
+          "end": 132.88,
           "words": [
             {
               "text": "no",
-              "start": 139.821,
-              "end": 140.079
+              "start": 130.76,
+              "end": 130.97
             },
             {
               "text": "es",
-              "start": 140.079,
-              "end": 140.337
+              "start": 130.97,
+              "end": 131.18
             },
             {
               "text": "la",
-              "start": 140.337,
-              "end": 140.595
+              "start": 131.18,
+              "end": 131.4
             },
             {
               "text": "mejor",
-              "start": 140.595,
-              "end": 141.111
+              "start": 131.4,
+              "end": 131.61
             },
             {
               "text": "situación...",
-              "start": 141.111,
-              "end": 141.885
+              "start": 131.61,
+              "end": 131.82
             },
             {
               "text": "pero",
-              "start": 141.885,
-              "end": 142.401
+              "start": 131.82,
+              "end": 132.03
             },
             {
               "text": "aquí",
-              "start": 142.401,
-              "end": 142.917
+              "start": 132.03,
+              "end": 132.24
             },
             {
               "text": "te",
-              "start": 142.917,
-              "end": 143.175
+              "start": 132.24,
+              "end": 132.46
             },
             {
               "text": "sigo",
-              "start": 143.175,
-              "end": 143.69
+              "start": 132.46,
+              "end": 132.67
             },
             {
               "text": "amando.",
-              "start": 143.69,
-              "end": 144.464
+              "start": 132.67,
+              "end": 132.88
             }
           ]
         },
         {
-          "text": "¡Hey, hey, hey...!",
-          "start": 144.464,
-          "end": 145.893,
+          "text": "Pero aquí te sigo andando.",
+          "start": 132.88,
+          "end": 135.02,
           "words": [
             {
-              "text": "¡Hey,",
-              "start": 144.464,
-              "end": 144.94
+              "text": "Pero",
+              "start": 132.88,
+              "end": 133.31
             },
             {
-              "text": "hey,",
-              "start": 144.94,
-              "end": 145.417
+              "text": "aquí",
+              "start": 133.31,
+              "end": 133.74
             },
             {
-              "text": "hey...!",
-              "start": 145.417,
-              "end": 145.893
+              "text": "te",
+              "start": 133.74,
+              "end": 134.16
+            },
+            {
+              "text": "sigo",
+              "start": 134.16,
+              "end": 134.59
+            },
+            {
+              "text": "andando.",
+              "start": 134.59,
+              "end": 135.02
             }
           ]
         }
       ]
     },
     {
-      "name": "Verso 2",
-      "start": 148.571,
-      "end": 240.0,
+      "name": "Verso 2: Tu crecimiento, guardias y recuerdos",
+      "start": 137.0,
+      "end": 248.0,
       "lines": [
         {
           "text": "Te he visto salir adelante y avanzar día con día,",
-          "start": 148.571,
-          "end": 151.071,
+          "start": 139.42,
+          "end": 143.36,
           "words": [
             {
               "text": "Te",
-              "start": 148.571,
-              "end": 148.718
+              "start": 139.42,
+              "end": 139.81
             },
             {
               "text": "he",
-              "start": 148.718,
-              "end": 148.866
+              "start": 139.81,
+              "end": 140.21
             },
             {
               "text": "visto",
-              "start": 148.866,
-              "end": 149.16
+              "start": 140.21,
+              "end": 140.6
             },
             {
               "text": "salir",
-              "start": 149.16,
-              "end": 149.454
+              "start": 140.6,
+              "end": 141.0
             },
             {
               "text": "adelante",
-              "start": 149.454,
-              "end": 150.042
+              "start": 141.0,
+              "end": 141.39
             },
             {
               "text": "y",
-              "start": 150.042,
-              "end": 150.189
+              "start": 141.39,
+              "end": 141.78
             },
             {
               "text": "avanzar",
-              "start": 150.189,
-              "end": 150.63
+              "start": 141.78,
+              "end": 142.18
             },
             {
               "text": "día",
-              "start": 150.63,
-              "end": 150.777
+              "start": 142.18,
+              "end": 142.57
             },
             {
               "text": "con",
-              "start": 150.777,
-              "end": 150.924
+              "start": 142.57,
+              "end": 142.97
             },
             {
               "text": "día,",
-              "start": 150.924,
-              "end": 151.071
+              "start": 142.97,
+              "end": 143.36
             }
           ]
         },
         {
           "text": "transformar cada tropiezo en coraje y valentía;",
-          "start": 151.071,
-          "end": 153.393,
+          "start": 143.44,
+          "end": 147.8,
           "words": [
             {
               "text": "transformar",
-              "start": 151.071,
-              "end": 151.507
+              "start": 143.44,
+              "end": 144.06
             },
             {
               "text": "cada",
-              "start": 151.507,
-              "end": 151.797
+              "start": 144.06,
+              "end": 144.69
             },
             {
               "text": "tropiezo",
-              "start": 151.797,
-              "end": 152.232
+              "start": 144.69,
+              "end": 145.31
             },
             {
               "text": "en",
-              "start": 152.232,
-              "end": 152.377
+              "start": 145.31,
+              "end": 145.93
             },
             {
               "text": "coraje",
-              "start": 152.377,
-              "end": 152.813
+              "start": 145.93,
+              "end": 146.55
             },
             {
               "text": "y",
-              "start": 152.813,
-              "end": 152.958
+              "start": 146.55,
+              "end": 147.18
             },
             {
               "text": "valentía;",
-              "start": 152.958,
-              "end": 153.393
-            }
-          ]
-        },
-        {
-          "text": "ir buscando tus pasiones y seguir tu ocupación,",
-          "start": 153.393,
-          "end": 155.714,
-          "words": [
-            {
-              "text": "ir",
-              "start": 153.393,
-              "end": 153.538
-            },
-            {
-              "text": "buscando",
-              "start": 153.538,
-              "end": 153.973
-            },
-            {
-              "text": "tus",
-              "start": 153.973,
-              "end": 154.118
-            },
-            {
-              "text": "pasiones",
-              "start": 154.118,
-              "end": 154.554
-            },
-            {
-              "text": "y",
-              "start": 154.554,
-              "end": 154.699
-            },
-            {
-              "text": "seguir",
-              "start": 154.699,
-              "end": 154.989
-            },
-            {
-              "text": "tu",
-              "start": 154.989,
-              "end": 155.134
-            },
-            {
-              "text": "ocupación,",
-              "start": 155.134,
-              "end": 155.714
+              "start": 147.18,
+              "end": 147.8
             }
           ]
         },
         {
           "text": "entregando en cada guardia tu paciencia y vocación.",
-          "start": 155.714,
-          "end": 158.214,
+          "start": 148.02,
+          "end": 152.12,
           "words": [
             {
               "text": "entregando",
-              "start": 155.714,
-              "end": 156.303
+              "start": 148.02,
+              "end": 148.53
             },
             {
               "text": "en",
-              "start": 156.303,
-              "end": 156.45
+              "start": 148.53,
+              "end": 149.05
             },
             {
               "text": "cada",
-              "start": 156.45,
-              "end": 156.744
+              "start": 149.05,
+              "end": 149.56
             },
             {
               "text": "guardia",
-              "start": 156.744,
-              "end": 157.038
+              "start": 149.56,
+              "end": 150.07
             },
             {
               "text": "tu",
-              "start": 157.038,
-              "end": 157.185
+              "start": 150.07,
+              "end": 150.58
             },
             {
               "text": "paciencia",
-              "start": 157.185,
-              "end": 157.626
+              "start": 150.58,
+              "end": 151.09
             },
             {
               "text": "y",
-              "start": 157.626,
-              "end": 157.773
+              "start": 151.09,
+              "end": 151.61
             },
             {
               "text": "vocación.",
-              "start": 157.773,
-              "end": 158.214
+              "start": 151.61,
+              "end": 152.12
             }
           ]
         },
         {
           "text": "Te vi pasar con el tiempo de ser una niña miedosa,",
-          "start": 158.214,
-          "end": 160.893,
+          "start": 152.44,
+          "end": 155.22,
           "words": [
             {
               "text": "Te",
-              "start": 158.214,
-              "end": 158.372
+              "start": 152.44,
+              "end": 152.69
             },
             {
               "text": "vi",
-              "start": 158.372,
-              "end": 158.529
+              "start": 152.69,
+              "end": 152.95
             },
             {
               "text": "pasar",
-              "start": 158.529,
-              "end": 158.845
+              "start": 152.95,
+              "end": 153.2
             },
             {
               "text": "con",
-              "start": 158.845,
-              "end": 159.002
+              "start": 153.2,
+              "end": 153.45
             },
             {
               "text": "el",
-              "start": 159.002,
-              "end": 159.16
+              "start": 153.45,
+              "end": 153.7
             },
             {
               "text": "tiempo",
-              "start": 159.16,
-              "end": 159.475
+              "start": 153.7,
+              "end": 153.96
             },
             {
               "text": "de",
-              "start": 159.475,
-              "end": 159.632
+              "start": 153.96,
+              "end": 154.21
             },
             {
               "text": "ser",
-              "start": 159.632,
-              "end": 159.79
+              "start": 154.21,
+              "end": 154.46
             },
             {
               "text": "una",
-              "start": 159.79,
-              "end": 160.105
+              "start": 154.46,
+              "end": 154.71
             },
             {
               "text": "niña",
-              "start": 160.105,
-              "end": 160.42
+              "start": 154.71,
+              "end": 154.97
             },
             {
               "text": "miedosa,",
-              "start": 160.42,
-              "end": 160.893
+              "start": 154.97,
+              "end": 155.22
             }
           ]
         },
         {
           "text": "a pararte frente al mundo como una chica grandiosa;",
-          "start": 160.893,
-          "end": 163.75,
+          "start": 155.62,
+          "end": 159.78,
           "words": [
             {
               "text": "a",
-              "start": 160.893,
-              "end": 161.052
+              "start": 155.62,
+              "end": 156.08
             },
             {
               "text": "pararte",
-              "start": 161.052,
-              "end": 161.528
+              "start": 156.08,
+              "end": 156.54
             },
             {
               "text": "frente",
-              "start": 161.528,
-              "end": 161.845
+              "start": 156.54,
+              "end": 157.01
             },
             {
               "text": "al",
-              "start": 161.845,
-              "end": 162.004
+              "start": 157.01,
+              "end": 157.47
             },
             {
               "text": "mundo",
-              "start": 162.004,
-              "end": 162.321
+              "start": 157.47,
+              "end": 157.93
             },
             {
               "text": "como",
-              "start": 162.321,
-              "end": 162.639
+              "start": 157.93,
+              "end": 158.39
             },
             {
               "text": "una",
-              "start": 162.639,
-              "end": 162.956
+              "start": 158.39,
+              "end": 158.86
             },
             {
               "text": "chica",
-              "start": 162.956,
-              "end": 163.274
+              "start": 158.86,
+              "end": 159.32
             },
             {
               "text": "grandiosa;",
-              "start": 163.274,
-              "end": 163.75
+              "start": 159.32,
+              "end": 159.78
             }
           ]
         },
         {
           "text": "de buscar en dónde hacer el servicio y la estancia,",
-          "start": 163.75,
-          "end": 166.25,
+          "start": 159.84,
+          "end": 161.2,
           "words": [
             {
               "text": "de",
-              "start": 163.75,
-              "end": 163.897
+              "start": 159.84,
+              "end": 159.98
             },
             {
               "text": "buscar",
-              "start": 163.897,
-              "end": 164.191
+              "start": 159.98,
+              "end": 160.11
             },
             {
               "text": "en",
-              "start": 164.191,
-              "end": 164.338
+              "start": 160.11,
+              "end": 160.25
             },
             {
               "text": "dónde",
-              "start": 164.338,
-              "end": 164.632
+              "start": 160.25,
+              "end": 160.38
             },
             {
               "text": "hacer",
-              "start": 164.632,
-              "end": 164.926
+              "start": 160.38,
+              "end": 160.52
             },
             {
               "text": "el",
-              "start": 164.926,
-              "end": 165.074
+              "start": 160.52,
+              "end": 160.66
             },
             {
               "text": "servicio",
-              "start": 165.074,
-              "end": 165.515
+              "start": 160.66,
+              "end": 160.79
             },
             {
               "text": "y",
-              "start": 165.515,
-              "end": 165.662
+              "start": 160.79,
+              "end": 160.93
             },
             {
               "text": "la",
-              "start": 165.662,
-              "end": 165.809
+              "start": 160.93,
+              "end": 161.06
             },
             {
               "text": "estancia,",
-              "start": 165.809,
-              "end": 166.25
+              "start": 161.06,
+              "end": 161.2
             }
           ]
         },
         {
           "text": "a tener hoy tu trabajo venciendo toda distancia.",
-          "start": 166.25,
-          "end": 168.75,
+          "start": 161.4,
+          "end": 165.6,
           "words": [
             {
               "text": "a",
-              "start": 166.25,
-              "end": 166.406
+              "start": 161.4,
+              "end": 161.93
             },
             {
               "text": "tener",
-              "start": 166.406,
-              "end": 166.719
+              "start": 161.93,
+              "end": 162.45
             },
             {
               "text": "hoy",
-              "start": 166.719,
-              "end": 166.875
+              "start": 162.45,
+              "end": 162.97
             },
             {
               "text": "tu",
-              "start": 166.875,
-              "end": 167.031
+              "start": 162.97,
+              "end": 163.5
             },
             {
               "text": "trabajo",
-              "start": 167.031,
-              "end": 167.5
+              "start": 163.5,
+              "end": 164.03
             },
             {
               "text": "venciendo",
-              "start": 167.5,
-              "end": 167.969
+              "start": 164.03,
+              "end": 164.55
             },
             {
               "text": "toda",
-              "start": 167.969,
-              "end": 168.281
+              "start": 164.55,
+              "end": 165.07
             },
             {
               "text": "distancia.",
-              "start": 168.281,
-              "end": 168.75
+              "start": 165.07,
+              "end": 165.6
             }
           ]
         },
         {
           "text": "En CATTOZ con tus pacientes o avanzando en tu proyecto,",
-          "start": 168.75,
-          "end": 171.607,
+          "start": 165.6,
+          "end": 167.06,
           "words": [
             {
               "text": "En",
-              "start": 168.75,
-              "end": 168.909
+              "start": 165.6,
+              "end": 165.75
             },
             {
               "text": "CATTOZ",
-              "start": 168.909,
-              "end": 169.226
+              "start": 165.75,
+              "end": 165.89
             },
             {
               "text": "con",
-              "start": 169.226,
-              "end": 169.385
+              "start": 165.89,
+              "end": 166.04
             },
             {
               "text": "tus",
-              "start": 169.385,
-              "end": 169.544
+              "start": 166.04,
+              "end": 166.18
             },
             {
               "text": "pacientes",
-              "start": 169.544,
-              "end": 170.02
+              "start": 166.18,
+              "end": 166.33
             },
             {
               "text": "o",
-              "start": 170.02,
-              "end": 170.179
+              "start": 166.33,
+              "end": 166.48
             },
             {
               "text": "avanzando",
-              "start": 170.179,
-              "end": 170.813
+              "start": 166.48,
+              "end": 166.62
             },
             {
               "text": "en",
-              "start": 170.813,
-              "end": 170.972
+              "start": 166.62,
+              "end": 166.77
             },
             {
               "text": "tu",
-              "start": 170.972,
-              "end": 171.131
+              "start": 166.77,
+              "end": 166.91
             },
             {
               "text": "proyecto,",
-              "start": 171.131,
-              "end": 171.607
+              "start": 166.91,
+              "end": 167.06
             }
           ]
         },
         {
           "text": "escribiendo aquella tesis donde buscas lo perfecto;",
-          "start": 171.607,
-          "end": 174.286,
+          "start": 167.28,
+          "end": 170.1,
           "words": [
             {
               "text": "escribiendo",
-              "start": 171.607,
-              "end": 172.237
+              "start": 167.28,
+              "end": 167.68
             },
             {
               "text": "aquella",
-              "start": 172.237,
-              "end": 172.71
+              "start": 167.68,
+              "end": 168.09
             },
             {
               "text": "tesis",
-              "start": 172.71,
-              "end": 173.025
+              "start": 168.09,
+              "end": 168.49
             },
             {
               "text": "donde",
-              "start": 173.025,
-              "end": 173.34
+              "start": 168.49,
+              "end": 168.89
             },
             {
               "text": "buscas",
-              "start": 173.34,
-              "end": 173.655
+              "start": 168.89,
+              "end": 169.29
             },
             {
               "text": "lo",
-              "start": 173.655,
-              "end": 173.813
+              "start": 169.29,
+              "end": 169.7
             },
             {
               "text": "perfecto;",
-              "start": 173.813,
-              "end": 174.286
+              "start": 169.7,
+              "end": 170.1
             }
           ]
         },
         {
           "text": "o en jornadas de Amozoc anestesiando y operando,",
-          "start": 174.286,
-          "end": 177.143,
+          "start": 170.14,
+          "end": 173.02,
           "words": [
             {
               "text": "o",
-              "start": 174.286,
-              "end": 174.436
+              "start": 170.14,
+              "end": 170.5
             },
             {
               "text": "en",
-              "start": 174.436,
-              "end": 174.586
+              "start": 170.5,
+              "end": 170.86
             },
             {
               "text": "jornadas",
-              "start": 174.586,
-              "end": 175.038
+              "start": 170.86,
+              "end": 171.22
             },
             {
               "text": "de",
-              "start": 175.038,
-              "end": 175.188
+              "start": 171.22,
+              "end": 171.58
             },
             {
               "text": "Amozoc",
-              "start": 175.188,
-              "end": 175.639
+              "start": 171.58,
+              "end": 171.94
             },
             {
               "text": "anestesiando",
-              "start": 175.639,
-              "end": 176.391
+              "start": 171.94,
+              "end": 172.3
             },
             {
               "text": "y",
-              "start": 176.391,
-              "end": 176.541
+              "start": 172.3,
+              "end": 172.66
             },
             {
               "text": "operando,",
-              "start": 176.541,
-              "end": 177.143
+              "start": 172.66,
+              "end": 173.02
             }
           ]
         },
         {
           "text": "demostrando qué tan grande eres aun cuando vas dudando.",
-          "start": 177.143,
-          "end": 179.821,
+          "start": 173.18,
+          "end": 175.88,
           "words": [
             {
               "text": "demostrando",
-              "start": 177.143,
-              "end": 177.773
+              "start": 173.18,
+              "end": 173.48
             },
             {
               "text": "qué",
-              "start": 177.773,
-              "end": 177.931
+              "start": 173.48,
+              "end": 173.78
             },
             {
               "text": "tan",
-              "start": 177.931,
-              "end": 178.088
+              "start": 173.78,
+              "end": 174.08
             },
             {
               "text": "grande",
-              "start": 178.088,
-              "end": 178.403
+              "start": 174.08,
+              "end": 174.38
             },
             {
               "text": "eres",
-              "start": 178.403,
-              "end": 178.718
+              "start": 174.38,
+              "end": 174.68
             },
             {
               "text": "aun",
-              "start": 178.718,
-              "end": 178.876
+              "start": 174.68,
+              "end": 174.98
             },
             {
               "text": "cuando",
-              "start": 178.876,
-              "end": 179.191
+              "start": 174.98,
+              "end": 175.28
             },
             {
               "text": "vas",
-              "start": 179.191,
-              "end": 179.349
+              "start": 175.28,
+              "end": 175.58
             },
             {
               "text": "dudando.",
-              "start": 179.349,
-              "end": 179.821
+              "start": 175.58,
+              "end": 175.88
             }
           ]
         },
         {
           "text": "Hoy que piensas en tu futuro, te acompaño en el correr:",
-          "start": 179.821,
-          "end": 182.679,
+          "start": 176.04,
+          "end": 178.86,
           "words": [
             {
               "text": "Hoy",
-              "start": 179.821,
-              "end": 179.98
+              "start": 176.04,
+              "end": 176.3
             },
             {
               "text": "que",
-              "start": 179.98,
-              "end": 180.139
+              "start": 176.3,
+              "end": 176.55
             },
             {
               "text": "piensas",
-              "start": 180.139,
-              "end": 180.456
+              "start": 176.55,
+              "end": 176.81
             },
             {
               "text": "en",
-              "start": 180.456,
-              "end": 180.615
+              "start": 176.81,
+              "end": 177.07
             },
             {
               "text": "tu",
-              "start": 180.615,
-              "end": 180.774
+              "start": 177.07,
+              "end": 177.32
             },
             {
               "text": "futuro,",
-              "start": 180.774,
-              "end": 181.25
+              "start": 177.32,
+              "end": 177.58
             },
             {
               "text": "te",
-              "start": 181.25,
-              "end": 181.409
+              "start": 177.58,
+              "end": 177.83
             },
             {
               "text": "acompaño",
-              "start": 181.409,
-              "end": 182.044
+              "start": 177.83,
+              "end": 178.09
             },
             {
               "text": "en",
-              "start": 182.044,
-              "end": 182.202
+              "start": 178.09,
+              "end": 178.35
             },
             {
               "text": "el",
-              "start": 182.202,
-              "end": 182.361
+              "start": 178.35,
+              "end": 178.6
             },
             {
               "text": "correr:",
-              "start": 182.361,
-              "end": 182.679
-            }
-          ]
-        },
-        {
-          "text": "devolviéndote en el Erco a Atlixco al atardecer,",
-          "start": 182.679,
-          "end": 185.536,
-          "words": [
-            {
-              "text": "devolviéndote",
-              "start": 182.679,
-              "end": 183.472
-            },
-            {
-              "text": "en",
-              "start": 183.472,
-              "end": 183.631
-            },
-            {
-              "text": "el",
-              "start": 183.631,
-              "end": 183.79
-            },
-            {
-              "text": "Erco",
-              "start": 183.79,
-              "end": 184.107
-            },
-            {
-              "text": "a",
-              "start": 184.107,
-              "end": 184.266
-            },
-            {
-              "text": "Atlixco",
-              "start": 184.266,
-              "end": 184.742
-            },
-            {
-              "text": "al",
-              "start": 184.742,
-              "end": 184.901
-            },
-            {
-              "text": "atardecer,",
-              "start": 184.901,
-              "end": 185.536
+              "start": 178.6,
+              "end": 178.86
             }
           ]
         },
         {
           "text": "tomando la 55 para ir a la caseta,",
-          "start": 185.536,
-          "end": 187.321,
+          "start": 179.6,
+          "end": 184.64,
           "words": [
             {
               "text": "tomando",
-              "start": 185.536,
-              "end": 185.948
+              "start": 179.6,
+              "end": 180.23
             },
             {
               "text": "la",
-              "start": 185.948,
-              "end": 186.085
+              "start": 180.23,
+              "end": 180.86
             },
             {
               "text": "55",
-              "start": 186.085,
-              "end": 186.223
+              "start": 180.86,
+              "end": 181.49
             },
             {
               "text": "para",
-              "start": 186.223,
-              "end": 186.497
+              "start": 181.49,
+              "end": 182.12
             },
             {
               "text": "ir",
-              "start": 186.497,
-              "end": 186.635
+              "start": 182.12,
+              "end": 182.75
             },
             {
               "text": "a",
-              "start": 186.635,
-              "end": 186.772
+              "start": 182.75,
+              "end": 183.38
             },
             {
               "text": "la",
-              "start": 186.772,
-              "end": 186.909
+              "start": 183.38,
+              "end": 184.01
             },
             {
               "text": "caseta,",
-              "start": 186.909,
-              "end": 187.321
+              "start": 184.01,
+              "end": 184.64
             }
           ]
         },
         {
           "text": "mientras veo que el camino con tu risa se completa.",
-          "start": 187.321,
-          "end": 189.821,
+          "start": 184.9,
+          "end": 187.78,
           "words": [
             {
               "text": "mientras",
-              "start": 187.321,
-              "end": 187.634
+              "start": 184.9,
+              "end": 185.19
             },
             {
               "text": "veo",
-              "start": 187.634,
-              "end": 187.79
+              "start": 185.19,
+              "end": 185.48
             },
             {
               "text": "que",
-              "start": 187.79,
-              "end": 187.946
+              "start": 185.48,
+              "end": 185.76
             },
             {
               "text": "el",
-              "start": 187.946,
-              "end": 188.103
+              "start": 185.76,
+              "end": 186.05
             },
             {
               "text": "camino",
-              "start": 188.103,
-              "end": 188.571
+              "start": 186.05,
+              "end": 186.34
             },
             {
               "text": "con",
-              "start": 188.571,
-              "end": 188.728
+              "start": 186.34,
+              "end": 186.63
             },
             {
               "text": "tu",
-              "start": 188.728,
-              "end": 188.884
+              "start": 186.63,
+              "end": 186.92
             },
             {
               "text": "risa",
-              "start": 188.884,
-              "end": 189.196
+              "start": 186.92,
+              "end": 187.2
             },
             {
               "text": "se",
-              "start": 189.196,
-              "end": 189.353
+              "start": 187.2,
+              "end": 187.49
             },
             {
               "text": "completa.",
-              "start": 189.353,
-              "end": 189.821
+              "start": 187.49,
+              "end": 187.78
             }
           ]
         },
         {
           "text": "Y con mis dos gatos juntos también dejaste tu huella,",
-          "start": 189.821,
-          "end": 192.143,
+          "start": 187.98,
+          "end": 192.82,
           "words": [
             {
               "text": "Y",
-              "start": 189.821,
-              "end": 189.967
+              "start": 187.98,
+              "end": 188.46
             },
             {
               "text": "con",
-              "start": 189.967,
-              "end": 190.112
+              "start": 188.46,
+              "end": 188.95
             },
             {
               "text": "mis",
-              "start": 190.112,
-              "end": 190.257
+              "start": 188.95,
+              "end": 189.43
             },
             {
               "text": "dos",
-              "start": 190.257,
-              "end": 190.402
+              "start": 189.43,
+              "end": 189.92
             },
             {
               "text": "gatos",
-              "start": 190.402,
-              "end": 190.692
+              "start": 189.92,
+              "end": 190.4
             },
             {
               "text": "juntos",
-              "start": 190.692,
-              "end": 190.982
+              "start": 190.4,
+              "end": 190.88
             },
             {
               "text": "también",
-              "start": 190.982,
-              "end": 191.272
+              "start": 190.88,
+              "end": 191.37
             },
             {
               "text": "dejaste",
-              "start": 191.272,
-              "end": 191.708
+              "start": 191.37,
+              "end": 191.85
             },
             {
               "text": "tu",
-              "start": 191.708,
-              "end": 191.853
+              "start": 191.85,
+              "end": 192.34
             },
             {
               "text": "huella,",
-              "start": 191.853,
-              "end": 192.143
+              "start": 192.34,
+              "end": 192.82
             }
           ]
         },
         {
-          "text": "haciendo que cada tarde a su lado sea más bella:",
-          "start": 192.143,
-          "end": 194.643,
+          "text": "Y con mis dos gatos, no seamos veia con mis migigristas.",
+          "start": 192.82,
+          "end": 194.72,
           "words": [
             {
-              "text": "haciendo",
-              "start": 192.143,
-              "end": 192.612
+              "text": "Y",
+              "start": 192.82,
+              "end": 192.99
             },
             {
-              "text": "que",
-              "start": 192.612,
-              "end": 192.768
+              "text": "con",
+              "start": 192.99,
+              "end": 193.17
             },
             {
-              "text": "cada",
-              "start": 192.768,
-              "end": 193.08
+              "text": "mis",
+              "start": 193.17,
+              "end": 193.34
             },
             {
-              "text": "tarde",
-              "start": 193.08,
-              "end": 193.393
+              "text": "dos",
+              "start": 193.34,
+              "end": 193.51
             },
             {
-              "text": "a",
-              "start": 193.393,
-              "end": 193.549
+              "text": "gatos,",
+              "start": 193.51,
+              "end": 193.68
             },
             {
-              "text": "su",
-              "start": 193.549,
-              "end": 193.705
+              "text": "no",
+              "start": 193.68,
+              "end": 193.86
             },
             {
-              "text": "lado",
-              "start": 193.705,
-              "end": 194.018
+              "text": "seamos",
+              "start": 193.86,
+              "end": 194.03
             },
             {
-              "text": "sea",
-              "start": 194.018,
-              "end": 194.174
+              "text": "veia",
+              "start": 194.03,
+              "end": 194.2
             },
             {
-              "text": "más",
-              "start": 194.174,
-              "end": 194.33
+              "text": "con",
+              "start": 194.2,
+              "end": 194.37
             },
             {
-              "text": "bella:",
-              "start": 194.33,
-              "end": 194.643
+              "text": "mis",
+              "start": 194.37,
+              "end": 194.55
+            },
+            {
+              "text": "migigristas.",
+              "start": 194.55,
+              "end": 194.72
             }
           ]
         },
         {
           "text": "con mi Michi gris travieso que no para ni un segundo,",
-          "start": 194.643,
-          "end": 197.321,
+          "start": 195.06,
+          "end": 197.46,
           "words": [
             {
               "text": "con",
-              "start": 194.643,
-              "end": 194.8
+              "start": 195.06,
+              "end": 195.28
             },
             {
               "text": "mi",
-              "start": 194.8,
-              "end": 194.958
+              "start": 195.28,
+              "end": 195.5
             },
             {
               "text": "Michi",
-              "start": 194.958,
-              "end": 195.273
+              "start": 195.5,
+              "end": 195.71
             },
             {
               "text": "gris",
-              "start": 195.273,
-              "end": 195.431
+              "start": 195.71,
+              "end": 195.93
             },
             {
               "text": "travieso",
-              "start": 195.431,
-              "end": 195.903
+              "start": 195.93,
+              "end": 196.15
             },
             {
               "text": "que",
-              "start": 195.903,
-              "end": 196.061
+              "start": 196.15,
+              "end": 196.37
             },
             {
               "text": "no",
-              "start": 196.061,
-              "end": 196.218
+              "start": 196.37,
+              "end": 196.59
             },
             {
               "text": "para",
-              "start": 196.218,
-              "end": 196.534
+              "start": 196.59,
+              "end": 196.81
             },
             {
               "text": "ni",
-              "start": 196.534,
-              "end": 196.691
+              "start": 196.81,
+              "end": 197.02
             },
             {
               "text": "un",
-              "start": 196.691,
-              "end": 196.849
+              "start": 197.02,
+              "end": 197.24
             },
             {
               "text": "segundo,",
-              "start": 196.849,
-              "end": 197.321
+              "start": 197.24,
+              "end": 197.46
             }
           ]
         },
         {
           "text": "y mi Micho, ese naranjo que queremos tanto en el mundo,",
-          "start": 197.321,
-          "end": 200.179,
+          "start": 197.76,
+          "end": 201.16,
           "words": [
             {
               "text": "y",
-              "start": 197.321,
-              "end": 197.472
+              "start": 197.76,
+              "end": 198.07
             },
             {
               "text": "mi",
-              "start": 197.472,
-              "end": 197.622
+              "start": 198.07,
+              "end": 198.38
             },
             {
               "text": "Micho,",
-              "start": 197.622,
-              "end": 197.923
+              "start": 198.38,
+              "end": 198.69
             },
             {
               "text": "ese",
-              "start": 197.923,
-              "end": 198.224
+              "start": 198.69,
+              "end": 199.0
             },
             {
               "text": "naranjo",
-              "start": 198.224,
-              "end": 198.675
+              "start": 199.0,
+              "end": 199.31
             },
             {
               "text": "que",
-              "start": 198.675,
-              "end": 198.825
+              "start": 199.31,
+              "end": 199.61
             },
             {
               "text": "queremos",
-              "start": 198.825,
-              "end": 199.276
+              "start": 199.61,
+              "end": 199.92
             },
             {
               "text": "tanto",
-              "start": 199.276,
-              "end": 199.577
+              "start": 199.92,
+              "end": 200.23
             },
             {
               "text": "en",
-              "start": 199.577,
-              "end": 199.727
+              "start": 200.23,
+              "end": 200.54
             },
             {
               "text": "el",
-              "start": 199.727,
-              "end": 199.878
+              "start": 200.54,
+              "end": 200.85
             },
             {
               "text": "mundo,",
-              "start": 199.878,
-              "end": 200.179
-            }
-          ]
-        },
-        {
-          "text": "al que con tus propias manos un día esterilizaste,",
-          "start": 200.179,
-          "end": 202.679,
-          "words": [
-            {
-              "text": "al",
-              "start": 200.179,
-              "end": 200.335
-            },
-            {
-              "text": "que",
-              "start": 200.335,
-              "end": 200.491
-            },
-            {
-              "text": "con",
-              "start": 200.491,
-              "end": 200.647
-            },
-            {
-              "text": "tus",
-              "start": 200.647,
-              "end": 200.804
-            },
-            {
-              "text": "propias",
-              "start": 200.804,
-              "end": 201.116
-            },
-            {
-              "text": "manos",
-              "start": 201.116,
-              "end": 201.429
-            },
-            {
-              "text": "un",
-              "start": 201.429,
-              "end": 201.585
-            },
-            {
-              "text": "día",
-              "start": 201.585,
-              "end": 201.741
-            },
-            {
-              "text": "esterilizaste,",
-              "start": 201.741,
-              "end": 202.679
+              "start": 200.85,
+              "end": 201.16
             }
           ]
         },
         {
           "text": "y que juntos a CATTOZ para cuidarlo llevaste.",
-          "start": 202.679,
-          "end": 204.821,
+          "start": 201.16,
+          "end": 205.02,
           "words": [
             {
               "text": "y",
-              "start": 202.679,
-              "end": 202.821
+              "start": 201.16,
+              "end": 201.64
             },
             {
               "text": "que",
-              "start": 202.821,
-              "end": 202.964
+              "start": 201.64,
+              "end": 202.12
             },
             {
               "text": "juntos",
-              "start": 202.964,
-              "end": 203.25
+              "start": 202.12,
+              "end": 202.61
             },
             {
               "text": "a",
-              "start": 203.25,
-              "end": 203.393
+              "start": 202.61,
+              "end": 203.09
             },
             {
               "text": "CATTOZ",
-              "start": 203.393,
-              "end": 203.679
+              "start": 203.09,
+              "end": 203.57
             },
             {
               "text": "para",
-              "start": 203.679,
-              "end": 203.964
+              "start": 203.57,
+              "end": 204.06
             },
             {
               "text": "cuidarlo",
-              "start": 203.964,
-              "end": 204.393
+              "start": 204.06,
+              "end": 204.54
             },
             {
               "text": "llevaste.",
-              "start": 204.393,
-              "end": 204.821
+              "start": 204.54,
+              "end": 205.02
             }
           ]
         },
         {
           "text": "Estuvimos con tu Kira cuando fue lo de su diente,",
-          "start": 204.821,
-          "end": 207.321,
+          "start": 205.26,
+          "end": 208.42,
           "words": [
             {
               "text": "Estuvimos",
-              "start": 204.821,
-              "end": 205.446
+              "start": 205.26,
+              "end": 205.58
             },
             {
               "text": "con",
-              "start": 205.446,
-              "end": 205.603
+              "start": 205.58,
+              "end": 205.89
             },
             {
               "text": "tu",
-              "start": 205.603,
-              "end": 205.759
+              "start": 205.89,
+              "end": 206.21
             },
             {
               "text": "Kira",
-              "start": 205.759,
-              "end": 206.071
+              "start": 206.21,
+              "end": 206.52
             },
             {
               "text": "cuando",
-              "start": 206.071,
-              "end": 206.384
+              "start": 206.52,
+              "end": 206.84
             },
             {
               "text": "fue",
-              "start": 206.384,
-              "end": 206.54
+              "start": 206.84,
+              "end": 207.16
             },
             {
               "text": "lo",
-              "start": 206.54,
-              "end": 206.696
+              "start": 207.16,
+              "end": 207.47
             },
             {
               "text": "de",
-              "start": 206.696,
-              "end": 206.853
+              "start": 207.47,
+              "end": 207.79
             },
             {
               "text": "su",
-              "start": 206.853,
-              "end": 207.009
+              "start": 207.79,
+              "end": 208.1
             },
             {
               "text": "diente,",
-              "start": 207.009,
-              "end": 207.321
+              "start": 208.1,
+              "end": 208.42
             }
           ]
         },
         {
           "text": "cuidando de tu perrita siempre juntos y al pendiente;",
-          "start": 207.321,
-          "end": 209.821,
+          "start": 208.52,
+          "end": 211.5,
           "words": [
             {
               "text": "cuidando",
-              "start": 207.321,
-              "end": 207.763
+              "start": 208.52,
+              "end": 208.85
             },
             {
               "text": "de",
-              "start": 207.763,
-              "end": 207.91
+              "start": 208.85,
+              "end": 209.18
             },
             {
               "text": "tu",
-              "start": 207.91,
-              "end": 208.057
+              "start": 209.18,
+              "end": 209.51
             },
             {
               "text": "perrita",
-              "start": 208.057,
-              "end": 208.498
+              "start": 209.51,
+              "end": 209.84
             },
             {
               "text": "siempre",
-              "start": 208.498,
-              "end": 208.792
+              "start": 209.84,
+              "end": 210.18
             },
             {
               "text": "juntos",
-              "start": 208.792,
-              "end": 209.086
+              "start": 210.18,
+              "end": 210.51
             },
             {
               "text": "y",
-              "start": 209.086,
-              "end": 209.233
+              "start": 210.51,
+              "end": 210.84
             },
             {
               "text": "al",
-              "start": 209.233,
-              "end": 209.38
+              "start": 210.84,
+              "end": 211.17
             },
             {
               "text": "pendiente;",
-              "start": 209.38,
-              "end": 209.821
+              "start": 211.17,
+              "end": 211.5
             }
           ]
         },
         {
           "text": "y llevando a laboratorios al Manchas en su dolor,",
-          "start": 209.821,
-          "end": 212.321,
+          "start": 211.68,
+          "end": 214.46,
           "words": [
             {
               "text": "y",
-              "start": 209.821,
-              "end": 209.968
+              "start": 211.68,
+              "end": 211.99
             },
             {
               "text": "llevando",
-              "start": 209.968,
-              "end": 210.41
+              "start": 211.99,
+              "end": 212.3
             },
             {
               "text": "a",
-              "start": 210.41,
-              "end": 210.557
+              "start": 212.3,
+              "end": 212.61
             },
             {
               "text": "laboratorios",
-              "start": 210.557,
-              "end": 211.292
+              "start": 212.61,
+              "end": 212.92
             },
             {
               "text": "al",
-              "start": 211.292,
-              "end": 211.439
+              "start": 212.92,
+              "end": 213.22
             },
             {
               "text": "Manchas",
-              "start": 211.439,
-              "end": 211.733
+              "start": 213.22,
+              "end": 213.53
             },
             {
               "text": "en",
-              "start": 211.733,
-              "end": 211.88
+              "start": 213.53,
+              "end": 213.84
             },
             {
               "text": "su",
-              "start": 211.88,
-              "end": 212.027
+              "start": 213.84,
+              "end": 214.15
             },
             {
               "text": "dolor,",
-              "start": 212.027,
-              "end": 212.321
+              "start": 214.15,
+              "end": 214.46
             }
           ]
         },
         {
           "text": "esperando los estudios con paciencia y con amor.",
-          "start": 212.321,
-          "end": 214.643,
+          "start": 214.8,
+          "end": 217.56,
           "words": [
             {
               "text": "esperando",
-              "start": 212.321,
-              "end": 212.902
+              "start": 214.8,
+              "end": 215.15
             },
             {
               "text": "los",
-              "start": 212.902,
-              "end": 213.047
+              "start": 215.15,
+              "end": 215.49
             },
             {
               "text": "estudios",
-              "start": 213.047,
-              "end": 213.482
+              "start": 215.49,
+              "end": 215.84
             },
             {
               "text": "con",
-              "start": 213.482,
-              "end": 213.627
+              "start": 215.84,
+              "end": 216.18
             },
             {
               "text": "paciencia",
-              "start": 213.627,
-              "end": 214.062
+              "start": 216.18,
+              "end": 216.53
             },
             {
               "text": "y",
-              "start": 214.062,
-              "end": 214.208
+              "start": 216.53,
+              "end": 216.87
             },
             {
               "text": "con",
-              "start": 214.208,
-              "end": 214.353
+              "start": 216.87,
+              "end": 217.22
             },
             {
               "text": "amor.",
-              "start": 214.353,
-              "end": 214.643
+              "start": 217.22,
+              "end": 217.56
             }
           ]
         },
         {
           "text": "Estuve en tus frustraciones y en tu miedo más profundo:",
-          "start": 214.643,
-          "end": 217.321,
+          "start": 217.56,
+          "end": 220.42,
           "words": [
             {
               "text": "Estuve",
-              "start": 214.643,
-              "end": 215.089
+              "start": 217.56,
+              "end": 217.85
             },
             {
               "text": "en",
-              "start": 215.089,
-              "end": 215.238
+              "start": 217.85,
+              "end": 218.13
             },
             {
               "text": "tus",
-              "start": 215.238,
-              "end": 215.387
+              "start": 218.13,
+              "end": 218.42
             },
             {
               "text": "frustraciones",
-              "start": 215.387,
-              "end": 215.982
+              "start": 218.42,
+              "end": 218.7
             },
             {
               "text": "y",
-              "start": 215.982,
-              "end": 216.131
+              "start": 218.7,
+              "end": 218.99
             },
             {
               "text": "en",
-              "start": 216.131,
-              "end": 216.28
+              "start": 218.99,
+              "end": 219.28
             },
             {
               "text": "tu",
-              "start": 216.28,
-              "end": 216.429
+              "start": 219.28,
+              "end": 219.56
             },
             {
               "text": "miedo",
-              "start": 216.429,
-              "end": 216.726
+              "start": 219.56,
+              "end": 219.85
             },
             {
               "text": "más",
-              "start": 216.726,
-              "end": 216.875
+              "start": 219.85,
+              "end": 220.13
             },
             {
               "text": "profundo:",
-              "start": 216.875,
-              "end": 217.321
+              "start": 220.13,
+              "end": 220.42
             }
           ]
         },
         {
           "text": "cuando diste el celular y sentiste caerse el mundo,",
-          "start": 217.321,
-          "end": 219.821,
+          "start": 220.42,
+          "end": 224.54,
           "words": [
             {
               "text": "cuando",
-              "start": 217.321,
-              "end": 217.616
+              "start": 220.42,
+              "end": 220.88
             },
             {
               "text": "diste",
-              "start": 217.616,
-              "end": 217.91
+              "start": 220.88,
+              "end": 221.34
             },
             {
               "text": "el",
-              "start": 217.91,
-              "end": 218.057
+              "start": 221.34,
+              "end": 221.79
             },
             {
               "text": "celular",
-              "start": 218.057,
-              "end": 218.498
+              "start": 221.79,
+              "end": 222.25
             },
             {
               "text": "y",
-              "start": 218.498,
-              "end": 218.645
+              "start": 222.25,
+              "end": 222.71
             },
             {
               "text": "sentiste",
-              "start": 218.645,
-              "end": 219.086
+              "start": 222.71,
+              "end": 223.17
             },
             {
               "text": "caerse",
-              "start": 219.086,
-              "end": 219.38
+              "start": 223.17,
+              "end": 223.62
             },
             {
               "text": "el",
-              "start": 219.38,
-              "end": 219.527
+              "start": 223.62,
+              "end": 224.08
             },
             {
               "text": "mundo,",
-              "start": 219.527,
-              "end": 219.821
-            }
-          ]
-        },
-        {
-          "text": "o en tu primera hemorragia cuando el susto te atrapó,",
-          "start": 219.821,
-          "end": 222.857,
-          "words": [
-            {
-              "text": "o",
-              "start": 219.821,
-              "end": 219.981
-            },
-            {
-              "text": "en",
-              "start": 219.981,
-              "end": 220.141
-            },
-            {
-              "text": "tu",
-              "start": 220.141,
-              "end": 220.301
-            },
-            {
-              "text": "primera",
-              "start": 220.301,
-              "end": 220.78
-            },
-            {
-              "text": "hemorragia",
-              "start": 220.78,
-              "end": 221.419
-            },
-            {
-              "text": "cuando",
-              "start": 221.419,
-              "end": 221.739
-            },
-            {
-              "text": "el",
-              "start": 221.739,
-              "end": 221.898
-            },
-            {
-              "text": "susto",
-              "start": 221.898,
-              "end": 222.218
-            },
-            {
-              "text": "te",
-              "start": 222.218,
-              "end": 222.378
-            },
-            {
-              "text": "atrapó,",
-              "start": 222.378,
-              "end": 222.857
+              "start": 224.08,
+              "end": 224.54
             }
           ]
         },
         {
           "text": "y ahí estuve de tu lado hasta que todo pasó.",
-          "start": 222.857,
-          "end": 225.357,
+          "start": 224.74,
+          "end": 229.16,
           "words": [
             {
               "text": "y",
-              "start": 222.857,
-              "end": 223.004
+              "start": 224.74,
+              "end": 225.18
             },
             {
               "text": "ahí",
-              "start": 223.004,
-              "end": 223.298
+              "start": 225.18,
+              "end": 225.62
             },
             {
               "text": "estuve",
-              "start": 223.298,
-              "end": 223.739
+              "start": 225.62,
+              "end": 226.07
             },
             {
               "text": "de",
-              "start": 223.739,
-              "end": 223.887
+              "start": 226.07,
+              "end": 226.51
             },
             {
               "text": "tu",
-              "start": 223.887,
-              "end": 224.034
+              "start": 226.51,
+              "end": 226.95
             },
             {
               "text": "lado",
-              "start": 224.034,
-              "end": 224.328
+              "start": 226.95,
+              "end": 227.39
             },
             {
               "text": "hasta",
-              "start": 224.328,
-              "end": 224.622
+              "start": 227.39,
+              "end": 227.83
             },
             {
               "text": "que",
-              "start": 224.622,
-              "end": 224.769
+              "start": 227.83,
+              "end": 228.28
             },
             {
               "text": "todo",
-              "start": 224.769,
-              "end": 225.063
+              "start": 228.28,
+              "end": 228.72
             },
             {
               "text": "pasó.",
-              "start": 225.063,
-              "end": 225.357
+              "start": 228.72,
+              "end": 229.16
             }
           ]
         },
         {
           "text": "Pero igual te he visto en vivo en más de un concierto gritar,",
-          "start": 225.357,
-          "end": 228.393,
+          "start": 229.66,
+          "end": 232.12,
           "words": [
             {
               "text": "Pero",
-              "start": 225.357,
-              "end": 225.661
+              "start": 229.66,
+              "end": 229.85
             },
             {
               "text": "igual",
-              "start": 225.661,
-              "end": 225.964
+              "start": 229.85,
+              "end": 230.04
             },
             {
               "text": "te",
-              "start": 225.964,
-              "end": 226.116
+              "start": 230.04,
+              "end": 230.23
             },
             {
               "text": "he",
-              "start": 226.116,
-              "end": 226.268
+              "start": 230.23,
+              "end": 230.42
             },
             {
               "text": "visto",
-              "start": 226.268,
-              "end": 226.571
+              "start": 230.42,
+              "end": 230.61
             },
             {
               "text": "en",
-              "start": 226.571,
-              "end": 226.723
+              "start": 230.61,
+              "end": 230.8
             },
             {
               "text": "vivo",
-              "start": 226.723,
-              "end": 227.027
+              "start": 230.8,
+              "end": 230.98
             },
             {
               "text": "en",
-              "start": 227.027,
-              "end": 227.179
+              "start": 230.98,
+              "end": 231.17
             },
             {
               "text": "más",
-              "start": 227.179,
-              "end": 227.33
+              "start": 231.17,
+              "end": 231.36
             },
             {
               "text": "de",
-              "start": 227.33,
-              "end": 227.482
+              "start": 231.36,
+              "end": 231.55
             },
             {
               "text": "un",
-              "start": 227.482,
-              "end": 227.634
+              "start": 231.55,
+              "end": 231.74
             },
             {
               "text": "concierto",
-              "start": 227.634,
-              "end": 228.089
+              "start": 231.74,
+              "end": 231.93
             },
             {
               "text": "gritar,",
-              "start": 228.089,
-              "end": 228.393
+              "start": 231.93,
+              "end": 232.12
             }
           ]
         },
         {
           "text": "ver al ídolo del pasado y romperte a llorar;",
-          "start": 228.393,
-          "end": 230.714,
+          "start": 232.32,
+          "end": 234.66,
           "words": [
             {
               "text": "ver",
-              "start": 228.393,
-              "end": 228.538
+              "start": 232.32,
+              "end": 232.58
             },
             {
               "text": "al",
-              "start": 228.538,
-              "end": 228.683
+              "start": 232.58,
+              "end": 232.84
             },
             {
               "text": "ídolo",
-              "start": 228.683,
-              "end": 229.118
+              "start": 232.84,
+              "end": 233.1
             },
             {
               "text": "del",
-              "start": 229.118,
-              "end": 229.263
+              "start": 233.1,
+              "end": 233.36
             },
             {
               "text": "pasado",
-              "start": 229.263,
-              "end": 229.699
+              "start": 233.36,
+              "end": 233.62
             },
             {
               "text": "y",
-              "start": 229.699,
-              "end": 229.844
+              "start": 233.62,
+              "end": 233.88
             },
             {
               "text": "romperte",
-              "start": 229.844,
-              "end": 230.279
+              "start": 233.88,
+              "end": 234.14
             },
             {
               "text": "a",
-              "start": 230.279,
-              "end": 230.424
+              "start": 234.14,
+              "end": 234.4
             },
             {
               "text": "llorar;",
-              "start": 230.424,
-              "end": 230.714
+              "start": 234.4,
+              "end": 234.66
             }
           ]
         },
         {
           "text": "vibrar junto a Mc Aese sintiendo cada canción,",
-          "start": 230.714,
-          "end": 232.857,
+          "start": 234.76,
+          "end": 236.54,
           "words": [
             {
               "text": "vibrar",
-              "start": 230.714,
-              "end": 231.0
+              "start": 234.76,
+              "end": 234.98
             },
             {
               "text": "junto",
-              "start": 231.0,
-              "end": 231.286
+              "start": 234.98,
+              "end": 235.2
             },
             {
               "text": "a",
-              "start": 231.286,
-              "end": 231.429
+              "start": 235.2,
+              "end": 235.43
             },
             {
               "text": "Mc",
-              "start": 231.429,
-              "end": 231.571
+              "start": 235.43,
+              "end": 235.65
             },
             {
               "text": "Aese",
-              "start": 231.571,
-              "end": 231.857
+              "start": 235.65,
+              "end": 235.87
             },
             {
               "text": "sintiendo",
-              "start": 231.857,
-              "end": 232.286
+              "start": 235.87,
+              "end": 236.09
             },
             {
               "text": "cada",
-              "start": 232.286,
-              "end": 232.571
+              "start": 236.09,
+              "end": 236.32
             },
             {
               "text": "canción,",
-              "start": 232.571,
-              "end": 232.857
+              "start": 236.32,
+              "end": 236.54
             }
           ]
         },
         {
           "text": "mientras veo que la música te llena de emoción;",
-          "start": 232.857,
-          "end": 235.179,
+          "start": 236.64,
+          "end": 241.38,
           "words": [
             {
               "text": "mientras",
-              "start": 232.857,
-              "end": 233.167
+              "start": 236.64,
+              "end": 237.17
             },
             {
               "text": "veo",
-              "start": 233.167,
-              "end": 233.321
+              "start": 237.17,
+              "end": 237.69
             },
             {
               "text": "que",
-              "start": 233.321,
-              "end": 233.476
+              "start": 237.69,
+              "end": 238.22
             },
             {
               "text": "la",
-              "start": 233.476,
-              "end": 233.631
+              "start": 238.22,
+              "end": 238.75
             },
             {
               "text": "música",
-              "start": 233.631,
-              "end": 234.095
+              "start": 238.75,
+              "end": 239.27
             },
             {
               "text": "te",
-              "start": 234.095,
-              "end": 234.25
+              "start": 239.27,
+              "end": 239.8
             },
             {
               "text": "llena",
-              "start": 234.25,
-              "end": 234.56
+              "start": 239.8,
+              "end": 240.33
             },
             {
               "text": "de",
-              "start": 234.56,
-              "end": 234.714
+              "start": 240.33,
+              "end": 240.85
             },
             {
               "text": "emoción;",
-              "start": 234.714,
-              "end": 235.179
+              "start": 240.85,
+              "end": 241.38
             }
           ]
         },
         {
           "text": "y esperando que algún día, sin ninguna reticencia,",
-          "start": 235.179,
-          "end": 237.679,
+          "start": 241.46,
+          "end": 244.42,
           "words": [
             {
               "text": "y",
-              "start": 235.179,
-              "end": 235.326
+              "start": 241.46,
+              "end": 241.83
             },
             {
               "text": "esperando",
-              "start": 235.326,
-              "end": 235.914
+              "start": 241.83,
+              "end": 242.2
             },
             {
               "text": "que",
-              "start": 235.914,
-              "end": 236.061
+              "start": 242.2,
+              "end": 242.57
             },
             {
               "text": "algún",
-              "start": 236.061,
-              "end": 236.355
+              "start": 242.57,
+              "end": 242.94
             },
             {
               "text": "día,",
-              "start": 236.355,
-              "end": 236.502
+              "start": 242.94,
+              "end": 243.31
             },
             {
               "text": "sin",
-              "start": 236.502,
-              "end": 236.649
+              "start": 243.31,
+              "end": 243.68
             },
             {
               "text": "ninguna",
-              "start": 236.649,
-              "end": 237.09
+              "start": 243.68,
+              "end": 244.05
             },
             {
               "text": "reticencia,",
-              "start": 237.09,
-              "end": 237.679
+              "start": 244.05,
+              "end": 244.42
             }
           ]
         },
         {
           "text": "puedas ver al buen Fargan de frente y en su presencia.",
-          "start": 237.679,
-          "end": 240.0,
+          "start": 244.42,
+          "end": 247.56,
           "words": [
             {
               "text": "puedas",
-              "start": 237.679,
-              "end": 237.969
+              "start": 244.42,
+              "end": 244.71
             },
             {
               "text": "ver",
-              "start": 237.969,
-              "end": 238.114
+              "start": 244.71,
+              "end": 244.99
             },
             {
               "text": "al",
-              "start": 238.114,
-              "end": 238.259
+              "start": 244.99,
+              "end": 245.28
             },
             {
               "text": "buen",
-              "start": 238.259,
-              "end": 238.404
+              "start": 245.28,
+              "end": 245.56
             },
             {
               "text": "Fargan",
-              "start": 238.404,
-              "end": 238.694
+              "start": 245.56,
+              "end": 245.85
             },
             {
               "text": "de",
-              "start": 238.694,
-              "end": 238.839
+              "start": 245.85,
+              "end": 246.13
             },
             {
               "text": "frente",
-              "start": 238.839,
-              "end": 239.129
+              "start": 246.13,
+              "end": 246.42
             },
             {
               "text": "y",
-              "start": 239.129,
-              "end": 239.275
+              "start": 246.42,
+              "end": 246.7
             },
             {
               "text": "en",
-              "start": 239.275,
-              "end": 239.42
+              "start": 246.7,
+              "end": 246.99
             },
             {
               "text": "su",
-              "start": 239.42,
-              "end": 239.565
+              "start": 246.99,
+              "end": 247.27
             },
             {
               "text": "presencia.",
-              "start": 239.565,
-              "end": 240.0
+              "start": 247.27,
+              "end": 247.56
             }
           ]
         }
@@ -4314,3041 +4182,550 @@ window.KARAOKE_DATA = {
     },
     {
       "name": "Segundo Coro",
-      "start": 240.0,
-      "end": 280.0,
+      "start": 248.0,
+      "end": 279.0,
       "lines": [
         {
-          "text": "¡Y túuu...!",
-          "start": 240.0,
-          "end": 242.857,
-          "words": [
-            {
-              "text": "¡Y",
-              "start": 240.0,
-              "end": 241.429
-            },
-            {
-              "text": "túuu...!",
-              "start": 241.429,
-              "end": 242.857
-            }
-          ]
-        },
-        {
           "text": "Vi pasar nuestra relación de una idea a realidad,",
-          "start": 242.857,
-          "end": 247.143,
+          "start": 249.58,
+          "end": 254.72,
           "words": [
             {
               "text": "Vi",
-              "start": 242.857,
-              "end": 243.109
+              "start": 249.58,
+              "end": 250.15
             },
             {
               "text": "pasar",
-              "start": 243.109,
-              "end": 243.613
+              "start": 250.15,
+              "end": 250.72
             },
             {
               "text": "nuestra",
-              "start": 243.613,
-              "end": 244.118
+              "start": 250.72,
+              "end": 251.29
             },
             {
               "text": "relación",
-              "start": 244.118,
-              "end": 244.874
+              "start": 251.29,
+              "end": 251.86
             },
             {
               "text": "de",
-              "start": 244.874,
-              "end": 245.126
+              "start": 251.86,
+              "end": 252.44
             },
             {
               "text": "una",
-              "start": 245.126,
-              "end": 245.63
+              "start": 252.44,
+              "end": 253.01
             },
             {
               "text": "idea",
-              "start": 245.63,
-              "end": 246.134
+              "start": 253.01,
+              "end": 253.58
             },
             {
               "text": "a",
-              "start": 246.134,
-              "end": 246.387
+              "start": 253.58,
+              "end": 254.15
             },
             {
               "text": "realidad,",
-              "start": 246.387,
-              "end": 247.143
+              "start": 254.15,
+              "end": 254.72
             }
           ]
         },
         {
           "text": "de empezar con un «veremos» a dos años de verdad.",
-          "start": 247.143,
-          "end": 251.25,
+          "start": 255.26,
+          "end": 259.86,
           "words": [
             {
               "text": "de",
-              "start": 247.143,
-              "end": 247.4
+              "start": 255.26,
+              "end": 255.72
             },
             {
               "text": "empezar",
-              "start": 247.4,
-              "end": 248.17
+              "start": 255.72,
+              "end": 256.18
             },
             {
               "text": "con",
-              "start": 248.17,
-              "end": 248.426
+              "start": 256.18,
+              "end": 256.64
             },
             {
               "text": "un",
-              "start": 248.426,
-              "end": 248.683
+              "start": 256.64,
+              "end": 257.1
             },
             {
               "text": "«veremos»",
-              "start": 248.683,
-              "end": 249.453
+              "start": 257.1,
+              "end": 257.56
             },
             {
               "text": "a",
-              "start": 249.453,
-              "end": 249.71
+              "start": 257.56,
+              "end": 258.02
             },
             {
               "text": "dos",
-              "start": 249.71,
-              "end": 249.967
+              "start": 258.02,
+              "end": 258.48
             },
             {
               "text": "años",
-              "start": 249.967,
-              "end": 250.48
+              "start": 258.48,
+              "end": 258.94
             },
             {
               "text": "de",
-              "start": 250.48,
-              "end": 250.737
+              "start": 258.94,
+              "end": 259.4
             },
             {
               "text": "verdad.",
-              "start": 250.737,
-              "end": 251.25
+              "start": 259.4,
+              "end": 259.86
             }
           ]
         },
         {
           "text": "Mi perspectiva sobre ti dio un giro en el corazón:",
-          "start": 251.25,
-          "end": 255.536,
+          "start": 260.86,
+          "end": 263.82,
           "words": [
             {
               "text": "Mi",
-              "start": 251.25,
-              "end": 251.502
+              "start": 260.86,
+              "end": 261.16
             },
             {
               "text": "perspectiva",
-              "start": 251.502,
-              "end": 252.511
+              "start": 261.16,
+              "end": 261.45
             },
             {
               "text": "sobre",
-              "start": 252.511,
-              "end": 253.015
+              "start": 261.45,
+              "end": 261.75
             },
             {
               "text": "ti",
-              "start": 253.015,
-              "end": 253.267
+              "start": 261.75,
+              "end": 262.04
             },
             {
               "text": "dio",
-              "start": 253.267,
-              "end": 253.519
+              "start": 262.04,
+              "end": 262.34
             },
             {
               "text": "un",
-              "start": 253.519,
-              "end": 253.771
+              "start": 262.34,
+              "end": 262.64
             },
             {
               "text": "giro",
-              "start": 253.771,
-              "end": 254.275
+              "start": 262.64,
+              "end": 262.93
             },
             {
               "text": "en",
-              "start": 254.275,
-              "end": 254.527
+              "start": 262.93,
+              "end": 263.23
             },
             {
               "text": "el",
-              "start": 254.527,
-              "end": 254.779
+              "start": 263.23,
+              "end": 263.52
             },
             {
               "text": "corazón:",
-              "start": 254.779,
-              "end": 255.536
+              "start": 263.52,
+              "end": 263.82
             }
           ]
         },
         {
           "text": "hoy eres mi inspiración y toda mi motivación;",
-          "start": 255.536,
-          "end": 259.286,
+          "start": 264.2,
+          "end": 267.68,
           "words": [
             {
               "text": "hoy",
-              "start": 255.536,
-              "end": 255.77
+              "start": 264.2,
+              "end": 264.63
             },
             {
               "text": "eres",
-              "start": 255.77,
-              "end": 256.239
+              "start": 264.63,
+              "end": 265.07
             },
             {
               "text": "mi",
-              "start": 256.239,
-              "end": 256.473
+              "start": 265.07,
+              "end": 265.5
             },
             {
               "text": "inspiración",
-              "start": 256.473,
-              "end": 257.411
+              "start": 265.5,
+              "end": 265.94
             },
             {
               "text": "y",
-              "start": 257.411,
-              "end": 257.645
+              "start": 265.94,
+              "end": 266.38
             },
             {
               "text": "toda",
-              "start": 257.645,
-              "end": 258.114
+              "start": 266.38,
+              "end": 266.81
             },
             {
               "text": "mi",
-              "start": 258.114,
-              "end": 258.348
+              "start": 266.81,
+              "end": 267.25
             },
             {
               "text": "motivación;",
-              "start": 258.348,
-              "end": 259.286
+              "start": 267.25,
+              "end": 267.68
             }
           ]
         },
         {
           "text": "dejaste de ser tan solo mi razón para existir,",
-          "start": 259.286,
-          "end": 263.393,
+          "start": 267.78,
+          "end": 269.56,
           "words": [
             {
               "text": "dejaste",
-              "start": 259.286,
-              "end": 260.056
+              "start": 267.78,
+              "end": 267.98
             },
             {
               "text": "de",
-              "start": 260.056,
-              "end": 260.312
+              "start": 267.98,
+              "end": 268.18
             },
             {
               "text": "ser",
-              "start": 260.312,
-              "end": 260.569
+              "start": 268.18,
+              "end": 268.37
             },
             {
               "text": "tan",
-              "start": 260.569,
-              "end": 260.826
+              "start": 268.37,
+              "end": 268.57
             },
             {
               "text": "solo",
-              "start": 260.826,
-              "end": 261.339
+              "start": 268.57,
+              "end": 268.77
             },
             {
               "text": "mi",
-              "start": 261.339,
-              "end": 261.596
+              "start": 268.77,
+              "end": 268.97
             },
             {
               "text": "razón",
-              "start": 261.596,
-              "end": 262.109
+              "start": 268.97,
+              "end": 269.16
             },
             {
               "text": "para",
-              "start": 262.109,
-              "end": 262.623
+              "start": 269.16,
+              "end": 269.36
             },
             {
               "text": "existir,",
-              "start": 262.623,
-              "end": 263.393
+              "start": 269.36,
+              "end": 269.56
             }
           ]
         },
         {
           "text": "ahora eres el motor que me impulsa a construir.",
-          "start": 263.393,
-          "end": 267.5,
+          "start": 270.4,
+          "end": 272.8,
           "words": [
             {
               "text": "ahora",
-              "start": 263.393,
-              "end": 264.163
+              "start": 270.4,
+              "end": 270.67
             },
             {
               "text": "eres",
-              "start": 264.163,
-              "end": 264.676
+              "start": 270.67,
+              "end": 270.93
             },
             {
               "text": "el",
-              "start": 264.676,
-              "end": 264.933
+              "start": 270.93,
+              "end": 271.2
             },
             {
               "text": "motor",
-              "start": 264.933,
-              "end": 265.446
+              "start": 271.2,
+              "end": 271.47
             },
             {
               "text": "que",
-              "start": 265.446,
-              "end": 265.703
+              "start": 271.47,
+              "end": 271.73
             },
             {
               "text": "me",
-              "start": 265.703,
-              "end": 265.96
+              "start": 271.73,
+              "end": 272.0
             },
             {
               "text": "impulsa",
-              "start": 265.96,
-              "end": 266.73
+              "start": 272.0,
+              "end": 272.27
             },
             {
               "text": "a",
-              "start": 266.73,
-              "end": 266.987
+              "start": 272.27,
+              "end": 272.53
             },
             {
               "text": "construir.",
-              "start": 266.987,
-              "end": 267.5
+              "start": 272.53,
+              "end": 272.8
             }
           ]
         },
         {
           "text": "Sé que falta definirnos y lo sigues meditando,",
-          "start": 267.5,
-          "end": 271.25,
+          "start": 272.8,
+          "end": 276.06,
           "words": [
             {
               "text": "Sé",
-              "start": 267.5,
-              "end": 267.734
+              "start": 272.8,
+              "end": 273.21
             },
             {
               "text": "que",
-              "start": 267.734,
-              "end": 267.969
+              "start": 273.21,
+              "end": 273.62
             },
             {
               "text": "falta",
-              "start": 267.969,
-              "end": 268.438
+              "start": 273.62,
+              "end": 274.02
             },
             {
               "text": "definirnos",
-              "start": 268.438,
-              "end": 269.375
+              "start": 274.02,
+              "end": 274.43
             },
             {
               "text": "y",
-              "start": 269.375,
-              "end": 269.609
+              "start": 274.43,
+              "end": 274.84
             },
             {
               "text": "lo",
-              "start": 269.609,
-              "end": 269.844
+              "start": 274.84,
+              "end": 275.25
             },
             {
               "text": "sigues",
-              "start": 269.844,
-              "end": 270.312
+              "start": 275.25,
+              "end": 275.65
             },
             {
               "text": "meditando,",
-              "start": 270.312,
-              "end": 271.25
+              "start": 275.65,
+              "end": 276.06
             }
           ]
         },
         {
           "text": "no es la mejor situación... pero aquí te sigo amando.",
-          "start": 271.25,
-          "end": 275.893,
+          "start": 276.06,
+          "end": 279.52,
           "words": [
             {
               "text": "no",
-              "start": 271.25,
-              "end": 271.508
+              "start": 276.06,
+              "end": 276.41
             },
             {
               "text": "es",
-              "start": 271.508,
-              "end": 271.766
+              "start": 276.41,
+              "end": 276.75
             },
             {
               "text": "la",
-              "start": 271.766,
-              "end": 272.024
+              "start": 276.75,
+              "end": 277.1
             },
             {
               "text": "mejor",
-              "start": 272.024,
-              "end": 272.54
+              "start": 277.1,
+              "end": 277.44
             },
             {
               "text": "situación...",
-              "start": 272.54,
-              "end": 273.313
+              "start": 277.44,
+              "end": 277.79
             },
             {
               "text": "pero",
-              "start": 273.313,
-              "end": 273.829
+              "start": 277.79,
+              "end": 278.14
             },
             {
               "text": "aquí",
-              "start": 273.829,
-              "end": 274.345
+              "start": 278.14,
+              "end": 278.48
             },
             {
               "text": "te",
-              "start": 274.345,
-              "end": 274.603
+              "start": 278.48,
+              "end": 278.83
             },
             {
               "text": "sigo",
-              "start": 274.603,
-              "end": 275.119
+              "start": 278.83,
+              "end": 279.17
             },
             {
               "text": "amando.",
-              "start": 275.119,
-              "end": 275.893
-            }
-          ]
-        },
-        {
-          "text": "¡Hey, hey, hey...!",
-          "start": 275.893,
-          "end": 277.321,
-          "words": [
-            {
-              "text": "¡Hey,",
-              "start": 275.893,
-              "end": 276.369
-            },
-            {
-              "text": "hey,",
-              "start": 276.369,
-              "end": 276.845
-            },
-            {
-              "text": "hey...!",
-              "start": 276.845,
-              "end": 277.321
+              "start": 279.17,
+              "end": 279.52
             }
           ]
         }
       ]
     },
     {
-      "name": "Tercer Coro",
-      "start": 280.0,
-      "end": 317.143,
+      "name": "Outro: De un «veremos» a dos años",
+      "start": 279.0,
+      "end": 303.2,
       "lines": [
         {
           "text": "¡Túuu... solo tú... y nadie más que tú!",
-          "start": 280.0,
-          "end": 282.857,
+          "start": 280.24,
+          "end": 286.14,
           "words": [
             {
               "text": "¡Túuu...",
-              "start": 280.0,
-              "end": 280.286
+              "start": 280.24,
+              "end": 280.98
             },
             {
               "text": "solo",
-              "start": 280.286,
-              "end": 280.857
+              "start": 280.98,
+              "end": 281.72
             },
             {
               "text": "tú...",
-              "start": 280.857,
-              "end": 281.143
+              "start": 281.72,
+              "end": 282.45
             },
             {
               "text": "y",
-              "start": 281.143,
-              "end": 281.429
+              "start": 282.45,
+              "end": 283.19
             },
             {
               "text": "nadie",
-              "start": 281.429,
-              "end": 282.0
+              "start": 283.19,
+              "end": 283.93
             },
             {
               "text": "más",
-              "start": 282.0,
-              "end": 282.286
+              "start": 283.93,
+              "end": 284.66
             },
             {
               "text": "que",
-              "start": 282.286,
-              "end": 282.571
+              "start": 284.66,
+              "end": 285.4
             },
             {
               "text": "tú!",
-              "start": 282.571,
-              "end": 282.857
+              "start": 285.4,
+              "end": 286.14
+            }
+          ]
+        },
+        {
+          "text": "¡Y tú!",
+          "start": 287.12,
+          "end": 287.76,
+          "words": [
+            {
+              "text": "¡Y",
+              "start": 287.12,
+              "end": 287.44
+            },
+            {
+              "text": "tú!",
+              "start": 287.44,
+              "end": 287.76
             }
           ]
         },
         {
           "text": "Vi pasar nuestra relación de una idea a realidad,",
-          "start": 282.857,
-          "end": 287.143,
+          "start": 289.94,
+          "end": 296.18,
           "words": [
             {
               "text": "Vi",
-              "start": 282.857,
-              "end": 283.109
+              "start": 289.94,
+              "end": 290.63
             },
             {
               "text": "pasar",
-              "start": 283.109,
-              "end": 283.613
+              "start": 290.63,
+              "end": 291.33
             },
             {
               "text": "nuestra",
-              "start": 283.613,
-              "end": 284.118
+              "start": 291.33,
+              "end": 292.02
             },
             {
               "text": "relación",
-              "start": 284.118,
-              "end": 284.874
+              "start": 292.02,
+              "end": 292.71
             },
             {
               "text": "de",
-              "start": 284.874,
-              "end": 285.126
+              "start": 292.71,
+              "end": 293.41
             },
             {
               "text": "una",
-              "start": 285.126,
-              "end": 285.63
+              "start": 293.41,
+              "end": 294.1
             },
             {
               "text": "idea",
-              "start": 285.63,
-              "end": 286.134
+              "start": 294.1,
+              "end": 294.79
             },
             {
               "text": "a",
-              "start": 286.134,
-              "end": 286.387
+              "start": 294.79,
+              "end": 295.49
             },
             {
               "text": "realidad,",
-              "start": 286.387,
-              "end": 287.143
-            }
-          ]
-        },
-        {
-          "text": "de empezar con un «veremos» a dos años de verdad.",
-          "start": 287.143,
-          "end": 291.25,
-          "words": [
-            {
-              "text": "de",
-              "start": 287.143,
-              "end": 287.4
-            },
-            {
-              "text": "empezar",
-              "start": 287.4,
-              "end": 288.17
-            },
-            {
-              "text": "con",
-              "start": 288.17,
-              "end": 288.426
-            },
-            {
-              "text": "un",
-              "start": 288.426,
-              "end": 288.683
-            },
-            {
-              "text": "«veremos»",
-              "start": 288.683,
-              "end": 289.453
-            },
-            {
-              "text": "a",
-              "start": 289.453,
-              "end": 289.71
-            },
-            {
-              "text": "dos",
-              "start": 289.71,
-              "end": 289.967
-            },
-            {
-              "text": "años",
-              "start": 289.967,
-              "end": 290.48
-            },
-            {
-              "text": "de",
-              "start": 290.48,
-              "end": 290.737
-            },
-            {
-              "text": "verdad.",
-              "start": 290.737,
-              "end": 291.25
-            }
-          ]
-        },
-        {
-          "text": "Mi perspectiva sobre ti dio un giro en el corazón:",
-          "start": 291.25,
-          "end": 295.536,
-          "words": [
-            {
-              "text": "Mi",
-              "start": 291.25,
-              "end": 291.502
-            },
-            {
-              "text": "perspectiva",
-              "start": 291.502,
-              "end": 292.511
-            },
-            {
-              "text": "sobre",
-              "start": 292.511,
-              "end": 293.015
-            },
-            {
-              "text": "ti",
-              "start": 293.015,
-              "end": 293.267
-            },
-            {
-              "text": "dio",
-              "start": 293.267,
-              "end": 293.519
-            },
-            {
-              "text": "un",
-              "start": 293.519,
-              "end": 293.771
-            },
-            {
-              "text": "giro",
-              "start": 293.771,
-              "end": 294.275
-            },
-            {
-              "text": "en",
-              "start": 294.275,
-              "end": 294.527
-            },
-            {
-              "text": "el",
-              "start": 294.527,
-              "end": 294.779
-            },
-            {
-              "text": "corazón:",
-              "start": 294.779,
-              "end": 295.536
-            }
-          ]
-        },
-        {
-          "text": "hoy eres mi inspiración y toda mi motivación;",
-          "start": 295.536,
-          "end": 299.286,
-          "words": [
-            {
-              "text": "hoy",
-              "start": 295.536,
-              "end": 295.77
-            },
-            {
-              "text": "eres",
-              "start": 295.77,
-              "end": 296.239
-            },
-            {
-              "text": "mi",
-              "start": 296.239,
-              "end": 296.473
-            },
-            {
-              "text": "inspiración",
-              "start": 296.473,
-              "end": 297.411
-            },
-            {
-              "text": "y",
-              "start": 297.411,
-              "end": 297.645
-            },
-            {
-              "text": "toda",
-              "start": 297.645,
-              "end": 298.114
-            },
-            {
-              "text": "mi",
-              "start": 298.114,
-              "end": 298.348
-            },
-            {
-              "text": "motivación;",
-              "start": 298.348,
-              "end": 299.286
-            }
-          ]
-        },
-        {
-          "text": "dejaste de ser tan solo mi razón para existir,",
-          "start": 299.286,
-          "end": 303.393,
-          "words": [
-            {
-              "text": "dejaste",
-              "start": 299.286,
-              "end": 300.056
-            },
-            {
-              "text": "de",
-              "start": 300.056,
-              "end": 300.312
-            },
-            {
-              "text": "ser",
-              "start": 300.312,
-              "end": 300.569
-            },
-            {
-              "text": "tan",
-              "start": 300.569,
-              "end": 300.826
-            },
-            {
-              "text": "solo",
-              "start": 300.826,
-              "end": 301.339
-            },
-            {
-              "text": "mi",
-              "start": 301.339,
-              "end": 301.596
-            },
-            {
-              "text": "razón",
-              "start": 301.596,
-              "end": 302.109
-            },
-            {
-              "text": "para",
-              "start": 302.109,
-              "end": 302.623
-            },
-            {
-              "text": "existir,",
-              "start": 302.623,
-              "end": 303.393
-            }
-          ]
-        },
-        {
-          "text": "ahora eres el motor que me impulsa a construir.",
-          "start": 303.393,
-          "end": 307.5,
-          "words": [
-            {
-              "text": "ahora",
-              "start": 303.393,
-              "end": 304.163
-            },
-            {
-              "text": "eres",
-              "start": 304.163,
-              "end": 304.676
-            },
-            {
-              "text": "el",
-              "start": 304.676,
-              "end": 304.933
-            },
-            {
-              "text": "motor",
-              "start": 304.933,
-              "end": 305.446
-            },
-            {
-              "text": "que",
-              "start": 305.446,
-              "end": 305.703
-            },
-            {
-              "text": "me",
-              "start": 305.703,
-              "end": 305.96
-            },
-            {
-              "text": "impulsa",
-              "start": 305.96,
-              "end": 306.73
-            },
-            {
-              "text": "a",
-              "start": 306.73,
-              "end": 306.987
-            },
-            {
-              "text": "construir.",
-              "start": 306.987,
-              "end": 307.5
-            }
-          ]
-        },
-        {
-          "text": "Sé que falta definirnos y lo sigues meditando,",
-          "start": 307.5,
-          "end": 311.25,
-          "words": [
-            {
-              "text": "Sé",
-              "start": 307.5,
-              "end": 307.734
-            },
-            {
-              "text": "que",
-              "start": 307.734,
-              "end": 307.969
-            },
-            {
-              "text": "falta",
-              "start": 307.969,
-              "end": 308.438
-            },
-            {
-              "text": "definirnos",
-              "start": 308.438,
-              "end": 309.375
-            },
-            {
-              "text": "y",
-              "start": 309.375,
-              "end": 309.609
-            },
-            {
-              "text": "lo",
-              "start": 309.609,
-              "end": 309.844
-            },
-            {
-              "text": "sigues",
-              "start": 309.844,
-              "end": 310.312
-            },
-            {
-              "text": "meditando,",
-              "start": 310.312,
-              "end": 311.25
-            }
-          ]
-        },
-        {
-          "text": "no es la mejor situación... pero aquí te sigo amando.",
-          "start": 311.25,
-          "end": 315.893,
-          "words": [
-            {
-              "text": "no",
-              "start": 311.25,
-              "end": 311.508
-            },
-            {
-              "text": "es",
-              "start": 311.508,
-              "end": 311.766
-            },
-            {
-              "text": "la",
-              "start": 311.766,
-              "end": 312.024
-            },
-            {
-              "text": "mejor",
-              "start": 312.024,
-              "end": 312.54
-            },
-            {
-              "text": "situación...",
-              "start": 312.54,
-              "end": 313.313
-            },
-            {
-              "text": "pero",
-              "start": 313.313,
-              "end": 313.829
-            },
-            {
-              "text": "aquí",
-              "start": 313.829,
-              "end": 314.345
-            },
-            {
-              "text": "te",
-              "start": 314.345,
-              "end": 314.603
-            },
-            {
-              "text": "sigo",
-              "start": 314.603,
-              "end": 315.119
-            },
-            {
-              "text": "amando.",
-              "start": 315.119,
-              "end": 315.893
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Verso 3",
-      "start": 317.143,
-      "end": 377.143,
-      "lines": [
-        {
-          "text": "Cada vez que voy a verte tengo mil cosas en mente,",
-          "start": 317.143,
-          "end": 320.0,
-          "words": [
-            {
-              "text": "Cada",
-              "start": 317.143,
-              "end": 317.5
-            },
-            {
-              "text": "vez",
-              "start": 317.5,
-              "end": 317.679
-            },
-            {
-              "text": "que",
-              "start": 317.679,
-              "end": 317.857
-            },
-            {
-              "text": "voy",
-              "start": 317.857,
-              "end": 318.036
-            },
-            {
-              "text": "a",
-              "start": 318.036,
-              "end": 318.214
-            },
-            {
-              "text": "verte",
-              "start": 318.214,
-              "end": 318.571
-            },
-            {
-              "text": "tengo",
-              "start": 318.571,
-              "end": 318.929
-            },
-            {
-              "text": "mil",
-              "start": 318.929,
-              "end": 319.107
-            },
-            {
-              "text": "cosas",
-              "start": 319.107,
-              "end": 319.464
-            },
-            {
-              "text": "en",
-              "start": 319.464,
-              "end": 319.643
-            },
-            {
-              "text": "mente,",
-              "start": 319.643,
-              "end": 320.0
-            }
-          ]
-        },
-        {
-          "text": "y los nervios por adentro se me notan en la frente.",
-          "start": 320.0,
-          "end": 322.679,
-          "words": [
-            {
-              "text": "y",
-              "start": 320.0,
-              "end": 320.167
-            },
-            {
-              "text": "los",
-              "start": 320.167,
-              "end": 320.335
-            },
-            {
-              "text": "nervios",
-              "start": 320.335,
-              "end": 320.67
-            },
-            {
-              "text": "por",
-              "start": 320.67,
-              "end": 320.837
-            },
-            {
-              "text": "adentro",
-              "start": 320.837,
-              "end": 321.339
-            },
-            {
-              "text": "se",
-              "start": 321.339,
-              "end": 321.507
-            },
-            {
-              "text": "me",
-              "start": 321.507,
-              "end": 321.674
-            },
-            {
-              "text": "notan",
-              "start": 321.674,
-              "end": 322.009
-            },
-            {
-              "text": "en",
-              "start": 322.009,
-              "end": 322.176
-            },
-            {
-              "text": "la",
-              "start": 322.176,
-              "end": 322.344
-            },
-            {
-              "text": "frente.",
-              "start": 322.344,
-              "end": 322.679
-            }
-          ]
-        },
-        {
-          "text": "Pienso desde si me bañé o si en algo me equivoqué,",
-          "start": 322.679,
-          "end": 325.893,
-          "words": [
-            {
-              "text": "Pienso",
-              "start": 322.679,
-              "end": 323.036
-            },
-            {
-              "text": "desde",
-              "start": 323.036,
-              "end": 323.393
-            },
-            {
-              "text": "si",
-              "start": 323.393,
-              "end": 323.571
-            },
-            {
-              "text": "me",
-              "start": 323.571,
-              "end": 323.75
-            },
-            {
-              "text": "bañé",
-              "start": 323.75,
-              "end": 324.107
-            },
-            {
-              "text": "o",
-              "start": 324.107,
-              "end": 324.286
-            },
-            {
-              "text": "si",
-              "start": 324.286,
-              "end": 324.464
-            },
-            {
-              "text": "en",
-              "start": 324.464,
-              "end": 324.643
-            },
-            {
-              "text": "algo",
-              "start": 324.643,
-              "end": 325.0
-            },
-            {
-              "text": "me",
-              "start": 325.0,
-              "end": 325.179
-            },
-            {
-              "text": "equivoqué,",
-              "start": 325.179,
-              "end": 325.893
-            }
-          ]
-        },
-        {
-          "text": "me pone ansioso pensar en qué estás pensando y por qué.",
-          "start": 325.893,
-          "end": 328.929,
-          "words": [
-            {
-              "text": "me",
-              "start": 325.893,
-              "end": 326.062
-            },
-            {
-              "text": "pone",
-              "start": 326.062,
-              "end": 326.399
-            },
-            {
-              "text": "ansioso",
-              "start": 326.399,
-              "end": 326.905
-            },
-            {
-              "text": "pensar",
-              "start": 326.905,
-              "end": 327.242
-            },
-            {
-              "text": "en",
-              "start": 327.242,
-              "end": 327.411
-            },
-            {
-              "text": "qué",
-              "start": 327.411,
-              "end": 327.579
-            },
-            {
-              "text": "estás",
-              "start": 327.579,
-              "end": 327.917
-            },
-            {
-              "text": "pensando",
-              "start": 327.917,
-              "end": 328.423
-            },
-            {
-              "text": "y",
-              "start": 328.423,
-              "end": 328.591
-            },
-            {
-              "text": "por",
-              "start": 328.591,
-              "end": 328.76
-            },
-            {
-              "text": "qué.",
-              "start": 328.76,
-              "end": 328.929
-            }
-          ]
-        },
-        {
-          "text": "Todo da vueltas y vueltas y me pierdo en la jugada,",
-          "start": 328.929,
-          "end": 331.607,
-          "words": [
-            {
-              "text": "Todo",
-              "start": 328.929,
-              "end": 329.244
-            },
-            {
-              "text": "da",
-              "start": 329.244,
-              "end": 329.401
-            },
-            {
-              "text": "vueltas",
-              "start": 329.401,
-              "end": 329.716
-            },
-            {
-              "text": "y",
-              "start": 329.716,
-              "end": 329.874
-            },
-            {
-              "text": "vueltas",
-              "start": 329.874,
-              "end": 330.189
-            },
-            {
-              "text": "y",
-              "start": 330.189,
-              "end": 330.347
-            },
-            {
-              "text": "me",
-              "start": 330.347,
-              "end": 330.504
-            },
-            {
-              "text": "pierdo",
-              "start": 330.504,
-              "end": 330.819
-            },
-            {
-              "text": "en",
-              "start": 330.819,
-              "end": 330.977
-            },
-            {
-              "text": "la",
-              "start": 330.977,
-              "end": 331.134
-            },
-            {
-              "text": "jugada,",
-              "start": 331.134,
-              "end": 331.607
-            }
-          ]
-        },
-        {
-          "text": "cada vez que con tus ojos me regalas tu mirada;",
-          "start": 331.607,
-          "end": 334.464,
-          "words": [
-            {
-              "text": "cada",
-              "start": 331.607,
-              "end": 331.964
-            },
-            {
-              "text": "vez",
-              "start": 331.964,
-              "end": 332.143
-            },
-            {
-              "text": "que",
-              "start": 332.143,
-              "end": 332.321
-            },
-            {
-              "text": "con",
-              "start": 332.321,
-              "end": 332.5
-            },
-            {
-              "text": "tus",
-              "start": 332.5,
-              "end": 332.679
-            },
-            {
-              "text": "ojos",
-              "start": 332.679,
-              "end": 333.036
-            },
-            {
-              "text": "me",
-              "start": 333.036,
-              "end": 333.214
-            },
-            {
-              "text": "regalas",
-              "start": 333.214,
-              "end": 333.75
-            },
-            {
-              "text": "tu",
-              "start": 333.75,
-              "end": 333.929
-            },
-            {
-              "text": "mirada;",
-              "start": 333.929,
-              "end": 334.464
-            }
-          ]
-        },
-        {
-          "text": "lo siento todo increíble y a la vez tan imposible,",
-          "start": 334.464,
-          "end": 337.321,
-          "words": [
-            {
-              "text": "lo",
-              "start": 334.464,
-              "end": 334.632
-            },
-            {
-              "text": "siento",
-              "start": 334.632,
-              "end": 334.968
-            },
-            {
-              "text": "todo",
-              "start": 334.968,
-              "end": 335.305
-            },
-            {
-              "text": "increíble",
-              "start": 335.305,
-              "end": 335.809
-            },
-            {
-              "text": "y",
-              "start": 335.809,
-              "end": 335.977
-            },
-            {
-              "text": "a",
-              "start": 335.977,
-              "end": 336.145
-            },
-            {
-              "text": "la",
-              "start": 336.145,
-              "end": 336.313
-            },
-            {
-              "text": "vez",
-              "start": 336.313,
-              "end": 336.481
-            },
-            {
-              "text": "tan",
-              "start": 336.481,
-              "end": 336.649
-            },
-            {
-              "text": "imposible,",
-              "start": 336.649,
-              "end": 337.321
-            }
-          ]
-        },
-        {
-          "text": "porque estar cerca de ti me deja el pecho sensible.",
-          "start": 337.321,
-          "end": 340.357,
-          "words": [
-            {
-              "text": "porque",
-              "start": 337.321,
-              "end": 337.679
-            },
-            {
-              "text": "estar",
-              "start": 337.679,
-              "end": 338.036
-            },
-            {
-              "text": "cerca",
-              "start": 338.036,
-              "end": 338.393
-            },
-            {
-              "text": "de",
-              "start": 338.393,
-              "end": 338.571
-            },
-            {
-              "text": "ti",
-              "start": 338.571,
-              "end": 338.75
-            },
-            {
-              "text": "me",
-              "start": 338.75,
-              "end": 338.929
-            },
-            {
-              "text": "deja",
-              "start": 338.929,
-              "end": 339.286
-            },
-            {
-              "text": "el",
-              "start": 339.286,
-              "end": 339.464
-            },
-            {
-              "text": "pecho",
-              "start": 339.464,
-              "end": 339.821
-            },
-            {
-              "text": "sensible.",
-              "start": 339.821,
-              "end": 340.357
-            }
-          ]
-        },
-        {
-          "text": "Aunque igual guardo palabras que hasta el fondo me han dolido,",
-          "start": 340.357,
-          "end": 343.929,
-          "words": [
-            {
-              "text": "Aunque",
-              "start": 340.357,
-              "end": 340.714
-            },
-            {
-              "text": "igual",
-              "start": 340.714,
-              "end": 341.071
-            },
-            {
-              "text": "guardo",
-              "start": 341.071,
-              "end": 341.429
-            },
-            {
-              "text": "palabras",
-              "start": 341.429,
-              "end": 341.964
-            },
-            {
-              "text": "que",
-              "start": 341.964,
-              "end": 342.143
-            },
-            {
-              "text": "hasta",
-              "start": 342.143,
-              "end": 342.5
-            },
-            {
-              "text": "el",
-              "start": 342.5,
-              "end": 342.679
-            },
-            {
-              "text": "fondo",
-              "start": 342.679,
-              "end": 343.036
-            },
-            {
-              "text": "me",
-              "start": 343.036,
-              "end": 343.214
-            },
-            {
-              "text": "han",
-              "start": 343.214,
-              "end": 343.393
-            },
-            {
-              "text": "dolido,",
-              "start": 343.393,
-              "end": 343.929
-            }
-          ]
-        },
-        {
-          "text": "frases que dejaron huella y me rompieron el latido:",
-          "start": 343.929,
-          "end": 346.786,
-          "words": [
-            {
-              "text": "frases",
-              "start": 343.929,
-              "end": 344.265
-            },
-            {
-              "text": "que",
-              "start": 344.265,
-              "end": 344.433
-            },
-            {
-              "text": "dejaron",
-              "start": 344.433,
-              "end": 344.937
-            },
-            {
-              "text": "huella",
-              "start": 344.937,
-              "end": 345.273
-            },
-            {
-              "text": "y",
-              "start": 345.273,
-              "end": 345.441
-            },
-            {
-              "text": "me",
-              "start": 345.441,
-              "end": 345.609
-            },
-            {
-              "text": "rompieron",
-              "start": 345.609,
-              "end": 346.113
-            },
-            {
-              "text": "el",
-              "start": 346.113,
-              "end": 346.282
-            },
-            {
-              "text": "latido:",
-              "start": 346.282,
-              "end": 346.786
-            }
-          ]
-        },
-        {
-          "text": "escuchar «si no te gusta, mira, ahí está la puerta»,",
-          "start": 346.786,
-          "end": 349.821,
-          "words": [
-            {
-              "text": "escuchar",
-              "start": 346.786,
-              "end": 347.321
-            },
-            {
-              "text": "«si",
-              "start": 347.321,
-              "end": 347.5
-            },
-            {
-              "text": "no",
-              "start": 347.5,
-              "end": 347.679
-            },
-            {
-              "text": "te",
-              "start": 347.679,
-              "end": 347.857
-            },
-            {
-              "text": "gusta,",
-              "start": 347.857,
-              "end": 348.214
-            },
-            {
-              "text": "mira,",
-              "start": 348.214,
-              "end": 348.571
-            },
-            {
-              "text": "ahí",
-              "start": 348.571,
-              "end": 348.929
-            },
-            {
-              "text": "está",
-              "start": 348.929,
-              "end": 349.286
-            },
-            {
-              "text": "la",
-              "start": 349.286,
-              "end": 349.464
-            },
-            {
-              "text": "puerta»,",
-              "start": 349.464,
-              "end": 349.821
-            }
-          ]
-        },
-        {
-          "text": "me dejó con el silencio y con la herida bien abierta;",
-          "start": 349.821,
-          "end": 352.857,
-          "words": [
-            {
-              "text": "me",
-              "start": 349.821,
-              "end": 349.99
-            },
-            {
-              "text": "dejó",
-              "start": 349.99,
-              "end": 350.327
-            },
-            {
-              "text": "con",
-              "start": 350.327,
-              "end": 350.496
-            },
-            {
-              "text": "el",
-              "start": 350.496,
-              "end": 350.665
-            },
-            {
-              "text": "silencio",
-              "start": 350.665,
-              "end": 351.171
-            },
-            {
-              "text": "y",
-              "start": 351.171,
-              "end": 351.339
-            },
-            {
-              "text": "con",
-              "start": 351.339,
-              "end": 351.508
-            },
-            {
-              "text": "la",
-              "start": 351.508,
-              "end": 351.677
-            },
-            {
-              "text": "herida",
-              "start": 351.677,
-              "end": 352.183
-            },
-            {
-              "text": "bien",
-              "start": 352.183,
-              "end": 352.351
-            },
-            {
-              "text": "abierta;",
-              "start": 352.351,
-              "end": 352.857
-            }
-          ]
-        },
-        {
-          "text": "cuando un día me dijiste «siento cosas por alguien más»,",
-          "start": 352.857,
-          "end": 355.714,
-          "words": [
-            {
-              "text": "cuando",
-              "start": 352.857,
-              "end": 353.214
-            },
-            {
-              "text": "un",
-              "start": 353.214,
-              "end": 353.393
-            },
-            {
-              "text": "día",
-              "start": 353.393,
-              "end": 353.571
-            },
-            {
-              "text": "me",
-              "start": 353.571,
-              "end": 353.75
-            },
-            {
-              "text": "dijiste",
-              "start": 353.75,
-              "end": 354.286
-            },
-            {
-              "text": "«siento",
-              "start": 354.286,
-              "end": 354.643
-            },
-            {
-              "text": "cosas",
-              "start": 354.643,
-              "end": 355.0
-            },
-            {
-              "text": "por",
-              "start": 355.0,
-              "end": 355.179
-            },
-            {
-              "text": "alguien",
-              "start": 355.179,
-              "end": 355.536
-            },
-            {
-              "text": "más»,",
-              "start": 355.536,
-              "end": 355.714
-            }
-          ]
-        },
-        {
-          "text": "sentí que todo mi mundo se quedaba sin su paz;",
-          "start": 355.714,
-          "end": 358.393,
-          "words": [
-            {
-              "text": "sentí",
-              "start": 355.714,
-              "end": 356.071
-            },
-            {
-              "text": "que",
-              "start": 356.071,
-              "end": 356.25
-            },
-            {
-              "text": "todo",
-              "start": 356.25,
-              "end": 356.607
-            },
-            {
-              "text": "mi",
-              "start": 356.607,
-              "end": 356.786
-            },
-            {
-              "text": "mundo",
-              "start": 356.786,
-              "end": 357.143
-            },
-            {
-              "text": "se",
-              "start": 357.143,
-              "end": 357.321
-            },
-            {
-              "text": "quedaba",
-              "start": 357.321,
-              "end": 357.857
-            },
-            {
-              "text": "sin",
-              "start": 357.857,
-              "end": 358.036
-            },
-            {
-              "text": "su",
-              "start": 358.036,
-              "end": 358.214
-            },
-            {
-              "text": "paz;",
-              "start": 358.214,
-              "end": 358.393
-            }
-          ]
-        },
-        {
-          "text": "escuchar de tu propia boca el «ya no siento lo mismo»,",
-          "start": 358.393,
-          "end": 361.429,
-          "words": [
-            {
-              "text": "escuchar",
-              "start": 358.393,
-              "end": 358.929
-            },
-            {
-              "text": "de",
-              "start": 358.929,
-              "end": 359.107
-            },
-            {
-              "text": "tu",
-              "start": 359.107,
-              "end": 359.286
-            },
-            {
-              "text": "propia",
-              "start": 359.286,
-              "end": 359.643
-            },
-            {
-              "text": "boca",
-              "start": 359.643,
-              "end": 360.0
-            },
-            {
-              "text": "el",
-              "start": 360.0,
-              "end": 360.179
-            },
-            {
-              "text": "«ya",
-              "start": 360.179,
-              "end": 360.357
-            },
-            {
-              "text": "no",
-              "start": 360.357,
-              "end": 360.536
-            },
-            {
-              "text": "siento",
-              "start": 360.536,
-              "end": 360.893
-            },
-            {
-              "text": "lo",
-              "start": 360.893,
-              "end": 361.071
-            },
-            {
-              "text": "mismo»,",
-              "start": 361.071,
-              "end": 361.429
-            }
-          ]
-        },
-        {
-          "text": "fue sentir cómo mis pasos se caían al abismo;",
-          "start": 361.429,
-          "end": 363.929,
-          "words": [
-            {
-              "text": "fue",
-              "start": 361.429,
-              "end": 361.607
-            },
-            {
-              "text": "sentir",
-              "start": 361.607,
-              "end": 361.964
-            },
-            {
-              "text": "cómo",
-              "start": 361.964,
-              "end": 362.321
-            },
-            {
-              "text": "mis",
-              "start": 362.321,
-              "end": 362.5
-            },
-            {
-              "text": "pasos",
-              "start": 362.5,
-              "end": 362.857
-            },
-            {
-              "text": "se",
-              "start": 362.857,
-              "end": 363.036
-            },
-            {
-              "text": "caían",
-              "start": 363.036,
-              "end": 363.214
-            },
-            {
-              "text": "al",
-              "start": 363.214,
-              "end": 363.393
-            },
-            {
-              "text": "abismo;",
-              "start": 363.393,
-              "end": 363.929
-            }
-          ]
-        },
-        {
-          "text": "soportar en la tormenta ese «hay que terminar»,",
-          "start": 363.929,
-          "end": 366.607,
-          "words": [
-            {
-              "text": "soportar",
-              "start": 363.929,
-              "end": 364.464
-            },
-            {
-              "text": "en",
-              "start": 364.464,
-              "end": 364.643
-            },
-            {
-              "text": "la",
-              "start": 364.643,
-              "end": 364.821
-            },
-            {
-              "text": "tormenta",
-              "start": 364.821,
-              "end": 365.357
-            },
-            {
-              "text": "ese",
-              "start": 365.357,
-              "end": 365.714
-            },
-            {
-              "text": "«hay",
-              "start": 365.714,
-              "end": 365.893
-            },
-            {
-              "text": "que",
-              "start": 365.893,
-              "end": 366.071
-            },
-            {
-              "text": "terminar»,",
-              "start": 366.071,
-              "end": 366.607
-            }
-          ]
-        },
-        {
-          "text": "y morderme las palabras para no echarme a llorar;",
-          "start": 366.607,
-          "end": 369.464,
-          "words": [
-            {
-              "text": "y",
-              "start": 366.607,
-              "end": 366.775
-            },
-            {
-              "text": "morderme",
-              "start": 366.775,
-              "end": 367.279
-            },
-            {
-              "text": "las",
-              "start": 367.279,
-              "end": 367.447
-            },
-            {
-              "text": "palabras",
-              "start": 367.447,
-              "end": 367.952
-            },
-            {
-              "text": "para",
-              "start": 367.952,
-              "end": 368.288
-            },
-            {
-              "text": "no",
-              "start": 368.288,
-              "end": 368.456
-            },
-            {
-              "text": "echarme",
-              "start": 368.456,
-              "end": 368.96
-            },
-            {
-              "text": "a",
-              "start": 368.96,
-              "end": 369.128
-            },
-            {
-              "text": "llorar;",
-              "start": 369.128,
-              "end": 369.464
-            }
-          ]
-        },
-        {
-          "text": "y el «yo sé que te quiero mucho, pero sigo pensando igual»,",
-          "start": 369.464,
-          "end": 372.679,
-          "words": [
-            {
-              "text": "y",
-              "start": 369.464,
-              "end": 369.633
-            },
-            {
-              "text": "el",
-              "start": 369.633,
-              "end": 369.803
-            },
-            {
-              "text": "«yo",
-              "start": 369.803,
-              "end": 369.972
-            },
-            {
-              "text": "sé",
-              "start": 369.972,
-              "end": 370.141
-            },
-            {
-              "text": "que",
-              "start": 370.141,
-              "end": 370.31
-            },
-            {
-              "text": "te",
-              "start": 370.31,
-              "end": 370.479
-            },
-            {
-              "text": "quiero",
-              "start": 370.479,
-              "end": 370.818
-            },
-            {
-              "text": "mucho,",
-              "start": 370.818,
-              "end": 371.156
-            },
-            {
-              "text": "pero",
-              "start": 371.156,
-              "end": 371.494
-            },
-            {
-              "text": "sigo",
-              "start": 371.494,
-              "end": 371.833
-            },
-            {
-              "text": "pensando",
-              "start": 371.833,
-              "end": 372.34
-            },
-            {
-              "text": "igual»,",
-              "start": 372.34,
-              "end": 372.679
-            }
-          ]
-        },
-        {
-          "text": "que me tiene suspendido entre el principio y el final.",
-          "start": 372.679,
-          "end": 375.714,
-          "words": [
-            {
-              "text": "que",
-              "start": 372.679,
-              "end": 372.847
-            },
-            {
-              "text": "me",
-              "start": 372.847,
-              "end": 373.016
-            },
-            {
-              "text": "tiene",
-              "start": 373.016,
-              "end": 373.353
-            },
-            {
-              "text": "suspendido",
-              "start": 373.353,
-              "end": 374.028
-            },
-            {
-              "text": "entre",
-              "start": 374.028,
-              "end": 374.365
-            },
-            {
-              "text": "el",
-              "start": 374.365,
-              "end": 374.534
-            },
-            {
-              "text": "principio",
-              "start": 374.534,
-              "end": 375.04
-            },
-            {
-              "text": "y",
-              "start": 375.04,
-              "end": 375.208
-            },
-            {
-              "text": "el",
-              "start": 375.208,
-              "end": 375.377
-            },
-            {
-              "text": "final.",
-              "start": 375.377,
-              "end": 375.714
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Puente",
-      "start": 377.143,
-      "end": 397.143,
-      "lines": [
-        {
-          "text": "Sé que aún falta definir qué somos o qué seremos,",
-          "start": 377.143,
-          "end": 380.0,
-          "words": [
-            {
-              "text": "Sé",
-              "start": 377.143,
-              "end": 377.321
-            },
-            {
-              "text": "que",
-              "start": 377.321,
-              "end": 377.5
-            },
-            {
-              "text": "aún",
-              "start": 377.5,
-              "end": 377.679
-            },
-            {
-              "text": "falta",
-              "start": 377.679,
-              "end": 378.036
-            },
-            {
-              "text": "definir",
-              "start": 378.036,
-              "end": 378.571
-            },
-            {
-              "text": "qué",
-              "start": 378.571,
-              "end": 378.75
-            },
-            {
-              "text": "somos",
-              "start": 378.75,
-              "end": 379.107
-            },
-            {
-              "text": "o",
-              "start": 379.107,
-              "end": 379.286
-            },
-            {
-              "text": "qué",
-              "start": 379.286,
-              "end": 379.464
-            },
-            {
-              "text": "seremos,",
-              "start": 379.464,
-              "end": 380.0
-            }
-          ]
-        },
-        {
-          "text": "que todavía lo meditas por las dudas que tenemos.",
-          "start": 380.0,
-          "end": 382.857,
-          "words": [
-            {
-              "text": "que",
-              "start": 380.0,
-              "end": 380.179
-            },
-            {
-              "text": "todavía",
-              "start": 380.179,
-              "end": 380.714
-            },
-            {
-              "text": "lo",
-              "start": 380.714,
-              "end": 380.893
-            },
-            {
-              "text": "meditas",
-              "start": 380.893,
-              "end": 381.429
-            },
-            {
-              "text": "por",
-              "start": 381.429,
-              "end": 381.607
-            },
-            {
-              "text": "las",
-              "start": 381.607,
-              "end": 381.786
-            },
-            {
-              "text": "dudas",
-              "start": 381.786,
-              "end": 382.143
-            },
-            {
-              "text": "que",
-              "start": 382.143,
-              "end": 382.321
-            },
-            {
-              "text": "tenemos.",
-              "start": 382.321,
-              "end": 382.857
-            }
-          ]
-        },
-        {
-          "text": "Pero has sido una experiencia que me hace sentir tan vivo,",
-          "start": 382.857,
-          "end": 386.429,
-          "words": [
-            {
-              "text": "Pero",
-              "start": 382.857,
-              "end": 383.214
-            },
-            {
-              "text": "has",
-              "start": 383.214,
-              "end": 383.393
-            },
-            {
-              "text": "sido",
-              "start": 383.393,
-              "end": 383.75
-            },
-            {
-              "text": "una",
-              "start": 383.75,
-              "end": 384.107
-            },
-            {
-              "text": "experiencia",
-              "start": 384.107,
-              "end": 384.821
-            },
-            {
-              "text": "que",
-              "start": 384.821,
-              "end": 385.0
-            },
-            {
-              "text": "me",
-              "start": 385.0,
-              "end": 385.179
-            },
-            {
-              "text": "hace",
-              "start": 385.179,
-              "end": 385.536
-            },
-            {
-              "text": "sentir",
-              "start": 385.536,
-              "end": 385.893
-            },
-            {
-              "text": "tan",
-              "start": 385.893,
-              "end": 386.071
-            },
-            {
-              "text": "vivo,",
-              "start": 386.071,
-              "end": 386.429
-            }
-          ]
-        },
-        {
-          "text": "algo que me pone a prueba y le da fuerza a mi motivo;",
-          "start": 386.429,
-          "end": 389.643,
-          "words": [
-            {
-              "text": "algo",
-              "start": 386.429,
-              "end": 386.767
-            },
-            {
-              "text": "que",
-              "start": 386.767,
-              "end": 386.936
-            },
-            {
-              "text": "me",
-              "start": 386.936,
-              "end": 387.105
-            },
-            {
-              "text": "pone",
-              "start": 387.105,
-              "end": 387.444
-            },
-            {
-              "text": "a",
-              "start": 387.444,
-              "end": 387.613
-            },
-            {
-              "text": "prueba",
-              "start": 387.613,
-              "end": 387.951
-            },
-            {
-              "text": "y",
-              "start": 387.951,
-              "end": 388.12
-            },
-            {
-              "text": "le",
-              "start": 388.12,
-              "end": 388.289
-            },
-            {
-              "text": "da",
-              "start": 388.289,
-              "end": 388.459
-            },
-            {
-              "text": "fuerza",
-              "start": 388.459,
-              "end": 388.797
-            },
-            {
-              "text": "a",
-              "start": 388.797,
-              "end": 388.966
-            },
-            {
-              "text": "mi",
-              "start": 388.966,
-              "end": 389.135
-            },
-            {
-              "text": "motivo;",
-              "start": 389.135,
-              "end": 389.643
-            }
-          ]
-        },
-        {
-          "text": "algo que me hace reír, llorar, enojar y errar,",
-          "start": 389.643,
-          "end": 392.143,
-          "words": [
-            {
-              "text": "algo",
-              "start": 389.643,
-              "end": 389.976
-            },
-            {
-              "text": "que",
-              "start": 389.976,
-              "end": 390.143
-            },
-            {
-              "text": "me",
-              "start": 390.143,
-              "end": 390.31
-            },
-            {
-              "text": "hace",
-              "start": 390.31,
-              "end": 390.643
-            },
-            {
-              "text": "reír,",
-              "start": 390.643,
-              "end": 390.81
-            },
-            {
-              "text": "llorar,",
-              "start": 390.81,
-              "end": 391.143
-            },
-            {
-              "text": "enojar",
-              "start": 391.143,
-              "end": 391.643
-            },
-            {
-              "text": "y",
-              "start": 391.643,
-              "end": 391.81
-            },
-            {
-              "text": "errar,",
-              "start": 391.81,
-              "end": 392.143
-            }
-          ]
-        },
-        {
-          "text": "pero que más que nada en este mundo... me hace amar.",
-          "start": 392.143,
-          "end": 395.179,
-          "words": [
-            {
-              "text": "pero",
-              "start": 392.143,
-              "end": 392.5
-            },
-            {
-              "text": "que",
-              "start": 392.5,
-              "end": 392.679
-            },
-            {
-              "text": "más",
-              "start": 392.679,
-              "end": 392.857
-            },
-            {
-              "text": "que",
-              "start": 392.857,
-              "end": 393.036
-            },
-            {
-              "text": "nada",
-              "start": 393.036,
-              "end": 393.393
-            },
-            {
-              "text": "en",
-              "start": 393.393,
-              "end": 393.571
-            },
-            {
-              "text": "este",
-              "start": 393.571,
-              "end": 393.929
-            },
-            {
-              "text": "mundo...",
-              "start": 393.929,
-              "end": 394.286
-            },
-            {
-              "text": "me",
-              "start": 394.286,
-              "end": 394.464
-            },
-            {
-              "text": "hace",
-              "start": 394.464,
-              "end": 394.821
-            },
-            {
-              "text": "amar.",
-              "start": 394.821,
-              "end": 395.179
-            }
-          ]
-        },
-        {
-          "text": "¡Hey, hey, hey...!",
-          "start": 395.179,
-          "end": 396.607,
-          "words": [
-            {
-              "text": "¡Hey,",
-              "start": 395.179,
-              "end": 395.655
-            },
-            {
-              "text": "hey,",
-              "start": 395.655,
-              "end": 396.131
-            },
-            {
-              "text": "hey...!",
-              "start": 396.131,
-              "end": 396.607
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Outro",
-      "start": 397.143,
-      "end": 440.0,
-      "lines": [
-        {
-          "text": "De sentarnos en la banca por aquel Paseo Bravo,",
-          "start": 397.143,
-          "end": 400.893,
-          "words": [
-            {
-              "text": "De",
-              "start": 397.143,
-              "end": 397.393
-            },
-            {
-              "text": "sentarnos",
-              "start": 397.393,
-              "end": 398.143
-            },
-            {
-              "text": "en",
-              "start": 398.143,
-              "end": 398.393
-            },
-            {
-              "text": "la",
-              "start": 398.393,
-              "end": 398.643
-            },
-            {
-              "text": "banca",
-              "start": 398.643,
-              "end": 399.143
-            },
-            {
-              "text": "por",
-              "start": 399.143,
-              "end": 399.393
-            },
-            {
-              "text": "aquel",
-              "start": 399.393,
-              "end": 399.893
-            },
-            {
-              "text": "Paseo",
-              "start": 399.893,
-              "end": 400.393
-            },
-            {
-              "text": "Bravo,",
-              "start": 400.393,
-              "end": 400.893
-            }
-          ]
-        },
-        {
-          "text": "a grabarme cada historia que en el pecho hoy me clavo;",
-          "start": 400.893,
-          "end": 405.536,
-          "words": [
-            {
-              "text": "a",
-              "start": 400.893,
-              "end": 401.151
-            },
-            {
-              "text": "grabarme",
-              "start": 401.151,
-              "end": 401.925
-            },
-            {
-              "text": "cada",
-              "start": 401.925,
-              "end": 402.44
-            },
-            {
-              "text": "historia",
-              "start": 402.44,
-              "end": 403.214
-            },
-            {
-              "text": "que",
-              "start": 403.214,
-              "end": 403.472
-            },
-            {
-              "text": "en",
-              "start": 403.472,
-              "end": 403.73
-            },
-            {
-              "text": "el",
-              "start": 403.73,
-              "end": 403.988
-            },
-            {
-              "text": "pecho",
-              "start": 403.988,
-              "end": 404.504
-            },
-            {
-              "text": "hoy",
-              "start": 404.504,
-              "end": 404.762
-            },
-            {
-              "text": "me",
-              "start": 404.762,
-              "end": 405.02
-            },
-            {
-              "text": "clavo;",
-              "start": 405.02,
-              "end": 405.536
-            }
-          ]
-        },
-        {
-          "text": "de las tardes en Atlixco con el cielo por testigo,",
-          "start": 405.536,
-          "end": 409.643,
-          "words": [
-            {
-              "text": "de",
-              "start": 405.536,
-              "end": 405.792
-            },
-            {
-              "text": "las",
-              "start": 405.792,
-              "end": 406.049
-            },
-            {
-              "text": "tardes",
-              "start": 406.049,
-              "end": 406.563
-            },
-            {
-              "text": "en",
-              "start": 406.563,
-              "end": 406.819
-            },
-            {
-              "text": "Atlixco",
-              "start": 406.819,
-              "end": 407.589
-            },
-            {
-              "text": "con",
-              "start": 407.589,
-              "end": 407.846
-            },
-            {
-              "text": "el",
-              "start": 407.846,
-              "end": 408.103
-            },
-            {
-              "text": "cielo",
-              "start": 408.103,
-              "end": 408.616
-            },
-            {
-              "text": "por",
-              "start": 408.616,
-              "end": 408.873
-            },
-            {
-              "text": "testigo,",
-              "start": 408.873,
-              "end": 409.643
-            }
-          ]
-        },
-        {
-          "text": "al CCU y a tus tesis platicando aquí contigo,",
-          "start": 409.643,
-          "end": 413.393,
-          "words": [
-            {
-              "text": "al",
-              "start": 409.643,
-              "end": 409.877
-            },
-            {
-              "text": "CCU",
-              "start": 409.877,
-              "end": 410.112
-            },
-            {
-              "text": "y",
-              "start": 410.112,
-              "end": 410.346
-            },
-            {
-              "text": "a",
-              "start": 410.346,
-              "end": 410.58
-            },
-            {
-              "text": "tus",
-              "start": 410.58,
-              "end": 410.815
-            },
-            {
-              "text": "tesis",
-              "start": 410.815,
-              "end": 411.283
-            },
-            {
-              "text": "platicando",
-              "start": 411.283,
-              "end": 412.221
-            },
-            {
-              "text": "aquí",
-              "start": 412.221,
-              "end": 412.69
-            },
-            {
-              "text": "contigo,",
-              "start": 412.69,
-              "end": 413.393
-            }
-          ]
-        },
-        {
-          "text": "comiendo algo por ahí mientras sigues avanzando",
-          "start": 413.393,
-          "end": 417.5,
-          "words": [
-            {
-              "text": "comiendo",
-              "start": 413.393,
-              "end": 414.163
-            },
-            {
-              "text": "algo",
-              "start": 414.163,
-              "end": 414.676
-            },
-            {
-              "text": "por",
-              "start": 414.676,
-              "end": 414.933
-            },
-            {
-              "text": "ahí",
-              "start": 414.933,
-              "end": 415.446
-            },
-            {
-              "text": "mientras",
-              "start": 415.446,
-              "end": 415.96
-            },
-            {
-              "text": "sigues",
-              "start": 415.96,
-              "end": 416.473
-            },
-            {
-              "text": "avanzando",
-              "start": 416.473,
-              "end": 417.5
-            }
-          ]
-        },
-        {
-          "text": "y yo te admiro en silencio mientras te sigo amando.",
-          "start": 417.5,
-          "end": 421.786,
-          "words": [
-            {
-              "text": "y",
-              "start": 417.5,
-              "end": 417.738
-            },
-            {
-              "text": "yo",
-              "start": 417.738,
-              "end": 417.976
-            },
-            {
-              "text": "te",
-              "start": 417.976,
-              "end": 418.214
-            },
-            {
-              "text": "admiro",
-              "start": 418.214,
-              "end": 418.929
-            },
-            {
-              "text": "en",
-              "start": 418.929,
-              "end": 419.167
-            },
-            {
-              "text": "silencio",
-              "start": 419.167,
-              "end": 419.881
-            },
-            {
-              "text": "mientras",
-              "start": 419.881,
-              "end": 420.357
-            },
-            {
-              "text": "te",
-              "start": 420.357,
-              "end": 420.595
-            },
-            {
-              "text": "sigo",
-              "start": 420.595,
-              "end": 421.071
-            },
-            {
-              "text": "amando.",
-              "start": 421.071,
-              "end": 421.786
-            }
-          ]
-        },
-        {
-          "text": "Sé que sigues meditando qué seremos al final,",
-          "start": 421.786,
-          "end": 425.536,
-          "words": [
-            {
-              "text": "Sé",
-              "start": 421.786,
-              "end": 422.036
-            },
-            {
-              "text": "que",
-              "start": 422.036,
-              "end": 422.286
-            },
-            {
-              "text": "sigues",
-              "start": 422.286,
-              "end": 422.786
-            },
-            {
-              "text": "meditando",
-              "start": 422.786,
-              "end": 423.786
-            },
-            {
-              "text": "qué",
-              "start": 423.786,
-              "end": 424.036
-            },
-            {
-              "text": "seremos",
-              "start": 424.036,
-              "end": 424.786
-            },
-            {
-              "text": "al",
-              "start": 424.786,
-              "end": 425.036
-            },
-            {
-              "text": "final,",
-              "start": 425.036,
-              "end": 425.536
-            }
-          ]
-        },
-        {
-          "text": "pero amarte en este tiempo ha sido algo tan real.",
-          "start": 425.536,
-          "end": 429.821,
-          "words": [
-            {
-              "text": "pero",
-              "start": 425.536,
-              "end": 426.04
-            },
-            {
-              "text": "amarte",
-              "start": 426.04,
-              "end": 426.796
-            },
-            {
-              "text": "en",
-              "start": 426.796,
-              "end": 427.048
-            },
-            {
-              "text": "este",
-              "start": 427.048,
-              "end": 427.553
-            },
-            {
-              "text": "tiempo",
-              "start": 427.553,
-              "end": 428.057
-            },
-            {
-              "text": "ha",
-              "start": 428.057,
-              "end": 428.309
-            },
-            {
-              "text": "sido",
-              "start": 428.309,
-              "end": 428.813
-            },
-            {
-              "text": "algo",
-              "start": 428.813,
-              "end": 429.317
-            },
-            {
-              "text": "tan",
-              "start": 429.317,
-              "end": 429.569
-            },
-            {
-              "text": "real.",
-              "start": 429.569,
-              "end": 429.821
-            }
-          ]
-        },
-        {
-          "text": "Más de dos años, mi Popis, que jamás voy a olvidar...",
-          "start": 429.821,
-          "end": 433.929,
-          "words": [
-            {
-              "text": "Más",
-              "start": 429.821,
-              "end": 430.078
-            },
-            {
-              "text": "de",
-              "start": 430.078,
-              "end": 430.335
-            },
-            {
-              "text": "dos",
-              "start": 430.335,
-              "end": 430.592
-            },
-            {
-              "text": "años,",
-              "start": 430.592,
-              "end": 431.105
-            },
-            {
-              "text": "mi",
-              "start": 431.105,
-              "end": 431.362
-            },
-            {
-              "text": "Popis,",
-              "start": 431.362,
-              "end": 431.875
-            },
-            {
-              "text": "que",
-              "start": 431.875,
-              "end": 432.132
-            },
-            {
-              "text": "jamás",
-              "start": 432.132,
-              "end": 432.645
-            },
-            {
-              "text": "voy",
-              "start": 432.645,
-              "end": 432.902
-            },
-            {
-              "text": "a",
-              "start": 432.902,
-              "end": 433.158
-            },
-            {
-              "text": "olvidar...",
-              "start": 433.158,
-              "end": 433.929
-            }
-          ]
-        },
-        {
-          "text": "mi corazón de pollito, gracias por hacerme amar.",
-          "start": 433.929,
-          "end": 438.036,
-          "words": [
-            {
-              "text": "mi",
-              "start": 433.929,
-              "end": 434.185
-            },
-            {
-              "text": "corazón",
-              "start": 434.185,
-              "end": 434.955
-            },
-            {
-              "text": "de",
-              "start": 434.955,
-              "end": 435.212
-            },
-            {
-              "text": "pollito,",
-              "start": 435.212,
-              "end": 435.982
-            },
-            {
-              "text": "gracias",
-              "start": 435.982,
-              "end": 436.496
-            },
-            {
-              "text": "por",
-              "start": 436.496,
-              "end": 436.752
-            },
-            {
-              "text": "hacerme",
-              "start": 436.752,
-              "end": 437.522
-            },
-            {
-              "text": "amar.",
-              "start": 437.522,
-              "end": 438.036
+              "start": 295.49,
+              "end": 296.18
             }
           ]
         }

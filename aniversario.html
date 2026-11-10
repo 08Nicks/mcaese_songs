@@ -758,14 +758,29 @@
 
       <!-- Reproductor de Audio -->
       <section class="player-card">
+        <!-- 1. Canción Principal (Versión Estudio) -->
         <div class="player-header">
           <div class="player-badge">
             <span class="dot"></span>
-            <span>🎵 Nuestra Canción</span>
+            <span>🎵 Nuestra Canción (Versión Estudio)</span>
           </div>
+          <span style="font-size: 0.8rem; color: var(--faint);">5:03 min</span>
         </div>
 
-        <audio id="audio" controls preload="metadata" src="music/de-un-veremos-a-dos-anos-mezcla.mp3">
+        <audio id="audio" controls preload="metadata" src="music/de-un-veremos-a-dos-anos-estudio.mp3">
+          Tu navegador no soporta el reproductor de audio.
+        </audio>
+
+        <!-- 2. Canción Cantada por Josué -->
+        <div class="player-header" style="margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+          <div class="player-badge" style="background: rgba(255, 107, 107, 0.14); border-color: rgba(255, 107, 107, 0.35);">
+            <span class="dot" style="background: #ff6b6b; box-shadow: 0 0 10px #ff6b6b;"></span>
+            <span style="color: #ffb3b3;">🎙️ Versión con mi voz (Josué para Popi)</span>
+          </div>
+          <span style="font-size: 0.8rem; color: var(--faint);">7:23 min</span>
+        </div>
+
+        <audio id="audioVoz" controls preload="metadata" src="music/de-un-veremos-a-dos-anos-mezcla.mp3">
           Tu navegador no soporta el reproductor de audio.
         </audio>
       </section>
@@ -790,10 +805,15 @@
 
       <!-- Pie con Descarga y Mensaje -->
       <footer class="romantic-footer">
-        <a class="download-cta" href="music/de-un-veremos-a-dos-anos-mezcla.mp3" download="De Un Veremos a Dos Anos - Popi.mp3">
-          ⬇️ Descargar la Canción (MP3)
-        </a>
-        <p class="footer-note">
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a class="download-cta" href="music/de-un-veremos-a-dos-anos-estudio.mp3" download="De Un Veremos a Dos Anos - Popi (Estudio).mp3">
+            ⬇️ Descargar Versión Estudio (MP3)
+          </a>
+          <a class="download-cta" href="music/de-un-veremos-a-dos-anos-mezcla.mp3" download="De Un Veremos a Dos Anos - Popi (Con mi voz).mp3" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2);">
+            🎙️ Descargar Versión con mi Voz (MP3)
+          </a>
+        </div>
+        <p class="footer-note" style="margin-top: 18px;">
           Hecho con todo el corazón para <strong>Popi</strong> · Puebla y CDMX · <strong>2 Años Juntos</strong> ❤️
         </p>
       </footer>
@@ -859,12 +879,22 @@
 
       const data = window.KARAOKE_DATA;
       const audio = document.getElementById("audio");
+      const audioVoz = document.getElementById("audioVoz");
       const lyricsEl = document.getElementById("lyrics");
       const lyricsContainer = document.getElementById("lyricsContainer");
       const sectionNameEl = document.getElementById("sectionName");
       const countWrap = document.getElementById("countWrap");
       const countInEl = document.getElementById("countIn");
       const timeLabel = document.getElementById("timeLabel");
+
+      if (audioVoz) {
+        audio.addEventListener("play", () => {
+          if (!audioVoz.paused) audioVoz.pause();
+        });
+        audioVoz.addEventListener("play", () => {
+          if (!audio.paused) audio.pause();
+        });
+      }
 
       const btnMix = document.getElementById("btnMix");
       const btnClean = document.getElementById("btnClean");
