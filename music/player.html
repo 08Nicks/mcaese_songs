@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <title>De un «Veremos» a Dos Años — karaoke</title>
+  <style>
+    :root {
+      --bg: #07060b;
+      --card: #120e1c;
+      --card-2: #0d0a15;
+      --pink: #ff3d81;
+      --pink-soft: #ff7aa8;
+      --gold: #ffb020;
+      --text: #f7f2ff;
+      --muted: #b0a6c4;
+      --faint: #7e748f;
+      --line: rgba(255, 255, 255, 0.09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(60% 45% at 15% 0%, rgba(255, 61, 129, 0.16), transparent),
+        radial-gradient(50% 40% at 90% 100%, rgba(255, 176, 32, 0.10), transparent),
+        var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      padding: 22px 16px 42px;
+    }
+    .wrap { width: min(880px, 100%); margin: 0 auto; }
+
+    header { margin-bottom: 16px; }
+    .eyebrow, .kicker {
+      margin: 0 0 6px;
+      color: var(--pink);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .kicker { color: var(--gold); }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(1.65rem, 5vw, 2.4rem);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+    }
+    .style { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent), var(--card);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    audio { width: 100%; display: block; }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .chip {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.78rem;
+      padding: 7px 11px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .chip:hover { border-color: rgba(255, 61, 129, 0.5); }
+    .chip.is-active {
+      border-color: rgba(255, 61, 129, 0.65);
+      background: rgba(255, 61, 129, 0.14);
+      color: #fff;
+    }
+    .time {
+      margin-left: auto;
+      color: var(--faint);
+      font-size: 0.78rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .karaoke-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .karaoke-top h2 { margin: 0; font-size: 1.05rem; }
+    .count-wrap {
+      min-width: 70px;
+      text-align: center;
+      color: var(--gold);
+    }
+    .count-label {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+    #countIn {
+      display: block;
+      font-size: 2.2rem;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+    #countIn[hidden] { display: none; }
+    .count-wrap[hidden] { display: none; }
+
+    .lyrics {
+      height: min(52vh, 520px);
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      padding: 6px 6px 40vh;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      mask-image: linear-gradient(180deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+    }
+    .lyric-section { margin: 18px 0 6px; }
+    .lyric-section h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+    .line {
+      margin: 0;
+      padding: 7px 10px;
+      border-left: 3px solid transparent;
+      border-radius: 7px;
+      color: var(--faint);
+      font-size: 0.98rem;
+      line-height: 1.45;
+      transition: color 160ms ease, background 160ms ease, font-size 160ms ease, border-color 160ms ease;
+    }
+    .line.active {
+      color: #fff;
+      background: rgba(255, 61, 129, 0.13);
+      border-left-color: var(--pink);
+      font-size: 1.22rem;
+      font-weight: 600;
+    }
+    .word {
+      display: inline-block;
+      padding: 1px 2px;
+      border-radius: 4px;
+      transition: color 110ms ease, background 110ms ease,
+                  box-shadow 110ms ease, transform 110ms ease;
+    }
+    .line.active .word { color: #efe6ff; }
+    .line.active .word.active {
+      color: #1a0f22;
+      background: linear-gradient(180deg, #ffd36b, #ffb020);
+      box-shadow: 0 0 18px rgba(255, 176, 32, 0.42);
+      transform: scale(1.06);
+    }
+
+    .record-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .record-head h2 { margin: 0; font-size: 1.05rem; }
+    .status {
+      color: var(--faint);
+      font-size: 0.72rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .status.recording { color: var(--pink); }
+    .hint {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+    .record-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .btn {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .btn:hover { border-color: rgba(255, 61, 129, 0.55); }
+    .btn-primary {
+      background: linear-gradient(180deg, #ff5c97, #e62f70);
+      border-color: #ff7aa8;
+      color: #fff;
+    }
+    .btn-ghost { background: transparent; }
+    .btn[hidden] { display: none; }
+    .small { margin: 10px 0 0; color: var(--faint); font-size: 0.76rem; line-height: 1.45; }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .links a {
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 61, 129, 0.35);
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 0.76rem;
+      text-decoration: none;
+    }
+    .links a:hover { background: rgba(255, 61, 129, 0.12); }
+
+    @media (max-width: 520px) {
+      .lyrics { height: 46vh; }
+      .line { font-size: 0.93rem; }
+      .line.active { font-size: 1.1rem; }
+      .time { width: 100%; margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="eyebrow">MC Aese · estilo</p>
+      <h1>De un «Veremos» a Dos Años</h1>
+      <p class="style">Dream Pop Latino & Rap Romántico · Rhodes · Guitarra acústica · 84 BPM · MC Aese x Kali Uchis</p>
+    </header>
+
+    <section class="card">
+      <audio id="audio" controls preload="metadata" src="de-un-veremos-a-dos-anos-guia.mp3">
+        Tu navegador no puede reproducir el audio.
+      </audio>
+      <div class="row">
+        <button id="useGuide" class="chip is-active" type="button">Con conteo</button>
+        <button id="useClean" class="chip" type="button">Sin conteo</button>
+        <button id="fullscreenBtn" class="chip" type="button">Pantalla completa</button>
+        <span id="timeLabel" class="time">0:00 / 5:46</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="karaoke-top">
+        <div>
+          <p class="kicker">Karaoke</p>
+          <h2 id="sectionName">Intro</h2>
+        </div>
+        <div class="count-wrap" id="countWrap">
+          <span class="count-label">Conteo</span>
+          <b id="countIn" hidden>4</b>
+        </div>
+      </div>
+      <p class="small" style="margin: 0 0 8px;">Sigue la palabra dorada: avanza al ritmo de la base.</p>
+      <div class="lyrics" id="lyrics"></div>
+    </section>
+
+    <section class="card">
+      <div class="record-head">
+        <div>
+          <p class="kicker">Grabación</p>
+          <h2>Graba tu voz</h2>
+        </div>
+        <span id="recStatus" class="status">Listo</span>
+      </div>
+      <p class="hint">
+        Usa audífonos: el micrófono no debe escuchar la pista. Al darle grabar,
+        empieza el conteo de 4 tiempos y luego la canción.
+      </p>
+      <div class="record-actions">
+        <button id="recordBtn" class="btn btn-primary" type="button">● Grabar mi voz</button>
+        <button id="stopBtn" class="btn" type="button" hidden>■ Detener</button>
+        <a id="downloadVocal" class="btn btn-ghost" hidden download="voz-principal.webm">Descargar voz</a>
+      </div>
+      <p id="recordMsg" class="small">
+        Si el navegador no te deja grabar, abre esta página desde
+        <code>http://127.0.0.1:4173/music/player.html</code>.
+      </p>
+    </section>
+
+    <footer class="links">
+      <a href="de-un-veremos-a-dos-anos-guia.mp3" download>Pista guía (MP3)</a>
+      <a href="de-un-veremos-a-dos-anos.mp3" download>Instrumental (MP3)</a>
+      <a href="de-un-veremos-a-dos-anos.mid" download>MIDI</a>
+      <a href="letra.txt" download>Letra completa</a>
+      <a href="prompt-ia.txt" download>Prompt para IA</a>
+      <a href="guia-de-grabacion.md" download>Guía de grabación</a>
+    </footer>
+  </div>
+
+  <script src="karaoke-data.js"></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const data = window.KARAOKE_DATA;
+      const audio = document.getElementById("audio");
+      const lyricsEl = document.getElementById("lyrics");
+      const sectionNameEl = document.getElementById("sectionName");
+      const countInEl = document.getElementById("countIn");
+      const countWrap = document.getElementById("countWrap");
+      const timeLabel = document.getElementById("timeLabel");
+      const useGuide = document.getElementById("useGuide");
+      const useClean = document.getElementById("useClean");
+      const fullscreenBtn = document.getElementById("fullscreenBtn");
+      const recordBtn = document.getElementById("recordBtn");
+      const stopBtn = document.getElementById("stopBtn");
+      const downloadVocal = document.getElementById("downloadVocal");
+      const recStatus = document.getElementById("recStatus");
+      const recordMsg = document.getElementById("recordMsg");
+
+      if (!data) {
+        lyricsEl.innerHTML = "<p class='line active'>No se pudo cargar la letra.</p>";
+        return;
+      }
+
+      const BEAT = 60 / data.bpm;
+      let usingGuide = true;
+      let offset = data.countIn;
+      let lineEls = [];
+      let wordEls = [];
+      let lastActive = null;
+      let lastWord = null;
+      let raf = 0;
+
+      // ---------------------------------------------------------------
+      // Construir letra
+      // ---------------------------------------------------------------
+      data.sections.forEach((section) => {
+        const sectionEl = document.createElement("section");
+        sectionEl.className = "lyric-section";
+        const title = document.createElement("h3");
+        title.textContent = section.name;
+        sectionEl.appendChild(title);
+
+        section.lines.forEach((line) => {
+          const p = document.createElement("p");
+          p.className = "line";
+          if (line.words && line.words.length) {
+            line.words.forEach((word, index) => {
+              const span = document.createElement("span");
+              span.className = "word";
+              span.textContent = word.text;
+              p.appendChild(span);
+              if (index < line.words.length - 1) {
+                p.appendChild(document.createTextNode(" "));
+              }
+              wordEls.push({ el: span, word });
+            });
+          } else {
+            p.textContent = line.text;
+          }
+          sectionEl.appendChild(p);
+          lineEls.push({ el: p, line, section: section.name });
+        });
+        lyricsEl.appendChild(sectionEl);
+      });
+
+      const fmt = (seconds) => {
+        const s = Math.max(0, Math.floor(seconds));
+        return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+      };
+
+      const songTime = () => Math.max(0, audio.currentTime - offset);
+      const songDuration = () => Math.max(0, (audio.duration || 0) - offset);
+
+      function updateTimeLabel() {
+        timeLabel.textContent = `${fmt(songTime())} / ${fmt(songDuration())}`;
+      }
+
+      function updateKaraoke() {
+        const t = audio.currentTime - offset;
+        const songT = Math.max(0, t);
+
+        // Conteo
+        if (t < 0) {
+          countWrap.hidden = false;
+          countInEl.hidden = false;
+          countInEl.textContent = String(Math.max(1, Math.ceil(-t / BEAT)));
+        } else {
+          countWrap.hidden = true;
+          countInEl.hidden = true;
+        }
+
+        // Sección actual
+        let currentSection = data.sections[0];
+        for (const section of data.sections) {
+          if (songT >= section.start && songT < section.end) {
+            currentSection = section;
+            break;
+          }
+          if (songT >= section.end) currentSection = section;
+        }
+        sectionNameEl.textContent = currentSection.name;
+
+        // Línea actual (durante el conteo no se resalta ninguna).
+        let active = null;
+        if (t >= 0) {
+          for (const item of lineEls) {
+            if (songT >= item.line.start && songT < item.line.end) {
+              active = item;
+              break;
+            }
+          }
+        }
+
+        if (active !== lastActive) {
+          if (lastActive) lastActive.el.classList.remove("active");
+          if (active) {
+            active.el.classList.add("active");
+            active.el.scrollIntoView({ block: "center", behavior: "smooth" });
+          }
+          lastActive = active;
+        }
+
+        // Palabra actual: búsqueda binaria sobre las 1200+ palabras.
+        let activeWord = null;
+        if (t >= 0 && wordEls.length) {
+          let lo = 0;
+          let hi = wordEls.length - 1;
+          let idx = -1;
+          while (lo <= hi) {
+            const mid = (lo + hi) >> 1;
+            if (wordEls[mid].word.start <= songT) {
+              idx = mid;
+              lo = mid + 1;
+            } else {
+              hi = mid - 1;
+            }
+          }
+          if (idx >= 0) {
+            const candidate = wordEls[idx];
+            if (songT < candidate.word.end) activeWord = candidate;
+          }
+        }
+
+        if (activeWord !== lastWord) {
+          if (lastWord) lastWord.el.classList.remove("active");
+          if (activeWord) activeWord.el.classList.add("active");
+          lastWord = activeWord;
+        }
+
+        updateTimeLabel();
+      }
+
+      function loop() {
+        updateKaraoke();
+        if (!audio.paused) raf = requestAnimationFrame(loop);
+      }
+
+      audio.addEventListener("play", () => {
+        cancelAnimationFrame(raf);
+        loop();
+      });
+      audio.addEventListener("pause", () => {
+        cancelAnimationFrame(raf);
+        updateKaraoke();
+      });
+      audio.addEventListener("seeked", updateKaraoke);
+      audio.addEventListener("timeupdate", updateKaraoke);
+      audio.addEventListener("loadedmetadata", updateTimeLabel);
+
+      // ---------------------------------------------------------------
+      // Cambiar entre pista guía y limpia
+      // ---------------------------------------------------------------
+      function updateChips() {
+        useGuide.classList.toggle("is-active", usingGuide);
+        useClean.classList.toggle("is-active", !usingGuide);
+      }
+
+      function switchSource(guide) {
+        if (guide === usingGuide) return;
+        if (mediaRecorder && mediaRecorder.state === "recording") return;
+        const wasPlaying = !audio.paused;
+        const currentSongTime = songTime();
+        usingGuide = guide;
+        offset = guide ? data.countIn : 0;
+        audio.src = guide ? data.guideAudio : data.audio;
+        audio.load();
+        updateChips();
+
+        const restore = () => {
+          const target = Math.min(
+            currentSongTime + offset,
+            Math.max(0, (audio.duration || 0) - 0.15)
+          );
+          audio.currentTime = target;
+          if (wasPlaying) audio.play().catch(() => {});
+          updateKaraoke();
+        };
+        audio.addEventListener("loadedmetadata", restore, { once: true });
+      }
+
+      useGuide.addEventListener("click", () => switchSource(true));
+      useClean.addEventListener("click", () => switchSource(false));
+
+      fullscreenBtn.addEventListener("click", () => {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen?.().catch(() => {});
+        } else {
+          document.exitFullscreen?.().catch(() => {});
+        }
+      });
+
+      // ---------------------------------------------------------------
+      // Grabación con micrófono
+      // ---------------------------------------------------------------
+      let mediaRecorder = null;
+      let chunks = [];
+      let stream = null;
+      let recTimer = 0;
+      let recStart = 0;
+
+      function startRecTimer() {
+        recStart = performance.now();
+        recStatus.classList.add("recording");
+        recTimer = window.setInterval(() => {
+          const s = (performance.now() - recStart) / 1000;
+          recStatus.textContent = `Grabando ${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+        }, 250);
+      }
+
+      function stopRecTimer() {
+        clearInterval(recTimer);
+        recStatus.classList.remove("recording");
+      }
+
+      async function ensureGuide() {
+        if (usingGuide) return;
+        usingGuide = true;
+        offset = data.countIn;
+        audio.src = data.guideAudio;
+        updateChips();
+        await new Promise((resolve) => {
+          if (audio.readyState >= 1) resolve();
+          else audio.addEventListener("loadedmetadata", resolve, { once: true });
+        });
+      }
+
+      async function startRecording() {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+          recordMsg.textContent = "Tu navegador no permite grabar audio aquí. Abre la página desde el servidor local.";
+          return;
+        }
+        if (typeof MediaRecorder === "undefined") {
+          recordMsg.textContent = "Tu navegador no soporta MediaRecorder. Graba con la app de tu celular.";
+          return;
+        }
+
+        recordMsg.textContent = "Pidiendo permiso al micrófono…";
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({
+            audio: {
+              echoCancellation: false,
+              noiseSuppression: false,
+              autoGainControl: false
+            }
+          });
+        } catch (error) {
+          recordMsg.textContent = "No se pudo acceder al micrófono. Revisa los permisos del navegador.";
+          return;
+        }
+
+        let mime = "";
+        if (MediaRecorder.isTypeSupported("audio/webm;codecs=opus")) {
+          mime = "audio/webm;codecs=opus";
+        } else if (MediaRecorder.isTypeSupported("audio/mp4")) {
+          mime = "audio/mp4";
+        }
+
+        try {
+          mediaRecorder = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
+        } catch (error) {
+          recordMsg.textContent = "No se pudo iniciar la grabación en este navegador.";
+          stream.getTracks().forEach((t) => t.stop());
+          return;
+        }
+
+        chunks = [];
+        mediaRecorder.ondataavailable = (event) => {
+          if (event.data && event.data.size) chunks.push(event.data);
+        };
+        mediaRecorder.onstop = () => {
+          const type = mediaRecorder.mimeType || "audio/webm";
+          const ext = type.includes("mp4") ? "m4a" : "webm";
+          const blob = new Blob(chunks, { type });
+          const url = URL.createObjectURL(blob);
+          downloadVocal.href = url;
+          downloadVocal.download = `voz-principal.${ext}`;
+          downloadVocal.hidden = false;
+          stopRecTimer();
+          recStatus.textContent = "Grabación lista";
+          recordBtn.hidden = false;
+          stopBtn.hidden = true;
+          recordMsg.textContent = "Descarga tu voz y déjala en music/voz/ para mezclarla.";
+          stream.getTracks().forEach((t) => t.stop());
+          stream = null;
+        };
+
+        await ensureGuide();
+        audio.currentTime = 0;
+        downloadVocal.hidden = true;
+        mediaRecorder.start();
+        startRecTimer();
+        recordBtn.hidden = true;
+        stopBtn.hidden = false;
+        recordMsg.textContent = "Grabando. Usa audífonos para que no se cuele la pista.";
+        try {
+          await audio.play();
+        } catch (error) {
+          recordMsg.textContent = "No se pudo reproducir la pista. Dale play manualmente.";
+        }
+      }
+
+      function stopRecording() {
+        if (mediaRecorder && mediaRecorder.state !== "inactive") {
+          mediaRecorder.stop();
+        }
+        audio.pause();
+        stopRecTimer();
+      }
+
+      recordBtn.addEventListener("click", startRecording);
+      stopBtn.addEventListener("click", stopRecording);
+
+      // ---------------------------------------------------------------
+      // Inicio
+      // ---------------------------------------------------------------
+      updateChips();
+      updateTimeLabel();
+      updateKaraoke();
+    })();
+  </script>
+</body>
+</html>
