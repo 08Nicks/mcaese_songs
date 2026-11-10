@@ -305,6 +305,70 @@
       color: #fff;
     }
 
+    .stepper-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .stepper-info {
+      text-align: center;
+      flex: 1;
+    }
+    .stepper-badge {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: var(--pink);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .stepper-title {
+      margin: 0;
+      font-size: 1.02rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+    .part-lyrics-preview {
+      background: rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px 14px;
+      max-height: 180px;
+      overflow-y: auto;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: #dfd7ee;
+    }
+    .part-lyrics-preview p {
+      margin: 0 0 6px;
+    }
+    .part-lyrics-preview p:last-child {
+      margin-bottom: 0;
+    }
+    .btn-gold {
+      background: linear-gradient(180deg, #ffd36b, #ffb020);
+      border-color: #ffd666;
+      color: #1a0f22;
+      font-weight: 800;
+    }
+    .btn-next {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.28);
+      color: #fff;
+    }
+    .btn-next:hover {
+      background: rgba(255, 61, 129, 0.25);
+      border-color: var(--pink);
+    }
+
     @media (max-width: 520px) {
       .lyrics { height: 46vh; }
       .line { font-size: 0.93rem; }
@@ -351,23 +415,34 @@
     <section class="card">
       <div class="record-head">
         <div>
-          <p class="kicker">Grabación por partes</p>
-          <h2>Graba tu voz por cachos</h2>
+          <p class="kicker">Modo Estudio · Paso a paso</p>
+          <h2>Graba tu voz por partes</h2>
         </div>
         <span id="recStatus" class="status">Listo</span>
       </div>
       <p class="hint">
-        🎧 Usa audífonos. Elige qué cacho quieres cantar: te dará 4 tiempos de preparación con la música antes de que empiece la letra. Al terminar, descargas el archivo. Luego unimos y afinamos todos tus cachos automáticamente.
+        🎧 Usa audífonos. Ve grabando cacho por cacho: escuchas 4 tiempos de música antes de cantar, grabas tu parte y la descargas. Al terminar te da el botón para pasar al siguiente cacho.
       </p>
 
-      <div>
-        <label for="sectionSelect" style="display:block; font-size:0.7rem; font-weight:800; letter-spacing:0.12em; color:var(--gold); text-transform:uppercase; margin-bottom:5px;">
-          Parte a grabar:
+      <div class="stepper-bar">
+        <button id="prevPartBtn" class="chip" type="button">◀ Anterior</button>
+        <div class="stepper-info">
+          <span class="stepper-badge" id="partBadge">PARTE 1 DE 9</span>
+          <h3 class="stepper-title" id="partTitle">01. Intro (0:00 - 0:37)</h3>
+        </div>
+        <button id="nextPartBtn" class="chip" type="button">Siguiente ▶</button>
+      </div>
+
+      <div style="margin-bottom: 8px;">
+        <label for="sectionSelect" style="display:block; font-size:0.68rem; font-weight:800; letter-spacing:0.12em; color:var(--muted); text-transform:uppercase; margin-bottom:4px;">
+          O salta a cualquier parte:
         </label>
         <select id="sectionSelect" class="section-select">
           <option value="all">🎤 Toda la canción completa (7:20 min)</option>
         </select>
       </div>
+
+      <div id="partLyricsBox" class="part-lyrics-preview"></div>
 
       <div id="prepCountBox" class="prep-box">
         <span class="prep-title" id="prepTitle">Preparándote para cantar</span>
@@ -375,12 +450,13 @@
       </div>
 
       <div class="record-actions">
-        <button id="recordBtn" class="btn btn-primary" type="button">● Grabar este cacho</button>
+        <button id="recordBtn" class="btn btn-primary" type="button">● Grabar esta parte</button>
         <button id="stopBtn" class="btn" type="button" hidden>■ Detener</button>
-        <a id="downloadVocal" class="btn btn-ghost" hidden download="01-intro.webm">⬇️ Descargar cacho</a>
+        <a id="downloadVocal" class="btn btn-gold" hidden download="01-intro.webm">⬇️ Descargar cacho</a>
+        <button id="nextStepBtn" class="btn btn-next" hidden type="button">➡️ Siguiente parte</button>
       </div>
       <p id="recordMsg" class="small">
-        Guarda los archivos descargados en la carpeta <code>music/voz/</code> de tu proyecto.
+        Ve descargando cada cacho en tu cel. Cuando los tengas, me los pasas y yo te afino y armo la canción completa.
       </p>
     </section>
 
@@ -418,6 +494,13 @@
       const prepCountBox = document.getElementById("prepCountBox");
       const prepCountNum = document.getElementById("prepCountNum");
       const prepTitle = document.getElementById("prepTitle");
+      const prevPartBtn = document.getElementById("prevPartBtn");
+      const nextPartBtn = document.getElementById("nextPartBtn");
+      const partBadge = document.getElementById("partBadge");
+      const partTitle = document.getElementById("partTitle");
+      const partLyricsBox = document.getElementById("partLyricsBox");
+      const nextStepBtn = document.getElementById("nextStepBtn");
+      let activePartIdx = 0;
 
       if (!data) {
         lyricsEl.innerHTML = "<p class='line active'>No se pudo cargar la letra.</p>";
@@ -450,14 +533,69 @@
         return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
       };
 
+      function selectPart(idx) {
+        if (idx === "all") {
+          activePartIdx = -1;
+          if (partBadge) partBadge.textContent = "MODO COMPLETO";
+          if (partTitle) partTitle.textContent = "Canción completa (7:20 min)";
+          if (partLyricsBox) partLyricsBox.innerHTML = "<p><em>Grabando toda la canción de principio a fin.</em></p>";
+          if (recordBtn) recordBtn.textContent = "● Grabar canción completa";
+          if (sectionSelect) sectionSelect.value = "all";
+          if (nextStepBtn) nextStepBtn.hidden = true;
+          return;
+        }
+
+        const num = Math.max(0, Math.min(data.sections.length - 1, parseInt(idx, 10)));
+        activePartIdx = num;
+        const sec = data.sections[num];
+        const slug = SECTION_SLUGS[num] || `parte-${num + 1}`;
+        if (partBadge) partBadge.textContent = `PARTE ${num + 1} DE ${data.sections.length}`;
+        if (partTitle) partTitle.textContent = `${slug}: ${sec.name} (${fmt(sec.start)} - ${fmt(sec.end)})`;
+
+        if (partLyricsBox) {
+          partLyricsBox.innerHTML = "";
+          sec.lines.forEach((line) => {
+            const p = document.createElement("p");
+            p.textContent = line.text;
+            partLyricsBox.appendChild(p);
+          });
+        }
+
+        if (recordBtn) recordBtn.textContent = `● Grabar Parte ${num + 1} (${sec.name})`;
+        if (sectionSelect) sectionSelect.value = String(num);
+
+        if (prevPartBtn) prevPartBtn.disabled = (num === 0);
+        if (nextPartBtn) nextPartBtn.disabled = (num === data.sections.length - 1);
+        if (nextStepBtn) nextStepBtn.hidden = true;
+      }
+
       // Llenar selector de secciones
       if (sectionSelect) {
         data.sections.forEach((sec, idx) => {
           const opt = document.createElement("option");
           opt.value = String(idx);
           const slug = SECTION_SLUGS[idx] || `cacho-${idx+1}`;
-          opt.textContent = `${slug}: ${sec.name} (${fmt(sec.start)} - ${fmt(sec.end)})`;
+          opt.textContent = `Parte ${idx+1}: ${sec.name} (${fmt(sec.start)} - ${fmt(sec.end)})`;
           sectionSelect.appendChild(opt);
+        });
+        sectionSelect.addEventListener("change", (e) => selectPart(e.target.value));
+      }
+
+      if (prevPartBtn) {
+        prevPartBtn.addEventListener("click", () => {
+          selectPart(activePartIdx <= 0 ? 0 : activePartIdx - 1);
+        });
+      }
+      if (nextPartBtn) {
+        nextPartBtn.addEventListener("click", () => {
+          selectPart(activePartIdx < 0 ? 0 : activePartIdx + 1);
+        });
+      }
+      if (nextStepBtn) {
+        nextStepBtn.addEventListener("click", () => {
+          const nextIdx = (activePartIdx >= 0 && activePartIdx < data.sections.length - 1) ? activePartIdx + 1 : 0;
+          selectPart(nextIdx);
+          recordBtn.scrollIntoView({ behavior: "smooth", block: "center" });
         });
       }
 
@@ -754,6 +892,15 @@
           stopBtn.hidden = true;
           prepCountBox.style.display = "none";
           recordMsg.innerHTML = `✅ ¡Cacho guardado como <strong>${filename}</strong>! Toca el botón para descargarlo y ponlo en <code>music/voz/</code>.`;
+
+          if (recordingSecIdx >= 0 && recordingSecIdx < data.sections.length - 1) {
+            if (nextStepBtn) {
+              const nextSec = data.sections[recordingSecIdx + 1];
+              nextStepBtn.textContent = `➡️ Pasar a Parte ${recordingSecIdx + 2} (${nextSec.name})`;
+              nextStepBtn.hidden = false;
+            }
+          }
+
           if (stream) {
             stream.getTracks().forEach((t) => t.stop());
             stream = null;
@@ -876,11 +1023,10 @@
       }
 
       recordBtn.addEventListener("click", () => {
-        const val = sectionSelect ? sectionSelect.value : "all";
-        if (val === "all") {
+        if (activePartIdx === -1) {
           startRecordingAll();
         } else {
-          startRecordingSection(parseInt(val, 10));
+          startRecordingSection(activePartIdx);
         }
       });
       stopBtn.addEventListener("click", stopRecording);
@@ -888,6 +1034,7 @@
       // ---------------------------------------------------------------
       // Inicio
       // ---------------------------------------------------------------
+      selectPart(0);
       updateChips();
       updateTimeLabel();
       updateKaraoke();
