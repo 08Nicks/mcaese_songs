@@ -236,15 +236,71 @@ def make_reverb_ir(dur: float = 0.9) -> np.ndarray:
     return ir
 
 
+SECTION_TIMINGS = {
+    "intro": 0.0,
+    "verso1": 37.14,
+    "verso-1": 37.14,
+    "verso_1": 37.14,
+    "coro1": 108.57,
+    "coro-1": 108.57,
+    "coro_1": 108.57,
+    "primer_coro": 108.57,
+    "primer-coro": 108.57,
+    "primercoro": 108.57,
+    "verso2": 148.57,
+    "verso-2": 148.57,
+    "verso_2": 148.57,
+    "coro2": 240.0,
+    "coro-2": 240.0,
+    "coro_2": 240.0,
+    "segundo_coro": 240.0,
+    "segundo-coro": 240.0,
+    "segundocoro": 240.0,
+    "coro3": 280.0,
+    "coro-3": 280.0,
+    "coro_3": 280.0,
+    "tercer_coro": 280.0,
+    "tercer-coro": 280.0,
+    "tercercoro": 280.0,
+    "verso3": 317.14,
+    "verso-3": 317.14,
+    "verso_3": 317.14,
+    "puente": 377.14,
+    "bridge": 377.14,
+    "outro": 397.14,
+}
+
+
+def guess_section_place(filename: str) -> tuple[str, float] | None:
+    fn = filename.lower()
+    for key, place in SECTION_TIMINGS.items():
+        if key in fn:
+            return key, place
+    return None
+
+
+def process_vocal_take(raw_vocal: np.ndarray, autotune_strength: float = 0.80) -> np.ndarray:
+    v = highpass(raw_vocal)
+    if autotune_strength > 0:
+        v = autotune_vocal(v, strength=autotune_strength)
+    v = lowpass(v)
+    v = presence(v)
+    v = compress(v)
+    # Nivel base de la voz (aprox. -18 dBFS RMS).
+    v = v / max(rms(v), 1e-6) * 0.12
+    return v
+
+
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Mezcla voz + instrumental")
-    parser.add_argument("vocal", help="Ruta de tu grabación (WAV, M4A o MP3)")
+    parser = argparse.ArgumentParser(description="Mezcla y afina voz + instrumental (por cachos o completa)")
+    parser.add_argument("vocal", nargs="?", default=os.path.join(HERE, "voz"),
+                        help="Archivo de audio o carpeta con los cachos (por defecto: music/voz/)")
     parser.add_argument("--instrumental", default=INSTRUMENTAL)
     parser.add_argument("--out", default=DEFAULT_OUT)
-    parser.add_argument("--trim", type=float, default=BAR,
-                        help="Segundos a recortar del inicio de la voz (por defecto 1 compás)")
-    parser.add_argument("--place", type=float, default=0.0,
-                        help="Segundo de la canción donde entra la voz (por defecto 0)")
+    parser.add_argument("--trim", type=float, default=None,
+                        help="Segundos a recortar del inicio (por defecto 1 compás si es toma completa)")
+    parser.add_argument("--place", type=float, default=None,
+                        help="Segundo de la canción donde entra la voz (por defecto detectado según el nombre)")
     parser.add_argument("--vocal-gain", type=float, default=1.0)
     parser.add_argument("--music-gain", type=float, default=0.85)
     parser.add_argument("--reverb", type=float, default=0.14)
@@ -252,46 +308,104 @@ def main() -> None:
                         help="Fuerza de afinación a la escala (0.0 = apagado, 0.8 = natural, 1.0 = completo)")
     args = parser.parse_args()
 
-    print("Cargando voz...")
-    vocal = load_audio(args.vocal)
-    if args.trim > 0:
-        vocal = vocal[int(args.trim * SR):]
-
-    print("Limpiando voz...")
-    vocal = highpass(vocal)
-
-    if args.autotune > 0:
-        print(f"Afinando voz a la escala de La menor / Do mayor (fuerza {args.autotune:.2f})...")
-        vocal = autotune_vocal(vocal, strength=args.autotune)
-
-    vocal = lowpass(vocal)
-    vocal = presence(vocal)
-    vocal = compress(vocal)
-
-    # Nivel base de la voz (aprox. -18 dBFS RMS).
-    vocal = vocal / max(rms(vocal), 1e-6) * 0.12
-
-    # Reverb corto.
-    if args.reverb > 0:
-        wet = fftconvolve(vocal, make_reverb_ir(), mode="full")[: len(vocal)]
-        vocal = vocal + wet.astype(np.float32) * args.reverb
-
     print("Cargando instrumental...")
     _, raw = wavfile.read(args.instrumental)
     inst = raw.astype(np.float32) / 32768.0
     inst = inst / max(rms(inst), 1e-6) * 0.10
 
-    start = int(args.place * SR)
-    total = max(len(inst), start + len(vocal))
-    mix = np.zeros(total, dtype=np.float32)
-    mix[: len(inst)] += inst * args.music_gain
-    mix[start: start + len(vocal)] += vocal * args.vocal_gain
+    vocal_bus = np.zeros(len(inst), dtype=np.float32)
+    files_to_process: list[tuple[str, float, float]] = [] # (path, place, trim)
 
-    # Suavizar picos y normalizar.
-    mix = np.tanh(mix * 0.9)
+    if os.path.isdir(args.vocal):
+        exts = (".wav", ".m4a", ".mp3", ".webm", ".ogg")
+        entries = sorted(os.listdir(args.vocal))
+        audio_files = [os.path.join(args.vocal, f) for f in entries if f.lower().endswith(exts)]
+        if not audio_files:
+            print(f"No se encontraron archivos de audio en {args.vocal}.")
+            print("Guarda allí tus cachos descargados del karaoke (ej: 01-intro.webm, 02-verso1.m4a, etc.).")
+            return
+
+        print(f"Se encontraron {len(audio_files)} toma(s) en {args.vocal}:")
+        for f in audio_files:
+            base = os.path.basename(f)
+            guessed = guess_section_place(base)
+            if guessed:
+                sec_name, place = guessed
+                trim = 0.0 # Los cachos por sección empiezan en su tiempo exacto
+                files_to_process.append((f, place, trim))
+                print(f"  • {base:25} -> Sección '{sec_name}' en {place:.2f}s")
+            elif "voz-principal" in base.lower():
+                trim = BAR if args.trim is None else args.trim
+                place = 0.0 if args.place is None else args.place
+                files_to_process.append((f, place, trim))
+                print(f"  • {base:25} -> Canción completa (inicio {place:.2f}s, trim {trim:.2f}s)")
+            else:
+                place = 0.0 if args.place is None else args.place
+                trim = 0.0 if args.trim is None else args.trim
+                files_to_process.append((f, place, trim))
+                print(f"  • {base:25} -> Posición {place:.2f}s")
+    else:
+        if not os.path.isfile(args.vocal):
+            print(f"No existe el archivo o carpeta: {args.vocal}")
+            return
+        base = os.path.basename(args.vocal)
+        guessed = guess_section_place(base)
+        if args.place is not None:
+            place = args.place
+            trim = 0.0 if args.trim is None else args.trim
+        elif guessed:
+            _, place = guessed
+            trim = 0.0 if args.trim is None else args.trim
+        else:
+            place = 0.0
+            trim = BAR if args.trim is None else args.trim
+        files_to_process.append((args.vocal, place, trim))
+
+    # Procesar y ubicar cada cacho
+    for fpath, place, trim in files_to_process:
+        print(f"Procesando y afinando: {os.path.basename(fpath)}...")
+        raw_v = load_audio(fpath)
+        if trim > 0:
+            raw_v = raw_v[int(trim * SR):]
+        if len(raw_v) == 0:
+            continue
+
+        clean_v = process_vocal_take(raw_v, autotune_strength=args.autotune)
+        start_samp = int(place * SR)
+        end_samp = min(len(vocal_bus), start_samp + len(clean_v))
+        if end_samp > start_samp:
+            vocal_bus[start_samp:end_samp] += clean_v[: end_samp - start_samp]
+
+    # Reverb amplio dream pop sobre el bus de voces
+    if args.reverb > 0 and np.max(np.abs(vocal_bus)) > 1e-4:
+        print("Aplicando reverberación Dream Pop a la voz...")
+        wet = fftconvolve(vocal_bus, make_reverb_ir(), mode="full")[: len(vocal_bus)]
+        vocal_bus = vocal_bus + wet.astype(np.float32) * args.reverb
+
+    # Mezclar con la pista instrumental
+    mix = np.zeros(len(inst), dtype=np.float32)
+    mix += inst * args.music_gain
+    mix += vocal_bus * args.vocal_gain
+
+    # Suavizar picos y normalizar
+    mix = np.tanh(mix * 0.92)
     save_audio(args.out, mix)
-    print(f"Listo: {args.out}")
-    print(f"       {len(mix) / SR:.1f} s")
+    print(f"\n✅ Canción mezclada y afinada lista:")
+    print(f"   WAV: {args.out} ({len(mix) / SR:.1f} s)")
+
+    # Exportar también en MP3 para escucharla en el celular fácilmente
+    try:
+        mp3_out = os.path.splitext(args.out)[0] + ".mp3"
+        ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+        subprocess.run(
+            [ffmpeg, "-y", "-i", args.out, "-b:a", "192k", mp3_out],
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        print(f"   MP3: {mp3_out}")
+    except Exception as e:
+        pass
 
 
 if __name__ == "__main__":

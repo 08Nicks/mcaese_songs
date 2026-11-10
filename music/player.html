@@ -241,6 +241,70 @@
     }
     .links a:hover { background: rgba(255, 61, 129, 0.12); }
 
+    .section-select {
+      width: 100%;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      color: var(--text);
+      font: inherit;
+      font-size: 0.92rem;
+      outline: none;
+      margin-bottom: 12px;
+    }
+    .section-select option { background: #120e1c; color: var(--text); }
+    .prep-box {
+      display: none;
+      text-align: center;
+      padding: 12px 10px;
+      margin-bottom: 12px;
+      background: radial-gradient(circle, rgba(255, 176, 32, 0.18), transparent 70%), rgba(255, 176, 32, 0.08);
+      border: 1px solid rgba(255, 176, 32, 0.45);
+      border-radius: 14px;
+    }
+    .prep-title {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      font-weight: 800;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .prep-num {
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 0 20px rgba(255, 176, 32, 0.6);
+    }
+    .lyric-section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .sec-rec-btn {
+      appearance: none;
+      border: 1px solid rgba(255, 61, 129, 0.35);
+      background: rgba(255, 61, 129, 0.08);
+      color: var(--pink-soft);
+      font: inherit;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .sec-rec-btn:hover {
+      background: rgba(255, 61, 129, 0.22);
+      border-color: var(--pink);
+      color: #fff;
+    }
+
     @media (max-width: 520px) {
       .lyrics { height: 46vh; }
       .line { font-size: 0.93rem; }
@@ -287,23 +351,36 @@
     <section class="card">
       <div class="record-head">
         <div>
-          <p class="kicker">Grabación</p>
-          <h2>Graba tu voz</h2>
+          <p class="kicker">Grabación por partes</p>
+          <h2>Graba tu voz por cachos</h2>
         </div>
         <span id="recStatus" class="status">Listo</span>
       </div>
       <p class="hint">
-        Usa audífonos: el micrófono no debe escuchar la pista. Al darle grabar,
-        empieza el conteo de 4 tiempos y luego la canción.
+        🎧 Usa audífonos. Elige qué cacho quieres cantar: te dará 4 tiempos de preparación con la música antes de que empiece la letra. Al terminar, descargas el archivo. Luego unimos y afinamos todos tus cachos automáticamente.
       </p>
+
+      <div>
+        <label for="sectionSelect" style="display:block; font-size:0.7rem; font-weight:800; letter-spacing:0.12em; color:var(--gold); text-transform:uppercase; margin-bottom:5px;">
+          Parte a grabar:
+        </label>
+        <select id="sectionSelect" class="section-select">
+          <option value="all">🎤 Toda la canción completa (7:20 min)</option>
+        </select>
+      </div>
+
+      <div id="prepCountBox" class="prep-box">
+        <span class="prep-title" id="prepTitle">Preparándote para cantar</span>
+        <span class="prep-num" id="prepCountNum">4</span>
+      </div>
+
       <div class="record-actions">
-        <button id="recordBtn" class="btn btn-primary" type="button">● Grabar mi voz</button>
+        <button id="recordBtn" class="btn btn-primary" type="button">● Grabar este cacho</button>
         <button id="stopBtn" class="btn" type="button" hidden>■ Detener</button>
-        <a id="downloadVocal" class="btn btn-ghost" hidden download="voz-principal.webm">Descargar voz</a>
+        <a id="downloadVocal" class="btn btn-ghost" hidden download="01-intro.webm">⬇️ Descargar cacho</a>
       </div>
       <p id="recordMsg" class="small">
-        Si el navegador no te deja grabar, abre esta página desde
-        <code>http://127.0.0.1:4173/music/player.html</code>.
+        Guarda los archivos descargados en la carpeta <code>music/voz/</code> de tu proyecto.
       </p>
     </section>
 
@@ -337,6 +414,10 @@
       const downloadVocal = document.getElementById("downloadVocal");
       const recStatus = document.getElementById("recStatus");
       const recordMsg = document.getElementById("recordMsg");
+      const sectionSelect = document.getElementById("sectionSelect");
+      const prepCountBox = document.getElementById("prepCountBox");
+      const prepCountNum = document.getElementById("prepCountNum");
+      const prepTitle = document.getElementById("prepTitle");
 
       if (!data) {
         lyricsEl.innerHTML = "<p class='line active'>No se pudo cargar la letra.</p>";
@@ -352,15 +433,62 @@
       let lastWord = null;
       let raf = 0;
 
+      const SECTION_SLUGS = [
+        "01-intro",
+        "02-verso1",
+        "03-coro1",
+        "04-verso2",
+        "05-coro2",
+        "06-coro3",
+        "07-verso3",
+        "08-puente",
+        "09-outro"
+      ];
+
+      const fmt = (seconds) => {
+        const s = Math.max(0, Math.floor(seconds));
+        return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+      };
+
+      // Llenar selector de secciones
+      if (sectionSelect) {
+        data.sections.forEach((sec, idx) => {
+          const opt = document.createElement("option");
+          opt.value = String(idx);
+          const slug = SECTION_SLUGS[idx] || `cacho-${idx+1}`;
+          opt.textContent = `${slug}: ${sec.name} (${fmt(sec.start)} - ${fmt(sec.end)})`;
+          sectionSelect.appendChild(opt);
+        });
+      }
+
       // ---------------------------------------------------------------
-      // Construir letra
+      // Construir letra con botones para grabar cada cacho
       // ---------------------------------------------------------------
-      data.sections.forEach((section) => {
+      data.sections.forEach((section, sIndex) => {
         const sectionEl = document.createElement("section");
         sectionEl.className = "lyric-section";
+
+        const headDiv = document.createElement("div");
+        headDiv.className = "lyric-section-head";
+
         const title = document.createElement("h3");
+        title.style.margin = "0";
         title.textContent = section.name;
-        sectionEl.appendChild(title);
+        headDiv.appendChild(title);
+
+        const pill = document.createElement("button");
+        pill.className = "sec-rec-btn";
+        pill.type = "button";
+        pill.textContent = "● Grabar este cacho";
+        pill.title = `Grabar solo ${section.name}`;
+        pill.addEventListener("click", () => {
+          if (sectionSelect) sectionSelect.value = String(sIndex);
+          recordBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+          startRecordingSection(sIndex);
+        });
+        headDiv.appendChild(pill);
+
+        sectionEl.appendChild(headDiv);
 
         section.lines.forEach((line) => {
           const p = document.createElement("p");
@@ -384,11 +512,6 @@
         });
         lyricsEl.appendChild(sectionEl);
       });
-
-      const fmt = (seconds) => {
-        const s = Math.max(0, Math.floor(seconds));
-        return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
-      };
 
       const songTime = () => Math.max(0, audio.currentTime - offset);
       const songDuration = () => Math.max(0, (audio.duration || 0) - offset);
@@ -532,13 +655,18 @@
       });
 
       // ---------------------------------------------------------------
-      // Grabación con micrófono
+      // Grabación con micrófono (por cachos o completa)
       // ---------------------------------------------------------------
       let mediaRecorder = null;
       let chunks = [];
       let stream = null;
       let recTimer = 0;
       let recStart = 0;
+      let currentSlug = "voz-principal";
+      let recordingSecIdx = -1;
+      let targetSection = null;
+      let preRollWaiting = false;
+      let checkInterval = 0;
 
       function startRecTimer() {
         recStart = performance.now();
@@ -566,14 +694,15 @@
         });
       }
 
-      async function startRecording() {
+      async function prepareMic() {
+        if (stream) return true;
         if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-          recordMsg.textContent = "Tu navegador no permite grabar audio aquí. Abre la página desde el servidor local.";
-          return;
+          recordMsg.textContent = "Tu navegador no permite grabar audio aquí. Abre la página en Safari o Chrome.";
+          return false;
         }
         if (typeof MediaRecorder === "undefined") {
-          recordMsg.textContent = "Tu navegador no soporta MediaRecorder. Graba con la app de tu celular.";
-          return;
+          recordMsg.textContent = "Tu navegador no soporta MediaRecorder. Graba con la app de notas de voz.";
+          return false;
         }
 
         recordMsg.textContent = "Pidiendo permiso al micrófono…";
@@ -585,24 +714,24 @@
               autoGainControl: false
             }
           });
-        } catch (error) {
-          recordMsg.textContent = "No se pudo acceder al micrófono. Revisa los permisos del navegador.";
-          return;
+          return true;
+        } catch (err) {
+          recordMsg.textContent = "No se pudo acceder al micrófono. Revisa los permisos en tu navegador.";
+          return false;
         }
+      }
 
+      function createRecorder() {
         let mime = "";
-        if (MediaRecorder.isTypeSupported("audio/webm;codecs=opus")) {
-          mime = "audio/webm;codecs=opus";
-        } else if (MediaRecorder.isTypeSupported("audio/mp4")) {
-          mime = "audio/mp4";
+        if (typeof MediaRecorder !== "undefined") {
+          if (MediaRecorder.isTypeSupported("audio/webm;codecs=opus")) mime = "audio/webm;codecs=opus";
+          else if (MediaRecorder.isTypeSupported("audio/mp4")) mime = "audio/mp4";
         }
-
         try {
           mediaRecorder = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
-        } catch (error) {
-          recordMsg.textContent = "No se pudo iniciar la grabación en este navegador.";
-          stream.getTracks().forEach((t) => t.stop());
-          return;
+        } catch (err) {
+          recordMsg.textContent = "No se pudo iniciar el grabador en este navegador.";
+          return false;
         }
 
         chunks = [];
@@ -614,25 +743,119 @@
           const ext = type.includes("mp4") ? "m4a" : "webm";
           const blob = new Blob(chunks, { type });
           const url = URL.createObjectURL(blob);
+          const filename = `${currentSlug}.${ext}`;
           downloadVocal.href = url;
-          downloadVocal.download = `voz-principal.${ext}`;
+          downloadVocal.download = filename;
+          downloadVocal.textContent = `⬇️ Descargar ${filename}`;
           downloadVocal.hidden = false;
           stopRecTimer();
-          recStatus.textContent = "Grabación lista";
+          recStatus.textContent = `Listo: ${filename}`;
           recordBtn.hidden = false;
           stopBtn.hidden = true;
-          recordMsg.textContent = "Descarga tu voz y déjala en music/voz/ para mezclarla.";
-          stream.getTracks().forEach((t) => t.stop());
-          stream = null;
+          prepCountBox.style.display = "none";
+          recordMsg.innerHTML = `✅ ¡Cacho guardado como <strong>${filename}</strong>! Toca el botón para descargarlo y ponlo en <code>music/voz/</code>.`;
+          if (stream) {
+            stream.getTracks().forEach((t) => t.stop());
+            stream = null;
+          }
         };
+        return true;
+      }
+
+      async function startRecordingSection(secIdx) {
+        if (!(await prepareMic())) return;
+        if (!createRecorder()) return;
+
+        recordingSecIdx = secIdx;
+        targetSection = data.sections[secIdx];
+        currentSlug = SECTION_SLUGS[secIdx] || `seccion-${secIdx + 1}`;
+
+        downloadVocal.hidden = true;
+        recordBtn.hidden = true;
+        stopBtn.hidden = false;
+        prepCountBox.style.display = "block";
+        prepTitle.textContent = `Preparando: ${targetSection.name}`;
+
+        const preRoll = 4 * BEAT; // 1 compás de cuenta previa (~2.86s)
+
+        if (secIdx === 0) {
+          // Intro: usamos pista con conteo incorporado
+          await ensureGuide();
+          audio.currentTime = 0;
+          preRollWaiting = true;
+          try {
+            await audio.play();
+          } catch (e) {
+            recordMsg.textContent = "Toca Play manualmente para iniciar.";
+          }
+        } else {
+          // Secciones intermedias: instrumental limpia
+          usingGuide = false;
+          offset = 0;
+          audio.src = data.audio;
+          updateChips();
+          await new Promise((resolve) => {
+            if (audio.readyState >= 1) resolve();
+            else audio.addEventListener("loadedmetadata", resolve, { once: true });
+          });
+          const cue = Math.max(0, targetSection.start - preRoll);
+          audio.currentTime = cue;
+          preRollWaiting = true;
+          try {
+            await audio.play();
+          } catch (e) {
+            recordMsg.textContent = "Toca Play manualmente para iniciar.";
+          }
+        }
+
+        clearInterval(checkInterval);
+        checkInterval = setInterval(() => {
+          const t = audio.currentTime - offset;
+
+          if (preRollWaiting) {
+            const diff = targetSection.start - t;
+            if (diff > 0.05) {
+              const b = Math.max(1, Math.ceil(diff / BEAT));
+              prepCountNum.textContent = String(b);
+            } else {
+              // Empieza la sección: iniciar grabación
+              preRollWaiting = false;
+              prepCountBox.style.display = "none";
+              if (mediaRecorder && mediaRecorder.state === "inactive") {
+                mediaRecorder.start();
+                startRecTimer();
+                recStatus.textContent = `🔴 Grabando ${targetSection.name}`;
+              }
+            }
+          } else {
+            // Ya grabando: detener si llega al fin de la sección
+            if (t >= targetSection.end + 0.15) {
+              clearInterval(checkInterval);
+              stopRecording();
+            }
+          }
+        }, 40);
+      }
+
+      async function startRecordingAll() {
+        if (!(await prepareMic())) return;
+        if (!createRecorder()) return;
+
+        recordingSecIdx = -1;
+        targetSection = null;
+        currentSlug = "voz-principal";
+
+        downloadVocal.hidden = true;
+        recordBtn.hidden = true;
+        stopBtn.hidden = false;
+        prepCountBox.style.display = "none";
 
         await ensureGuide();
         audio.currentTime = 0;
         downloadVocal.hidden = true;
         mediaRecorder.start();
         startRecTimer();
-        recordBtn.hidden = true;
-        stopBtn.hidden = false;
+        recStatus.textContent = "🔴 Grabando canción completa";
         recordMsg.textContent = "Grabando. Usa audífonos para que no se cuele la pista.";
         try {
           await audio.play();
@@ -642,6 +865,9 @@
       }
 
       function stopRecording() {
+        clearInterval(checkInterval);
+        preRollWaiting = false;
+        prepCountBox.style.display = "none";
         if (mediaRecorder && mediaRecorder.state !== "inactive") {
           mediaRecorder.stop();
         }
@@ -649,7 +875,14 @@
         stopRecTimer();
       }
 
-      recordBtn.addEventListener("click", startRecording);
+      recordBtn.addEventListener("click", () => {
+        const val = sectionSelect ? sectionSelect.value : "all";
+        if (val === "all") {
+          startRecordingAll();
+        } else {
+          startRecordingSection(parseInt(val, 10));
+        }
+      });
       stopBtn.addEventListener("click", stopRecording);
 
       // ---------------------------------------------------------------
