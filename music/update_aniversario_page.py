@@ -3,6 +3,7 @@
 Script to build the definitive, clean, beautiful aniversario.html
 with pure UTF-8 encoding, organized lyric sections & stanzas,
 custom captions for recent photos (Pizza moment & Gorrito rosa),
+fixed lightbox polaroid card so caption is rendered INSIDE the card paper,
 no duplicate photos, and zero mention of Suno/AI.
 """
 
@@ -607,18 +608,18 @@ html_content = """<!DOCTYPE html>
     }
 
     /* -------------------------------------------------------------
-       Modal Lightbox para Fotos en Grande
+       Modal Lightbox para Fotos en Grande (Diseño Polaroid Auténtico)
        ------------------------------------------------------------- */
     .lightbox-modal {
       position: fixed;
       inset: 0;
       z-index: 9999;
-      background: rgba(7, 6, 11, 0.92);
-      backdrop-filter: blur(16px);
+      background: rgba(7, 6, 11, 0.94);
+      backdrop-filter: blur(18px);
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 20px;
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -626,33 +627,72 @@ html_content = """<!DOCTYPE html>
       display: flex;
       opacity: 1;
     }
-    .lightbox-img-wrap {
-      max-width: 90vw;
-      max-height: 82vh;
+    .lightbox-card {
       background: var(--polaroid-bg);
+      color: var(--polaroid-text);
       padding: 14px 14px 22px;
       border-radius: 8px;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+      box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.8),
+        0 0 0 1px rgba(255, 255, 255, 0.12);
+      max-width: min(92vw, 640px);
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
       animation: modalZoom 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
     @keyframes modalZoom {
       0% { transform: scale(0.85); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
     }
+    .lightbox-card::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 22px;
+      background: rgba(255, 230, 160, 0.85);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      border-left: 3px dashed rgba(0,0,0,0.18);
+      border-right: 3px dashed rgba(0,0,0,0.18);
+      z-index: 2;
+    }
+    .lightbox-img-wrap {
+      width: 100%;
+      max-height: 70vh;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #140f1e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .lightbox-img-wrap img {
       max-width: 100%;
       max-height: 70vh;
+      width: auto;
+      height: auto;
       object-fit: contain;
-      border-radius: 4px;
       display: block;
+      border-radius: 2px;
     }
     .lightbox-caption-text {
+      margin: 14px 10px 4px;
       text-align: center;
       font-family: "Caveat", cursive;
-      font-size: 1.5rem;
+      font-size: clamp(1.4rem, 4.2vw, 1.85rem);
       font-weight: 700;
       color: #241d2d;
-      margin: 14px 0 0;
+      line-height: 1.25;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.08);
+    }
+    .lightbox-caption-text:empty {
+      display: none;
     }
     .lightbox-close-btn {
       position: absolute;
@@ -923,13 +963,15 @@ html_content = """<!DOCTYPE html>
 
   </div>
 
-  <!-- Modal Lightbox -->
+  <!-- Modal Lightbox (Diseño Polaroid Auténtico) -->
   <div id="lightbox" class="lightbox-modal" onclick="closeLightbox(event)">
     <button class="lightbox-close-btn" onclick="closeLightbox(event)" aria-label="Cerrar foto">✕</button>
-    <div class="lightbox-img-wrap" onclick="event.stopPropagation()">
-      <img id="lightboxImg" src="" alt="Foto ampliada" />
+    <div class="lightbox-card" onclick="event.stopPropagation()">
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="Foto ampliada" />
+      </div>
+      <p id="lightboxCaption" class="lightbox-caption-text"></p>
     </div>
-    <p id="lightboxCaption" class="lightbox-caption-text"></p>
   </div>
 
   <!-- Datos y Lógica de Karaoke -->
@@ -1229,4 +1271,4 @@ html_content = """<!DOCTYPE html>
 with open("aniversario.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print("SUCCESS: Updated aniversario.html with Pizza moment and Tu gorrito rosa captions!")
+print("SUCCESS: Lightbox polaroid card structure updated with caption inside!")
