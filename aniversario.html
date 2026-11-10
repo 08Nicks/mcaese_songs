@@ -938,7 +938,6 @@
       function renderLyrics() {
         const frag = document.createDocumentFragment();
         lineEls = [];
-        wordEls = [];
 
         data.sections.forEach((section) => {
           section.lines.forEach((line) => {
@@ -949,24 +948,25 @@
 
             // Al hacer clic en un verso, saltar a ese momento
             p.addEventListener("click", () => {
-              audio.currentTime = line.start + offset;
+              audio.currentTime = line.start;
               audio.play().catch(() => {});
             });
 
+            const itemWords = [];
             if (line.words && line.words.length) {
               line.words.forEach((w, i) => {
                 const sp = document.createElement("span");
                 sp.className = "word";
                 sp.textContent = w.text + (i < line.words.length - 1 ? " " : "");
                 p.appendChild(sp);
-                wordEls.push({ el: sp, word: w });
+                itemWords.push({ el: sp, word: w });
               });
             } else {
               p.textContent = line.text;
             }
 
             frag.appendChild(p);
-            lineEls.push({ el: p, line });
+            lineEls.push({ el: p, line, words: itemWords });
           });
         });
 
@@ -980,21 +980,15 @@
       // Actualización continua de karaoke (Loop de 60fps)
       // -------------------------------------------------------------
       function updateTimeLabel() {
-        const dur = audio.duration || data.duration || 443;
+        const dur = audio.duration || data.duration || 303;
         timeLabel.textContent = `${fmt(audio.currentTime)} / ${fmt(dur)}`;
       }
 
       function updateKaraoke() {
-        const t = audio.currentTime - offset;
-        const songT = Math.max(0, t);
+        const songT = Math.max(0, audio.currentTime);
 
         // Indicador de conteo
-        if (t < 0) {
-          countWrap.hidden = false;
-          countInEl.textContent = String(Math.max(1, Math.ceil(-t / BEAT)));
-        } else {
-          countWrap.hidden = true;
-        }
+        if (countWrap) countWrap.hidden = true;
 
         // Sección musical actual
         let currentSection = data.sections[0];
@@ -1005,21 +999,35 @@
           }
           if (songT >= sec.end) currentSection = sec;
         }
-        sectionNameEl.textContent = currentSection.name;
+        if (sectionNameEl && currentSection) {
+          sectionNameEl.textContent = currentSection.name;
+        }
 
-        // Línea actual
+        // Línea actual (la más reciente que ya haya empezado)
         let activeLine = null;
-        if (t >= 0) {
-          for (const item of lineEls) {
-            if (songT >= item.line.start && songT < item.line.end) {
-              activeLine = item;
-              break;
+        if (lineEls.length) {
+          if (songT < lineEls[0].line.start) {
+            activeLine = lineEls[0];
+          } else {
+            for (let i = lineEls.length - 1; i >= 0; i--) {
+              if (songT >= lineEls[i].line.start) {
+                const next = lineEls[i + 1];
+                if (!next || songT < next.line.start) {
+                  activeLine = lineEls[i];
+                  break;
+                }
+              }
             }
           }
         }
 
         if (activeLine !== lastActive) {
-          if (lastActive) lastActive.el.classList.remove("active");
+          if (lastActive) {
+            lastActive.el.classList.remove("active");
+            if (lastActive.words) {
+              lastActive.words.forEach(w => w.el.classList.remove("active"));
+            }
+          }
           if (activeLine) {
             activeLine.el.classList.add("active");
             activeLine.el.scrollIntoView({ block: "center", behavior: "smooth" });
@@ -1027,31 +1035,11 @@
           lastActive = activeLine;
         }
 
-        // Palabra actual (búsqueda binaria)
-        let activeWord = null;
-        if (t >= 0 && wordEls.length) {
-          let lo = 0;
-          let hi = wordEls.length - 1;
-          let idx = -1;
-          while (lo <= hi) {
-            const mid = (lo + hi) >> 1;
-            if (wordEls[mid].word.start <= songT) {
-              idx = mid;
-              lo = mid + 1;
-            } else {
-              hi = mid - 1;
-            }
-          }
-          if (idx >= 0) {
-            const candidate = wordEls[idx];
-            if (songT < candidate.word.end) activeWord = candidate;
-          }
-        }
-
-        if (activeWord !== lastWord) {
-          if (lastWord) lastWord.el.classList.remove("active");
-          if (activeWord) activeWord.el.classList.add("active");
-          lastWord = activeWord;
+        // Iluminación progresiva de palabras en la línea activa
+        if (activeLine && activeLine.words) {
+          activeLine.words.forEach((wObj) => {
+            wObj.el.classList.toggle("active", songT >= wObj.word.start);
+          });
         }
 
         updateTimeLabel();
