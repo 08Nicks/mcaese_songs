@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#07060b" />
+  <title>Feliz Aniversario, Popi ❤️ — De un «Veremos» a Dos Años</title>
+  <meta name="description" content="Feliz aniversario popi, sé que no es mucho pero quise recordarlo. De un «veremos» a dos años juntos... esta canción es para ti." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #07060b;
+      --card: #130f1e;
+      --card-inner: #0d0a15;
+      --pink: #ff3d81;
+      --pink-soft: #ff7aa8;
+      --gold: #ffb020;
+      --gold-light: #ffd666;
+      --wine: #6e163c;
+      --text: #f7f2ff;
+      --muted: #b5a9cc;
+      --faint: #7a708e;
+      --line: rgba(255, 255, 255, 0.10);
+      --polaroid-bg: #faf7f2;
+      --polaroid-text: #241d2d;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: "Sora", system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* -------------------------------------------------------------
+       Fondo Ambiental y Partículas Románticas
+       ------------------------------------------------------------- */
+    .ambient-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .ambient-slide {
+      position: absolute;
+      inset: -20px;
+      background-size: cover;
+      background-position: center;
+      filter: blur(28px) brightness(0.24) saturate(1.4);
+      opacity: 0;
+      transition: opacity 2.5s ease-in-out, transform 12s ease-out;
+      transform: scale(1.04);
+    }
+    .ambient-slide.active {
+      opacity: 1;
+      transform: scale(1.12);
+    }
+
+    .ambient-vignette {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 15%, rgba(255, 61, 129, 0.14), transparent 60%),
+        radial-gradient(ellipse at 85% 85%, rgba(255, 176, 32, 0.12), transparent 55%),
+        linear-gradient(180deg, rgba(7, 6, 11, 0.65) 0%, rgba(7, 6, 11, 0.92) 80%, #07060b 100%);
+    }
+
+    /* Corazones flotantes suaves */
+    .hearts-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .floating-heart {
+      position: absolute;
+      bottom: -40px;
+      color: rgba(255, 61, 129, 0.35);
+      font-size: 1.2rem;
+      user-select: none;
+      animation: floatUp 14s linear infinite;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(0.8) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.4; }
+      100% {
+        transform: translateY(-110vh) scale(1.2) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       Estructura Principal (Columnas de Fotos a los Lados)
+       ------------------------------------------------------------- */
+    .page-wrapper {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 28px;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 32px 18px 60px;
+    }
+
+    /* Columnas laterales de polaroids (Desktop) */
+    .photo-sidebar {
+      flex: 0 0 240px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: sticky;
+      top: 24px;
+    }
+
+    @media (max-width: 1100px) {
+      .photo-sidebar { display: none; }
+      .page-wrapper { padding: 20px 14px 50px; }
+    }
+
+    /* Columna Central */
+    .center-content {
+      flex: 1;
+      max-width: 760px;
+      width: 100%;
+    }
+
+    /* -------------------------------------------------------------
+       Polaroid Card
+       ------------------------------------------------------------- */
+    .polaroid {
+      position: relative;
+      background: var(--polaroid-bg);
+      border-radius: 6px;
+      padding: 10px 10px 18px 10px;
+      box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.55),
+        0 2px 6px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      transform-origin: center center;
+      transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+                  box-shadow 0.35s ease,
+                  z-index 0s;
+    }
+    .polaroid:hover {
+      transform: scale(1.07) rotate(0deg) !important;
+      box-shadow:
+        0 22px 45px rgba(255, 61, 129, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.5);
+      z-index: 20;
+    }
+
+    /* Cinta adhesiva (Washi Tape) */
+    .polaroid::before {
+      content: "";
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 16px;
+      background: rgba(255, 222, 125, 0.65);
+      backdrop-filter: blur(1px);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      border-radius: 2px;
+      z-index: 2;
+    }
+
+    .polaroid-img-wrap {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #1a1622;
+    }
+    .polaroid-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .polaroid:hover .polaroid-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .polaroid-caption {
+      margin: 10px 0 0;
+      text-align: center;
+      font-family: "Caveat", cursive;
+      font-size: 1.18rem;
+      color: var(--polaroid-text);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    /* Inclinaciones aleatorias naturales */
+    .tilt-left-1  { transform: rotate(-3.5deg); }
+    .tilt-right-1 { transform: rotate(2.8deg); }
+    .tilt-left-2  { transform: rotate(-2.2deg); }
+    .tilt-right-2 { transform: rotate(3.6deg); }
+    .tilt-left-3  { transform: rotate(-3.0deg); }
+    .tilt-right-3 { transform: rotate(2.0deg); }
+
+    /* -------------------------------------------------------------
+       Carrusel de Fotos Móvil
+       ------------------------------------------------------------- */
+    .mobile-reel-wrap {
+      display: none;
+      margin-bottom: 22px;
+    }
+    @media (max-width: 1100px) {
+      .mobile-reel-wrap { display: block; }
+    }
+    .mobile-reel-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold-light);
+      font-weight: 700;
+      margin: 0 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .mobile-reel {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 10px 4px 18px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .mobile-reel::-webkit-scrollbar { height: 4px; }
+    .mobile-reel::-webkit-scrollbar-thumb { background: rgba(255, 61, 129, 0.4); border-radius: 99px; }
+    .mobile-reel .polaroid {
+      flex: 0 0 170px;
+      scroll-snap-align: start;
+    }
+
+    /* -------------------------------------------------------------
+       Encabezado de Dedicatoria de Aniversario
+       ------------------------------------------------------------- */
+    .anniversary-hero {
+      text-align: center;
+      margin-bottom: 24px;
+      padding: 26px 20px 22px;
+      background:
+        radial-gradient(75% 65% at 50% 0%, rgba(255, 61, 129, 0.22), transparent),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01)),
+        var(--card);
+      border: 1px solid rgba(255, 61, 129, 0.35);
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+    .anniversary-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #ff3d81, #ffd666, transparent);
+    }
+
+    .love-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(255, 61, 129, 0.16);
+      border: 1px solid rgba(255, 61, 129, 0.45);
+      color: #ff9ec3;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .love-pill span { color: #ff3d81; }
+
+    .anniversary-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.1rem, 6vw, 3.2rem);
+      line-height: 1.05;
+      margin: 0 0 12px;
+      background: linear-gradient(135deg, #ffffff 40%, #ffd666 80%, #ff8db7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .anniversary-dedication {
+      font-size: clamp(1.02rem, 3vw, 1.25rem);
+      line-height: 1.45;
+      color: #ede4fc;
+      margin: 0 0 14px;
+      font-style: italic;
+      font-weight: 300;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .anniversary-dedication strong {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .song-credits {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.3);
+      padding: 4px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+    }
+    .song-credits b { color: var(--gold-light); }
+
+    /* -------------------------------------------------------------
+       Tarjeta del Reproductor de Audio
+       ------------------------------------------------------------- */
+    .player-card {
+      background:
+        linear-gradient(180deg, rgba(255, 176, 32, 0.07), transparent),
+        var(--card);
+      border: 1px solid rgba(255, 176, 32, 0.35);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      margin-bottom: 16px;
+    }
+
+    .player-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .player-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #ffd666;
+    }
+    .player-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: #ffb020;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ffb020;
+      animation: pulseDot 2s infinite;
+    }
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    audio {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+      outline: none;
+      margin-bottom: 12px;
+    }
+
+    .controls-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      font: inherit;
+      font-size: 0.78rem;
+      padding: 8px 13px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .chip:hover {
+      border-color: rgba(255, 61, 129, 0.6);
+      background: rgba(255, 61, 129, 0.08);
+      color: #fff;
+    }
+    .chip.is-active {
+      border-color: #ffd666;
+      background: rgba(255, 176, 32, 0.22);
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 0 16px rgba(255, 176, 32, 0.28);
+    }
+    .time-label {
+      margin-left: auto;
+      color: var(--faint);
+      font-size: 0.8rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* -------------------------------------------------------------
+       Tarjeta del Karaoke (Letra en Tiempo Real)
+       ------------------------------------------------------------- */
+    .karaoke-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent), var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 20px 18px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      margin-bottom: 18px;
+    }
+
+    .karaoke-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+    .kicker {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin: 0 0 2px;
+    }
+    .section-title {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .count-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 61, 129, 0.18);
+      border: 1px solid rgba(255, 61, 129, 0.4);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--pink-soft);
+    }
+    .count-number {
+      font-size: 1.15rem;
+      color: #fff;
+    }
+
+    /* Contenedor scrolleable de letra */
+    .lyrics-container {
+      max-height: 440px;
+      overflow-y: auto;
+      padding: 10px 6px;
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 61, 129, 0.4) transparent;
+    }
+    .lyrics-container::-webkit-scrollbar { width: 5px; }
+    .lyrics-container::-webkit-scrollbar-thumb {
+      background: rgba(255, 61, 129, 0.35);
+      border-radius: 99px;
+    }
+
+    .line {
+      margin: 0 0 16px;
+      font-size: clamp(1.05rem, 3.2vw, 1.25rem);
+      line-height: 1.6;
+      color: #6a617c;
+      transition: color 0.25s ease, transform 0.25s ease;
+      cursor: pointer;
+    }
+    .line:hover {
+      color: #9f94b8;
+    }
+    .line.active {
+      color: #ffffff;
+      transform: translateX(4px);
+    }
+
+    /* Palabras iluminadas en sincronía */
+    .word {
+      display: inline-block;
+      padding: 0 2px;
+      border-radius: 4px;
+      transition: color 0.12s ease, text-shadow 0.12s ease;
+    }
+    .line.active .word {
+      color: #9c91b5;
+    }
+    .line.active .word.active {
+      color: #ffd666;
+      font-weight: 700;
+      text-shadow:
+        0 0 18px rgba(255, 176, 32, 0.75),
+        0 0 32px rgba(255, 61, 129, 0.5);
+      animation: popWord 0.15s ease-out;
+    }
+    @keyframes popWord {
+      0% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    /* -------------------------------------------------------------
+       Pie de Página con Descarga y Nota Romántica
+       ------------------------------------------------------------- */
+    .romantic-footer {
+      text-align: center;
+      padding: 24px 16px;
+      border-top: 1px solid var(--line);
+      margin-top: 24px;
+    }
+    .download-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #ffd36b, #ff3d81);
+      color: #120e1c;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 13px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(255, 61, 129, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-bottom: 16px;
+    }
+    .download-cta:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 14px 40px rgba(255, 61, 129, 0.6);
+    }
+
+    .footer-note {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .footer-note strong { color: var(--gold-light); }
+
+    /* -------------------------------------------------------------
+       Modal Lightbox para Ampliar Fotos
+       ------------------------------------------------------------- */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(7, 6, 11, 0.92);
+      backdrop-filter: blur(14px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .lightbox-modal.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-img-wrap {
+      max-width: 90vw;
+      max-height: 78vh;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+    .lightbox-img-wrap img {
+      max-width: 100%;
+      max-height: 78vh;
+      display: block;
+      object-fit: contain;
+    }
+    .lightbox-caption-text {
+      font-family: "Caveat", cursive;
+      font-size: 1.6rem;
+      color: #ffd666;
+      margin: 14px 0 0;
+      text-align: center;
+    }
+    .lightbox-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 1.4rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .lightbox-close-btn:hover { background: rgba(255, 61, 129, 0.4); }
+  </style>
+</head>
+<body>
+
+  <!-- Fondo Ambiental con Fotos y Corazones -->
+  <div class="ambient-backdrop" aria-hidden="true">
+    <div class="ambient-slide active" id="ambientSlideA" style="background-image: url('fotos/IMG-20261108-WA0225.jpg');"></div>
+    <div class="ambient-slide" id="ambientSlideB"></div>
+    <div class="ambient-vignette"></div>
+    <div class="hearts-layer" id="heartsLayer"></div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- =========================================================
+         COLUMNA IZQUIERDA: POLAROIDS FLOTANTES (DESKTOP)
+         ========================================================= -->
+    <aside class="photo-sidebar" aria-label="Fotos de recuerdos - Izquierda">
+      <div class="polaroid tilt-left-1" onclick="openLightbox('fotos/IMG-20260609-WA0092.jpg', 'Cada momento contigo…')">
+        <div class="polaroid-img-wrap">
+          <img src="fotos/IMG-20260609-WA0092.jpg" alt="Recuerdo con Popi" loading="lazy" />
+        </div>
+        <p class="polaroid-caption">Cada momento contigo…</p>
+      </div>
+
+      <div class="polaroid tilt-right-1" onclick="openLightbox('fotos/IMG-20260609-WA0116.jpg', 'Nuestras sonrisas')">
+        <div class="polaroid-img-wrap">
+          <img src="fotos/IMG-20260609-WA0116.jpg" alt="Recuerdo con Popi" loading="lazy" />
+        </div>
+        <p class="polaroid-caption">Nuestras sonrisas</p>
+      </div>
+
+      <div class="polaroid tilt-left-2" onclick="openLightbox('fotos/IMG-20260921-WA0125.jpg', 'Siempre juntos')">
+        <div class="polaroid-img-wrap">
+          <img src="fotos/IMG-20260921-WA0125.jpg" alt="Recuerdo con Popi" loading="lazy" />
+        </div>
+        <p class="polaroid-caption">Siempre juntos</p>
+      </div>
+
+      <div class="polaroid tilt-right-2" onclick="openLightbox('fotos/IMG-20261020-WA0071.jpg', 'Donde sea, pero contigo')">
+        <div class="polaroid-img-wrap">
+          <img src="fotos/IMG-20261020-WA0071.jpg" alt="Recuerdo con Popi" loading="lazy" />
+        </div>
+        <p class="polaroid-caption">Donde sea, pero contigo</p>
+      </div>
+
+      <div class="polaroid tilt-left-3" onclick="openLightbox('fotos/IMG-20261108-WA0222.jpg', 'Dos años de amor')">
+        <div class="polaroid-img-wrap">
+          <img src="fotos/IMG-20261108-WA0222.jpg" alt="Recuerdo con Popi" loading="lazy" />
+        </div>
+        <p class="polaroid-caption">Dos años de amor</p>
+      </div>
+    </aside>
+
+    <!-- =========================================================
+         COLUMNA CENTRAL: DEDICATORIA + REPRODUCTOR + KARAOKE
+         ========================================================= -->
+    <main class="center-content">
+
+      <!-- Encabezado Romántico -->
+      <header class="anniversary-hero">
+        <div class="love-pill">
+          <span>❤️</span> 2 Años Juntos · Aniversario
+        </div>
+
+        <h1 class="anniversary-title">Feliz Aniversario, Popi</h1>
+
+        <p class="anniversary-dedication">
+          «Sé que no es mucho, pero quise recordarlo… de un <strong>«a ver qué pasa»</strong> a dos años sin soltarnos la mano.»
+        </p>
+
+        <div class="song-credits">
+          🎵 Canción: <b>De un «Veremos» a Dos Años</b> · Estilo MC Aese x Kali Uchis (84 BPM)
+        </div>
+      </header>
+
+      <!-- Carrusel Horizontal para Celulares -->
+      <section class="mobile-reel-wrap" aria-label="Galería de fotos de aniversario">
+        <p class="mobile-reel-title">📸 Nuestros Recuerdos <span>(Toca para agrandar)</span></p>
+        <div class="mobile-reel">
+          <div class="polaroid tilt-left-1" onclick="openLightbox('fotos/IMG-20260609-WA0092.jpg', 'Cada momento contigo…')">
+            <div class="polaroid-img-wrap"><img src="fotos/IMG-20260609-WA0092.jpg" alt="Recuerdo" loading="lazy" /></div>
+            <p class="polaroid-caption">Cada momento…</p>
+          </div>
+          <div class="polaroid tilt-right-1" onclick="openLightbox('fotos/IMG-20260609-WA0094.jpg', 'De un «veremos»…')">
+            <div class="polaroid-img-wrap"><img src="fotos/IMG-20260609-WA0094.jpg" alt="Recuerdo" loading="lazy" /></div>
+            <p class="polaroid-caption">De un «veremos»…</p>
+          </div>
+          <div class="polaroid tilt-left-2" onclick="openLightbox('fotos/IMG-20260609-WA0116.jpg', 'Nuestras sonrisas')">
+            <div class="polaroid-img-wrap"><img src="fotos/IMG-20260609-WA0116.jpg" alt="Recuerdo" loading="lazy" /></div>
+            <p class="polaroid-caption">Nuestras sonrisas</p>
+          </div>
+          <div class="polaroid tilt-right-2" onclick="openLightbox('fotos/IMG-20260921-WA0125.jpg', 'Siempre juntos')">
+            <div class="polaroid-img-wrap"><img src="fotos/IMG-20260921-WA0125.jpg" alt="Recuerdo" loading="lazy" /></div>
+            <p class="polaroid-caption">Siempre juntos</p>
+          </div>
+          <div class="polaroid tilt-left-3" onclick="openLightbox('fotos/IMG-20260921-WA0129.jpg', 'A no soltarnos la mano')">
+            <div class="polaroid-img-wrap"><img src="fotos/IMG-20260921-WA0129.jpg" alt="Recuerdo" loading="lazy" /></div>
+            <p class="polaroid-caption">A no soltarnos…</p>
+          </div>
+          <div class="polaroid tilt-right-1" onclick="openLightbox('fotos/IMG-20261020-WA0071.jpg', 'Donde sea, pero contigo')">
+            <div class="polaroid-img-wrap"><img src="fotos/IMG-20261020-WA0071.jpg" alt="Recuerdo" loading="lazy" /></div>
+            <p class="polaroid-caption">Conectados</p>
+          </div>
+          <div class="polaroid tilt-left-1" onclick="openLightbox('fotos/IMG-20261108-WA0222.jpg', 'Dos años de amor')">
+            <div class="polaroid-img-wrap"><img src="fotos/IMG-20261108-WA0222.jpg" alt="Recuerdo" loading="lazy" /></div>
+            <p class="polaroid-caption">Dos años</p>
+          </div>
+          <div class="polaroid tilt-right-2" onclick="openLightbox('fotos/IMG-20261108-WA0223(1).jpg', 'Mi lugar favorito')">
+            <div class="polaroid-img-wrap"><img src="fotos/IMG-20261108-WA0223(1).jpg" alt="Recuerdo" loading="lazy" /></div>
+            <p class="polaroid-caption">Mi lugar favorito</p>
+          </div>
+          <div class="polaroid tilt-left-2" onclick="openLightbox('fotos/IMG-20261108-WA0224(2).jpg', 'Tú en cada plano')">
+            <div class="polaroid-img-wrap"><img src="fotos/IMG-20261108-WA0224(2).jpg" alt="Recuerdo" loading="lazy" /></div>
+            <p class="polaroid-caption">En cada plano</p>
+          </div>
+          <div class="polaroid tilt-right-3" onclick="openLightbox('fotos/IMG-20261108-WA0225.jpg', 'Por muchos años más, Popi ❤️')">
+            <div class="polaroid-img-wrap"><img src="fotos/IMG-20261108-WA0225.jpg" alt="Recuerdo" loading="lazy" /></div>
+            <p class="polaroid-caption">Por muchos más ❤️</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reproductor de Audio -->
+      <section class="player-card">
+        <div class="player-header">
+          <div class="player-badge">
+            <span class="dot"></span>
+            <span>✨ Canción Terminada con Auto-Tune y Mezcla Masterizada</span>
+          </div>
+        </div>
+
+        <audio id="audio" controls preload="metadata" src="music/de-un-veremos-a-dos-anos-mezcla.mp3">
+          Tu navegador no soporta el reproductor de audio.
+        </audio>
+
+        <div class="controls-row">
+          <button id="btnMix" class="chip is-active" type="button">✨ Canción con tu voz</button>
+          <button id="btnClean" class="chip" type="button">🎵 Instrumental sola</button>
+          <button id="btnGuide" class="chip" type="button">🎙️ Con conteo de voz</button>
+          <button id="btnFullscreen" class="chip" type="button">⛶ Pantalla completa</button>
+          <span id="timeLabel" class="time-label">0:00 / 7:23</span>
+        </div>
+      </section>
+
+      <!-- Letra en Tiempo Real (Karaoke) -->
+      <section class="karaoke-card">
+        <div class="karaoke-head">
+          <div>
+            <p class="kicker">Letra Sincronizada</p>
+            <h2 id="sectionName" class="section-title">Intro</h2>
+          </div>
+          <div id="countWrap" class="count-indicator" hidden>
+            <span>Conteo:</span>
+            <span id="countIn" class="count-number">4</span>
+          </div>
+        </div>
+
+        <div class="lyrics-container" id="lyricsContainer">
+          <div id="lyrics">Cargando letra sincronizada…</div>
+        </div>
+      </section>
+
+      <!-- Pie con Descarga y Mensaje -->
+      <footer class="romantic-footer">
+        <a class="download-cta" href="music/de-un-veremos-a-dos-anos-mezcla.mp3" download="De Un Veremos a Dos Anos - Popi.mp3">
+          ⬇️ Descargar la Canción (MP3)
+        </a>
+        <p class="footer-note">
+          Hecho con todo el corazón para <strong>Popi</strong> · Puebla y CDMX · <strong>2 Años Juntos</strong> ❤️
+        </p>
+      </footer>
+
+    </main>
+
+    <!-- =========================================================
+         COLUMNA DERECHA: POLAROIDS FLOTANTES (DESKTOP)
+         ========================================================= -->
+    <aside class="photo-sidebar" aria-label="Fotos de recuerdos - Derecha">
+      <div class="polaroid tilt-right-1" onclick="openLightbox('fotos/IMG-20260609-WA0094.jpg', 'De un «veremos»…')">
+        <div class="polaroid-img-wrap">
+          <img src="fotos/IMG-20260609-WA0094.jpg" alt="Recuerdo con Popi" loading="lazy" />
+        </div>
+        <p class="polaroid-caption">De un «veremos»…</p>
+      </div>
+
+      <div class="polaroid tilt-left-1" onclick="openLightbox('fotos/IMG-20260921-WA0129.jpg', 'A no soltarnos la mano')">
+        <div class="polaroid-img-wrap">
+          <img src="fotos/IMG-20260921-WA0129.jpg" alt="Recuerdo con Popi" loading="lazy" />
+        </div>
+        <p class="polaroid-caption">A no soltarnos la mano</p>
+      </div>
+
+      <div class="polaroid tilt-right-2" onclick="openLightbox('fotos/IMG-20261108-WA0223(1).jpg', 'Mi lugar favorito en el mundo')">
+        <div class="polaroid-img-wrap">
+          <img src="fotos/IMG-20261108-WA0223(1).jpg" alt="Recuerdo con Popi" loading="lazy" />
+        </div>
+        <p class="polaroid-caption">Mi lugar favorito</p>
+      </div>
+
+      <div class="polaroid tilt-left-2" onclick="openLightbox('fotos/IMG-20261108-WA0224(2).jpg', 'Tú en cada plano')">
+        <div class="polaroid-img-wrap">
+          <img src="fotos/IMG-20261108-WA0224(2).jpg" alt="Recuerdo con Popi" loading="lazy" />
+        </div>
+        <p class="polaroid-caption">Tú en cada plano</p>
+      </div>
+
+      <div class="polaroid tilt-right-3" onclick="openLightbox('fotos/IMG-20261108-WA0225.jpg', 'Por muchos años más, Popi ❤️')">
+        <div class="polaroid-img-wrap">
+          <img src="fotos/IMG-20261108-WA0225.jpg" alt="Recuerdo con Popi" loading="lazy" />
+        </div>
+        <p class="polaroid-caption">Por muchos años más ❤️</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Modal Lightbox -->
+  <div id="lightbox" class="lightbox-modal" onclick="closeLightbox(event)">
+    <button class="lightbox-close-btn" onclick="closeLightbox(event)" aria-label="Cerrar foto">✕</button>
+    <div class="lightbox-img-wrap" onclick="event.stopPropagation()">
+      <img id="lightboxImg" src="" alt="Foto ampliada" />
+    </div>
+    <p id="lightboxCaption" class="lightbox-caption-text"></p>
+  </div>
+
+  <!-- Datos y Lógica de Karaoke -->
+  <script src="music/karaoke-data.js"></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const data = window.KARAOKE_DATA;
+      const audio = document.getElementById("audio");
+      const lyricsEl = document.getElementById("lyrics");
+      const lyricsContainer = document.getElementById("lyricsContainer");
+      const sectionNameEl = document.getElementById("sectionName");
+      const countWrap = document.getElementById("countWrap");
+      const countInEl = document.getElementById("countIn");
+      const timeLabel = document.getElementById("timeLabel");
+
+      const btnMix = document.getElementById("btnMix");
+      const btnClean = document.getElementById("btnClean");
+      const btnGuide = document.getElementById("btnGuide");
+      const btnFullscreen = document.getElementById("btnFullscreen");
+
+      if (!data) {
+        lyricsEl.innerHTML = "<p class='line active'>No se pudo cargar la letra.</p>";
+        return;
+      }
+
+      // -------------------------------------------------------------
+      // Resuelve rutas relativas según la ubicación del archivo
+      // -------------------------------------------------------------
+      const resolveAudio = (path) => {
+        if (!path) return "";
+        if (path.startsWith("music/") || path.startsWith("http") || path.startsWith("/")) return path;
+        return "music/" + path;
+      };
+
+      const BEAT = 60 / data.bpm;
+      let currentMode = "mix"; // "mix", "clean", "guide"
+      let offset = 0;
+      let lineEls = [];
+      let wordEls = [];
+      let lastActive = null;
+      let lastWord = null;
+      let raf = 0;
+
+      const songTime = () => Math.max(0, audio.currentTime - offset);
+
+      // Formatear segundos a mm:ss
+      const fmt = (s) => {
+        const sec = Math.max(0, Math.floor(s));
+        return `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, "0")}`;
+      };
+
+      // -------------------------------------------------------------
+      // Renderizar letra con palabras marcadas para sincronización
+      // -------------------------------------------------------------
+      function renderLyrics() {
+        const frag = document.createDocumentFragment();
+        lineEls = [];
+        wordEls = [];
+
+        data.sections.forEach((section) => {
+          section.lines.forEach((line) => {
+            const p = document.createElement("p");
+            p.className = "line";
+            p.dataset.start = line.start;
+            p.dataset.end = line.end;
+
+            // Al hacer clic en un verso, saltar a ese momento
+            p.addEventListener("click", () => {
+              audio.currentTime = line.start + offset;
+              audio.play().catch(() => {});
+            });
+
+            if (line.words && line.words.length) {
+              line.words.forEach((w, i) => {
+                const sp = document.createElement("span");
+                sp.className = "word";
+                sp.textContent = w.text + (i < line.words.length - 1 ? " " : "");
+                p.appendChild(sp);
+                wordEls.push({ el: sp, word: w });
+              });
+            } else {
+              p.textContent = line.text;
+            }
+
+            frag.appendChild(p);
+            lineEls.push({ el: p, line });
+          });
+        });
+
+        lyricsEl.innerHTML = "";
+        lyricsEl.appendChild(frag);
+      }
+
+      renderLyrics();
+
+      // -------------------------------------------------------------
+      // Actualización continua de karaoke (Loop de 60fps)
+      // -------------------------------------------------------------
+      function updateTimeLabel() {
+        const dur = audio.duration || data.duration || 443;
+        timeLabel.textContent = `${fmt(audio.currentTime)} / ${fmt(dur)}`;
+      }
+
+      function updateKaraoke() {
+        const t = audio.currentTime - offset;
+        const songT = Math.max(0, t);
+
+        // Indicador de conteo
+        if (t < 0) {
+          countWrap.hidden = false;
+          countInEl.textContent = String(Math.max(1, Math.ceil(-t / BEAT)));
+        } else {
+          countWrap.hidden = true;
+        }
+
+        // Sección musical actual
+        let currentSection = data.sections[0];
+        for (const sec of data.sections) {
+          if (songT >= sec.start && songT < sec.end) {
+            currentSection = sec;
+            break;
+          }
+          if (songT >= sec.end) currentSection = sec;
+        }
+        sectionNameEl.textContent = currentSection.name;
+
+        // Línea actual
+        let activeLine = null;
+        if (t >= 0) {
+          for (const item of lineEls) {
+            if (songT >= item.line.start && songT < item.line.end) {
+              activeLine = item;
+              break;
+            }
+          }
+        }
+
+        if (activeLine !== lastActive) {
+          if (lastActive) lastActive.el.classList.remove("active");
+          if (activeLine) {
+            activeLine.el.classList.add("active");
+            activeLine.el.scrollIntoView({ block: "center", behavior: "smooth" });
+          }
+          lastActive = activeLine;
+        }
+
+        // Palabra actual (búsqueda binaria)
+        let activeWord = null;
+        if (t >= 0 && wordEls.length) {
+          let lo = 0;
+          let hi = wordEls.length - 1;
+          let idx = -1;
+          while (lo <= hi) {
+            const mid = (lo + hi) >> 1;
+            if (wordEls[mid].word.start <= songT) {
+              idx = mid;
+              lo = mid + 1;
+            } else {
+              hi = mid - 1;
+            }
+          }
+          if (idx >= 0) {
+            const candidate = wordEls[idx];
+            if (songT < candidate.word.end) activeWord = candidate;
+          }
+        }
+
+        if (activeWord !== lastWord) {
+          if (lastWord) lastWord.el.classList.remove("active");
+          if (activeWord) activeWord.el.classList.add("active");
+          lastWord = activeWord;
+        }
+
+        updateTimeLabel();
+      }
+
+      function loop() {
+        updateKaraoke();
+        if (!audio.paused) raf = requestAnimationFrame(loop);
+      }
+
+      audio.addEventListener("play", () => {
+        cancelAnimationFrame(raf);
+        loop();
+      });
+      audio.addEventListener("pause", () => {
+        cancelAnimationFrame(raf);
+        updateKaraoke();
+      });
+      audio.addEventListener("seeked", updateKaraoke);
+      audio.addEventListener("timeupdate", updateKaraoke);
+      audio.addEventListener("loadedmetadata", updateTimeLabel);
+
+      // -------------------------------------------------------------
+      // Cambio de Fuente de Audio
+      // -------------------------------------------------------------
+      function updateChips() {
+        btnMix.classList.toggle("is-active", currentMode === "mix");
+        btnClean.classList.toggle("is-active", currentMode === "clean");
+        btnGuide.classList.toggle("is-active", currentMode === "guide");
+      }
+
+      function switchMode(mode) {
+        if (mode === currentMode) return;
+        const wasPlaying = !audio.paused;
+        const currentSongTime = songTime();
+        currentMode = mode;
+        offset = (mode === "guide") ? data.countIn : 0;
+
+        if (mode === "mix") {
+          audio.src = resolveAudio(data.mixAudio || "de-un-veremos-a-dos-anos-mezcla.mp3");
+        } else if (mode === "guide") {
+          audio.src = resolveAudio(data.guideAudio);
+        } else {
+          audio.src = resolveAudio(data.audio);
+        }
+        audio.load();
+        updateChips();
+
+        const restore = () => {
+          const target = Math.min(
+            currentSongTime + offset,
+            Math.max(0, (audio.duration || 0) - 0.15)
+          );
+          audio.currentTime = target;
+          if (wasPlaying) audio.play().catch(() => {});
+          updateKaraoke();
+        };
+        audio.addEventListener("loadedmetadata", restore, { once: true });
+      }
+
+      btnMix.addEventListener("click", () => switchMode("mix"));
+      btnClean.addEventListener("click", () => switchMode("clean"));
+      btnGuide.addEventListener("click", () => switchMode("guide"));
+
+      btnFullscreen.addEventListener("click", () => {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen?.().catch(() => {});
+        } else {
+          document.exitFullscreen?.().catch(() => {});
+        }
+      });
+
+      // -------------------------------------------------------------
+      // Fondo Dinámico y Lluvia de Corazones
+      // -------------------------------------------------------------
+      const allPhotos = [
+        "fotos/IMG-20261108-WA0225.jpg",
+        "fotos/IMG-20260609-WA0092.jpg",
+        "fotos/IMG-20260609-WA0094.jpg",
+        "fotos/IMG-20260609-WA0116.jpg",
+        "fotos/IMG-20260921-WA0125.jpg",
+        "fotos/IMG-20260921-WA0129.jpg",
+        "fotos/IMG-20261020-WA0071.jpg",
+        "fotos/IMG-20261108-WA0222.jpg",
+        "fotos/IMG-20261108-WA0223(1).jpg",
+        "fotos/IMG-20261108-WA0224(2).jpg"
+      ];
+
+      let bgIndex = 0;
+      const slideA = document.getElementById("ambientSlideA");
+      const slideB = document.getElementById("ambientSlideB");
+      let currentSlide = slideA;
+
+      setInterval(() => {
+        bgIndex = (bgIndex + 1) % allPhotos.length;
+        const nextPhoto = allPhotos[bgIndex];
+        const nextSlide = (currentSlide === slideA) ? slideB : slideA;
+
+        nextSlide.style.backgroundImage = `url('${nextPhoto}')`;
+        nextSlide.classList.add("active");
+        currentSlide.classList.remove("active");
+        currentSlide = nextSlide;
+      }, 7000);
+
+      // Crear corazones flotantes de fondo
+      const heartsLayer = document.getElementById("heartsLayer");
+      const heartSymbols = ["❤️", "💖", "✨", "💕", "🌸"];
+      function spawnHeart() {
+        const el = document.createElement("div");
+        el.className = "floating-heart";
+        el.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+        el.style.left = `${Math.random() * 100}%`;
+        el.style.fontSize = `${0.9 + Math.random() * 0.9}rem`;
+        el.style.animationDuration = `${10 + Math.random() * 8}s`;
+        heartsLayer.appendChild(el);
+        setTimeout(() => el.remove(), 18000);
+      }
+      setInterval(spawnHeart, 1600);
+      for (let i = 0; i < 7; i++) spawnHeart();
+
+    })();
+
+    // -------------------------------------------------------------
+    // Funciones del Modal Lightbox
+    // -------------------------------------------------------------
+    function openLightbox(src, caption) {
+      const modal = document.getElementById("lightbox");
+      const img = document.getElementById("lightboxImg");
+      const cap = document.getElementById("lightboxCaption");
+      img.src = src;
+      cap.textContent = caption || "";
+      modal.classList.add("is-open");
+    }
+
+    function closeLightbox(e) {
+      if (e) e.stopPropagation();
+      document.getElementById("lightbox").classList.remove("is-open");
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+  </script>
+</body>
+</html>
