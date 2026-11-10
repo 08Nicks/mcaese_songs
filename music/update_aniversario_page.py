@@ -2,6 +2,7 @@
 """
 Script to build the definitive, clean, beautiful aniversario.html
 with pure UTF-8 encoding, organized lyric sections & stanzas,
+custom captions for recent photos (Pizza moment & Gorrito rosa),
 no duplicate photos, and zero mention of Suno/AI.
 """
 
@@ -689,11 +690,11 @@ html_content = """<!DOCTYPE html>
          COLUMNA IZQUIERDA: POLAROIDS FLOTANTES (DESKTOP)
          ========================================================= -->
     <aside class="photo-sidebar" aria-label="Fotos de recuerdos - Izquierda">
-      <div class="polaroid tilt-left-1" onclick="openLightbox('fotos/reciente-01.jpg', 'Nuestros momentos más recientes ✨')">
+      <div class="polaroid tilt-left-1" onclick="openLightbox('fotos/reciente-01.jpg', 'Pizza moment 🍕✨')">
         <div class="polaroid-img-wrap">
-          <img src="fotos/reciente-01.jpg" alt="Recuerdo con Popi" loading="lazy" />
+          <img src="fotos/reciente-01.jpg" alt="Pizza moment con Popi" loading="lazy" />
         </div>
-        <p class="polaroid-caption">Momentos recientes ✨</p>
+        <p class="polaroid-caption">Pizza moment 🍕</p>
       </div>
 
       <div class="polaroid tilt-right-1" onclick="openLightbox('fotos/reciente-02.jpg', 'Juntos siempre ❤️')">
@@ -758,17 +759,17 @@ html_content = """<!DOCTYPE html>
       <section class="mobile-reel-wrap" aria-label="Galería de fotos de aniversario">
         <p class="mobile-reel-title">📸 Nuestros Recuerdos <span>(Toca para agrandar)</span></p>
         <div class="mobile-reel">
-          <div class="polaroid tilt-left-1" onclick="openLightbox('fotos/reciente-01.jpg', 'Nuestros momentos más recientes ✨')">
-            <div class="polaroid-img-wrap"><img src="fotos/reciente-01.jpg" alt="Recuerdo" loading="lazy" /></div>
-            <p class="polaroid-caption">Reciente ✨</p>
+          <div class="polaroid tilt-left-1" onclick="openLightbox('fotos/reciente-01.jpg', 'Pizza moment 🍕✨')">
+            <div class="polaroid-img-wrap"><img src="fotos/reciente-01.jpg" alt="Pizza moment" loading="lazy" /></div>
+            <p class="polaroid-caption">Pizza moment 🍕</p>
           </div>
           <div class="polaroid tilt-right-1" onclick="openLightbox('fotos/reciente-02.jpg', 'Juntos siempre ❤️')">
             <div class="polaroid-img-wrap"><img src="fotos/reciente-02.jpg" alt="Recuerdo" loading="lazy" /></div>
             <p class="polaroid-caption">Juntos ❤️</p>
           </div>
-          <div class="polaroid tilt-left-2" onclick="openLightbox('fotos/reciente-03.jpg', 'Tú y yo, mi amor 💕')">
-            <div class="polaroid-img-wrap"><img src="fotos/reciente-03.jpg" alt="Recuerdo" loading="lazy" /></div>
-            <p class="polaroid-caption">Tú y yo 💕</p>
+          <div class="polaroid tilt-left-2" onclick="openLightbox('fotos/reciente-03.jpg', 'Ese gorrito rosa que tanto amo 🌸💕')">
+            <div class="polaroid-img-wrap"><img src="fotos/reciente-03.jpg" alt="Tu gorrito rosa" loading="lazy" /></div>
+            <p class="polaroid-caption">Tu gorrito rosa 🌸</p>
           </div>
           <div class="polaroid tilt-left-3" onclick="openLightbox('fotos/IMG-20260609-WA0094.jpg', 'De un «veremos»…')">
             <div class="polaroid-img-wrap"><img src="fotos/IMG-20260609-WA0094.jpg" alt="Recuerdo" loading="lazy" /></div>
@@ -877,11 +878,11 @@ html_content = """<!DOCTYPE html>
          COLUMNA DERECHA: POLAROIDS FLOTANTES (DESKTOP)
          ========================================================= -->
     <aside class="photo-sidebar" aria-label="Fotos de recuerdos - Derecha">
-      <div class="polaroid tilt-right-1" onclick="openLightbox('fotos/reciente-03.jpg', 'Tú y yo, mi amor 💕')">
+      <div class="polaroid tilt-right-1" onclick="openLightbox('fotos/reciente-03.jpg', 'Ese gorrito rosa que tanto amo 🌸💕')">
         <div class="polaroid-img-wrap">
-          <img src="fotos/reciente-03.jpg" alt="Recuerdo con Popi" loading="lazy" />
+          <img src="fotos/reciente-03.jpg" alt="Tu gorrito rosa" loading="lazy" />
         </div>
-        <p class="polaroid-caption">Tú y yo 💕</p>
+        <p class="polaroid-caption">Tu gorrito rosa 🌸</p>
       </div>
 
       <div class="polaroid tilt-left-1" onclick="openLightbox('fotos/IMG-20260609-WA0094.jpg', 'De un «veremos»…')">
@@ -1228,4 +1229,4 @@ html_content = """<!DOCTYPE html>
 with open("aniversario.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print("SUCCESS: Updated aniversario.html with pristine UTF-8 and organized section lyrics!")
+print("SUCCESS: Updated aniversario.html with Pizza moment and Tu gorrito rosa captions!")
