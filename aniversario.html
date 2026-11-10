@@ -705,7 +705,7 @@
         </p>
 
         <div class="song-credits">
-          🎵 Canción: <b>De un «Veremos» a Dos Años</b> · Estilo MC Aese x Kali Uchis (84 BPM)
+          🎵 Canción: <b>De un «Veremos» a Dos Años</b>
         </div>
       </header>
 
@@ -761,21 +761,13 @@
         <div class="player-header">
           <div class="player-badge">
             <span class="dot"></span>
-            <span>✨ Canción Terminada con Auto-Tune y Mezcla Masterizada</span>
+            <span>🎵 Nuestra Canción</span>
           </div>
         </div>
 
         <audio id="audio" controls preload="metadata" src="music/de-un-veremos-a-dos-anos-mezcla.mp3">
           Tu navegador no soporta el reproductor de audio.
         </audio>
-
-        <div class="controls-row">
-          <button id="btnMix" class="chip is-active" type="button">✨ Canción con tu voz</button>
-          <button id="btnClean" class="chip" type="button">🎵 Instrumental sola</button>
-          <button id="btnGuide" class="chip" type="button">🎙️ Con conteo de voz</button>
-          <button id="btnFullscreen" class="chip" type="button">⛶ Pantalla completa</button>
-          <span id="timeLabel" class="time-label">0:00 / 7:23</span>
-        </div>
       </section>
 
       <!-- Letra en Tiempo Real (Karaoke) -->
@@ -1055,10 +1047,19 @@
       // -------------------------------------------------------------
       // Cambio de Fuente de Audio
       // -------------------------------------------------------------
+      function updateTimeLabel() {
+        if (!timeLabel) return;
+        const dur = audio.duration || data.duration || 443;
+        timeLabel.textContent = `${fmt(audio.currentTime)} / ${fmt(dur)}`;
+      }
+
+      // -------------------------------------------------------------
+      // Cambio de Fuente de Audio
+      // -------------------------------------------------------------
       function updateChips() {
-        btnMix.classList.toggle("is-active", currentMode === "mix");
-        btnClean.classList.toggle("is-active", currentMode === "clean");
-        btnGuide.classList.toggle("is-active", currentMode === "guide");
+        if (btnMix) btnMix.classList.toggle("is-active", currentMode === "mix");
+        if (btnClean) btnClean.classList.toggle("is-active", currentMode === "clean");
+        if (btnGuide) btnGuide.classList.toggle("is-active", currentMode === "guide");
       }
 
       function switchMode(mode) {
@@ -1090,17 +1091,19 @@
         audio.addEventListener("loadedmetadata", restore, { once: true });
       }
 
-      btnMix.addEventListener("click", () => switchMode("mix"));
-      btnClean.addEventListener("click", () => switchMode("clean"));
-      btnGuide.addEventListener("click", () => switchMode("guide"));
+      if (btnMix) btnMix.addEventListener("click", () => switchMode("mix"));
+      if (btnClean) btnClean.addEventListener("click", () => switchMode("clean"));
+      if (btnGuide) btnGuide.addEventListener("click", () => switchMode("guide"));
 
-      btnFullscreen.addEventListener("click", () => {
-        if (!document.fullscreenElement) {
-          document.documentElement.requestFullscreen?.().catch(() => {});
-        } else {
-          document.exitFullscreen?.().catch(() => {});
-        }
-      });
+      if (btnFullscreen) {
+        btnFullscreen.addEventListener("click", () => {
+          if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen?.().catch(() => {});
+          } else {
+            document.exitFullscreen?.().catch(() => {});
+          }
+        });
+      }
 
       // -------------------------------------------------------------
       // Fondo Dinámico y Lluvia de Corazones
