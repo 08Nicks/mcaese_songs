@@ -4,6 +4,7 @@ window.KARAOKE_DATA = {
   "countIn": 2.857,
   "audio": "de-un-veremos-a-dos-anos.mp3",
   "guideAudio": "de-un-veremos-a-dos-anos-guia.mp3",
+  "mixAudio": "de-un-veremos-a-dos-anos-mezcla.mp3",
   "duration": 440.0,
   "sections": [
     {

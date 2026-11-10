@@ -4,6 +4,8 @@ Thumbs.db
 __pycache__/
 *.pyc
 *.wav
+scratch/
+Send Anywhere*/
 music/voz/*.wav
 music/voz/*.webm
 music/voz/*.m4a

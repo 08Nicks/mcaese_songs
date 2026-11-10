@@ -385,15 +385,20 @@
       <p class="style">Dream Pop Latino & Rap Romántico · Rhodes · Guitarra acústica · 84 BPM · MC Aese x Kali Uchis</p>
     </header>
 
-    <section class="card">
-      <audio id="audio" controls preload="metadata" src="de-un-veremos-a-dos-anos-guia.mp3">
+    <section class="card" style="border: 1px solid rgba(255, 176, 32, 0.35); background: linear-gradient(180deg, rgba(255, 176, 32, 0.08), rgba(18, 14, 28, 0.95));">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+        <span style="background:#ffb020; color:#120e1c; font-size:0.7rem; font-weight:800; padding:2px 8px; border-radius:999px; text-transform:uppercase;">Listo</span>
+        <span style="font-size:0.85rem; color:#ffd666; font-weight:600;">✨ Mezcla final con tu voz y Auto-Tune lista</span>
+      </div>
+      <audio id="audio" controls preload="metadata" src="de-un-veremos-a-dos-anos-mezcla.mp3">
         Tu navegador no puede reproducir el audio.
       </audio>
       <div class="row">
-        <button id="useGuide" class="chip is-active" type="button">Con conteo</button>
-        <button id="useClean" class="chip" type="button">Sin conteo</button>
+        <button id="useMix" class="chip is-active" style="border-color: #ffd666; background: rgba(255, 176, 32, 0.22); color: #fff; font-weight: 700;" type="button">✨ Canción Mezclada (Tu Voz)</button>
+        <button id="useClean" class="chip" type="button">Instrumental limpia</button>
+        <button id="useGuide" class="chip" type="button">Pista con conteo</button>
         <button id="fullscreenBtn" class="chip" type="button">Pantalla completa</button>
-        <span id="timeLabel" class="time">0:00 / 5:46</span>
+        <span id="timeLabel" class="time">0:00 / 7:23</span>
       </div>
     </section>
 
@@ -461,6 +466,7 @@
     </section>
 
     <footer class="links">
+      <a href="de-un-veremos-a-dos-anos-mezcla.mp3" download style="color:#ffd666; font-weight:700;">✨ Descargar Canción Mezclada (MP3)</a>
       <a href="de-un-veremos-a-dos-anos-guia.mp3" download>Pista guía (MP3)</a>
       <a href="de-un-veremos-a-dos-anos.mp3" download>Instrumental (MP3)</a>
       <a href="de-un-veremos-a-dos-anos.mid" download>MIDI</a>
@@ -482,6 +488,7 @@
       const countInEl = document.getElementById("countIn");
       const countWrap = document.getElementById("countWrap");
       const timeLabel = document.getElementById("timeLabel");
+      const useMix = document.getElementById("useMix");
       const useGuide = document.getElementById("useGuide");
       const useClean = document.getElementById("useClean");
       const fullscreenBtn = document.getElementById("fullscreenBtn");
@@ -508,8 +515,9 @@
       }
 
       const BEAT = 60 / data.bpm;
-      let usingGuide = true;
-      let offset = data.countIn;
+      let currentMode = "mix";
+      let usingGuide = false;
+      let offset = 0;
       let lineEls = [];
       let wordEls = [];
       let lastActive = null;
@@ -751,21 +759,29 @@
       audio.addEventListener("loadedmetadata", updateTimeLabel);
 
       // ---------------------------------------------------------------
-      // Cambiar entre pista guía y limpia
+      // Cambiar entre canción mezclada, instrumental limpia y pista guía
       // ---------------------------------------------------------------
       function updateChips() {
-        useGuide.classList.toggle("is-active", usingGuide);
-        useClean.classList.toggle("is-active", !usingGuide);
+        if (useMix) useMix.classList.toggle("is-active", currentMode === "mix");
+        useClean.classList.toggle("is-active", currentMode === "clean");
+        useGuide.classList.toggle("is-active", currentMode === "guide");
       }
 
-      function switchSource(guide) {
-        if (guide === usingGuide) return;
+      function switchSourceMode(mode) {
+        if (mode === currentMode) return;
         if (mediaRecorder && mediaRecorder.state === "recording") return;
         const wasPlaying = !audio.paused;
         const currentSongTime = songTime();
-        usingGuide = guide;
-        offset = guide ? data.countIn : 0;
-        audio.src = guide ? data.guideAudio : data.audio;
+        currentMode = mode;
+        usingGuide = (mode === "guide");
+        offset = (mode === "guide") ? data.countIn : 0;
+        if (mode === "mix") {
+          audio.src = data.mixAudio || "de-un-veremos-a-dos-anos-mezcla.mp3";
+        } else if (mode === "guide") {
+          audio.src = data.guideAudio;
+        } else {
+          audio.src = data.audio;
+        }
         audio.load();
         updateChips();
 
@@ -781,8 +797,9 @@
         audio.addEventListener("loadedmetadata", restore, { once: true });
       }
 
-      useGuide.addEventListener("click", () => switchSource(true));
-      useClean.addEventListener("click", () => switchSource(false));
+      if (useMix) useMix.addEventListener("click", () => switchSourceMode("mix"));
+      useGuide.addEventListener("click", () => switchSourceMode("guide"));
+      useClean.addEventListener("click", () => switchSourceMode("clean"));
 
       fullscreenBtn.addEventListener("click", () => {
         if (!document.fullscreenElement) {
@@ -822,6 +839,7 @@
 
       async function ensureGuide() {
         if (usingGuide) return;
+        currentMode = "guide";
         usingGuide = true;
         offset = data.countIn;
         audio.src = data.guideAudio;
@@ -937,6 +955,7 @@
           }
         } else {
           // Secciones intermedias: instrumental limpia
+          currentMode = "clean";
           usingGuide = false;
           offset = 0;
           audio.src = data.audio;
